@@ -10,7 +10,83 @@
 </head>
 
 <body class="page__body">
-  <header class="header">Шапка</header>
+  <header class="main-header">
+    <div class="main-header__logo-wrapper">
+      <a class="main-header__logo logo-header">
+        <span class="visually-hidden">Логотип магазина CAT ENERGY.</span>
+        <img class="logo-header__logo-image" src="images/logo/logo-image.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
+        <img class="logo-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип магазина Кэт энерджи.">
+      </a>
+    </div>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="main-nav__list site-nav">
+        <li class="site-nav__item site-nav__item--active">
+          <a class="site-nav__link" href="index.html">
+            Главная
+          </a>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="catalog.html">
+            Каталог продукции
+          </a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="form.html">
+            Подбор программы
+          </a>
+        </li>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <section class="products">
+      <ul class="products__list">
+        <li class="products__item prodact-card">
+          Карточка
+        </li>
+      </ul>
+    </section>
+
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты.</h2>
+      <div class="contacts__addres addres">
+        <strong class="addres__slogan">Приглашаем к&nbsp;сотрудничеству дилеров!</strong>
+        <addres class="addres__value">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</addres>
+      </div>
+      <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.32085871616114!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1648645933779!5m2!1sru!2sru" width="600" height="450" style="border: 0;" allowfullscreen title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="footer__link logo-footer" href="#">
+      <img class="logo-footer__logo-text" width="128" height="24" alt="Логотип «Кэт Энерджи»" src="images/logo/logo-text.svg">
+    </a>
+    <ul class="footer__socials-list">
+      <li class="footer__socials-item">
+        <a class="footer__socials-link socials socials--vkontakte" href="#">
+          <span class="visually-hidden">В контакте.</span>
+        </a>
+      </li>
+      <li class="footer__socials-item">
+        <a class="footer__socials-link socials socials--youtube" href="#">
+          <span class="visually-hidden">Youtube.</span>
+        </a>
+      </li>
+      <li class="footer__socials-item">
+        <a class="footer__socials-link socials socials--telegram" href="#">
+          <span class="visually-hidden">Telegram.</span>
+        </a>
+      </li>
+    </ul>
+    <a class="footer__logo-academy logo-academy">
+      <p class="logo-academy__text">HTML Academy</p>
+      <img class="logo-academy__logo" src="images/logo/logo-html-academy.svg" width="27" height="34" alt="Логотип HTML Academy">
+    </a>
+  </footer>
 </body>
 
 </html>
