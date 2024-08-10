@@ -45,7 +45,11 @@
     <section class="hero">
       <h1 class="hero__title">Функциональное питание для котов</h1>
       <p class="hero__intro">Занялся собой? Займись котом!</p>
-      <img class="hero__image" src="images/hero-cat-food.png" width="280" height="270" alt="Оранжевая банка корма 'CAT ENERGY PR' со вкусом курицы.">
+      <picture>
+        <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/hero/hero-cat-food-desktop@1x.png 1x, images/hero/hero-cat-food-desktop@2x.png 2x">
+        <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/hero/hero-cat-food-tablet@1x.png 1x, images/hero/hero-cat-food-tablet@2x.png 2x">
+        <img class="hero__image" src="images/hero/hero-cat-food-mobile@1x.png" srcset="images/hero/hero-cat-food-mobile@2x.png 2x" width="280" height="270" alt="Оранжевая банка корма 'CAT ENERGY PR' со вкусом курицы.">
+      </picture>
       <a class="button" href="form.html">подобрать программу</a>
     </section>
 
@@ -85,7 +89,7 @@
       </ul>
     </section>
 
-    <section class="example">
+    < class="example">
       <h2 class="example__title">Живой пример</h2>
       <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
 
@@ -101,24 +105,30 @@
       </ul>
 
       <p class="example__total">Затраты на питание: 15 000 РУБ.</p>
-      <img class="example__illustration-picture" src="images/live-example/cat-mobile-before.png" width="280" height="256" alt="Кот до похудения">
-      <button class="example__illustration-button" type="button">
+      <picture>
+        <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/example/cat-before@1x.png 1x, images/example/cat-before@2x.png 2x">
+        <img class="example__picture" src="images/example/cat-mobile-before@1x.png" srcset="images/example/cat-mobile-before@2x.png 2x" width="280" height="256" alt="Кот до похудения">
+      </picture>
+      <button class="example__curtain" type="button">
         <span class="visually-hidden">Изменить изображение кота.</span>
       </button>
-      <img class="example__illustration-picture" src="images/live-example/cat-mobile-after.png" width="280" height="256" alt="Кот после похудения">
-    </section>
+      <picture>
+        <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/example/cat-after@1x.png 1x, images/example/cat-after@2x.png 2x">
+        <img class="example__picture" src="images/example/cat-mobile-after@1x.png" srcset="images/example/cat-mobile-after@2x.png 2x" width="280" height="256" alt="Кот до похудения">
+      </picture>
+      </section>
 
-    <section class="contacts">
-      <h2 class="visually-hidden">Контакты.</h2>
-      <div class="contacts__address address">
-        <p class="address__slogan">Приглашаем к сотрудничеству дилеров!</p>
-        <address class="address__value">
-          <p class="address__value">ул. Большая Конюшенная, д. 19/8</p>
-          <p class="address__value">Санкт-Петербург</p>
-        </address>
-      </div>
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aefe2e2002fc8f362ffb31cc2dcc5431c5e0101396b2360ad92f34b6ca8409ae1&amp;source=constructor" width="320" height="362" style="border: 0;"></iframe>
-    </section>
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты.</h2>
+        <div class="contacts__address address">
+          <p class="address__slogan">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="address__value">
+            <p class="address__value">ул. Большая Конюшенная, д. 19/8</p>
+            <p class="address__value">Санкт-Петербург</p>
+          </address>
+        </div>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aefe2e2002fc8f362ffb31cc2dcc5431c5e0101396b2360ad92f34b6ca8409ae1&amp;source=constructor" width="320" height="362" style="border: 0;"></iframe>
+      </section>
   </main>
 
   <footer class="main-footer">
