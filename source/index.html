@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/index.js" defer></script>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -50,6 +50,9 @@
       <h1 class="hero__title">Функциональное питание для котов</h1>
       <p class="hero__intro">Занялся собой? Займись котом!</p>
       <picture>
+        <source width="552" height="499" type="image/webp" media="(min-width: 1440px)" srcset="images/hero/hero-cat-food-desktop@1x.webp 1x, images/hero/hero-cat-food-desktop@2x.webp 2x">
+        <source width="709" height="609" type="image/webp" media="(min-width: 768px)" srcset="images/hero/hero-cat-food-tablet@1x.webp 1x, images/hero/hero-cat-food-tablet@2x.webp 2x">
+        <source width="280" height="270" type="image/webp" srcset="images/hero/hero-cat-food-mobile@1x.webp 1x, images/hero/hero-cat-food-mobile@2x.webp 2x">
         <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/hero/hero-cat-food-desktop@1x.png 1x, images/hero/hero-cat-food-desktop@2x.png 2x">
         <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/hero/hero-cat-food-tablet@1x.png 1x, images/hero/hero-cat-food-tablet@2x.png 2x">
         <img class="hero__image" src="images/hero/hero-cat-food-mobile@1x.png" srcset="images/hero/hero-cat-food-mobile@2x.png 2x" width="280" height="270" alt="Оранжевая банка корма 'CAT ENERGY PR' со вкусом курицы.">
@@ -110,6 +113,8 @@
 
       <p class="example__total">Затраты на питание: 15 000 РУБ.</p>
       <picture>
+        <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/example/cat-before@1x.webp 1x, images/example/cat-before@2x.webp 2x">
+        <source width="280" height="256" type="image/webp" srcset="images/example/cat-mobile-before@1x.webp 1x, images/example/cat-mobile-before@2x.webp 2x">
         <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/example/cat-before@1x.png 1x, images/example/cat-before@2x.png 2x">
         <img class="example__picture" src="images/example/cat-mobile-before@1x.png" srcset="images/example/cat-mobile-before@2x.png 2x" width="280" height="256" alt="Кот до похудения">
       </picture>
@@ -117,6 +122,8 @@
         <span class="visually-hidden">Изменить изображение кота.</span>
       </button>
       <picture>
+        <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/example/cat-after@1x.webp 1x, images/example/cat-after@2x.webp 2x">
+        <source width="280" height="256" type="image/webp" srcset="images/example/cat-mobile-after@1x.webp 1x, images/example/cat-mobile-after@2x.webp 2x">
         <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/example/cat-after@1x.png 1x, images/example/cat-after@2x.png 2x">
         <img class="example__picture" src="images/example/cat-mobile-after@1x.png" srcset="images/example/cat-mobile-after@2x.png 2x" width="280" height="256" alt="Кот до похудения">
       </picture>
