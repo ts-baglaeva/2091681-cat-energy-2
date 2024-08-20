@@ -1,28 +1,5 @@
 /* здесь подключите шрифты */
 
-$primary-font: "Oswald", "Arial", sans-serif;
-$secondary-font: "Lato", "Arial", sans-serif;
+@include font-face("Lato", url("../../fonts/lato/Lato-Regular.woff2") format("woff2"));
+@include font-face("Oswald", url("../../fonts/oswald/oswaldregular.woff2") format("woff2"));
 
-
-@include font-face("Oswald", url("../../fonts/oswald/oswaldregular.woff2") format("woff2"), url("../../fonts/oswald/oswaldregular.woff") format("woff"));
-@include font-face("Lato", url("../../fonts/lato/Lato-Regular.woff2") format("woff2"),
-url("../../fonts/lato/Lato-Regular.woff") format("woff"));
-
-
-/* Не забыть удалить после правильного подключения шрифтов
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2"), url("../../fonts/oswald/oswaldregular.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../../fonts/lato/Lato-Regular.woff2") format("woff2"), url("../../fonts/lato/Lato-Regular.woff") format("woff");
-  font-display: swap;
-} */
