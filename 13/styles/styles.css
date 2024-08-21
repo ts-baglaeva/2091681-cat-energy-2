@@ -24,17 +24,168 @@ body {
   line-height: 20px;
 }
 
-/* BLOCKS */
-.navigation__list {
-  list-style: none;
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-.navigation__link {
-  font-family: "Lato", sans-serif;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* BLOCKS */
+.navigation {
+  display: flex;
+}
+
+.navigation__toggle {
+  width: 24px;
+  height: 16px;
+}
+
+.navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation__item {
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
-  text-transform: uppercase;
   text-decoration: none;
+  text-transform: uppercase;
+  list-style: none;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .navigation__item {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+@media (min-width: 1440px) {
+  .navigation__item {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.navigation__link {
   color: #000000;
+  text-decoration: none;
+}
+@media (min-width: 1440px) {
+  .navigation__link {
+    color: #ffffff;
+  }
+}
+
+.hero {
+  background-image: url("../images/hero/hero-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  /* background-color: $$main-color; */
+}
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/hero/hero-background-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    background-image: none;
+  }
+}
+@media (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: none;
+  }
+}
+@media (min-width: 1440px) {
+  .hero {
+    background-image: url("../images/hero/hero-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
+@media (min-width: 1440px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/hero/hero-background-desktop@2x.jpg");
+    background-size: 50% auto;
+  }
+}
+
+.hero__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: #ffffff;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    text-align: start;
+  }
+}
+
+.hero__intro {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .hero__intro {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-align: start;
+  }
+}
+
+.button {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #68b738;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  width: 100%;
+  display: block;
+}
+@media (min-width: 768px) {
+  .button {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 14px 26px;
+    display: inline;
+  }
+}
+@media (min-width: 1440px) {
+  .button {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 14px 26px;
+    display: inline;
+  }
 }
