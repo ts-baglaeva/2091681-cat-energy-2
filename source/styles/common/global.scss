@@ -6,3 +6,9 @@ body {
   font-size: 20px;
   line-height: 20px;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
