@@ -1,3 +1,7 @@
 .contacts {
 
 }
+
+.contacts__address {
+  @include flex;
+}

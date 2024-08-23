@@ -1,3 +1,11 @@
 .programs {
 
 }
+
+.programs__list {
+  @include flex;
+}
+
+.programs__item {
+  list-style: none;
+}

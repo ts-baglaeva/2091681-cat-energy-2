@@ -1,3 +1,35 @@
 .works {
 
 }
+
+.works__title {
+  @include font;
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.works__list {
+
+}
+
+.works__item {
+  list-style: none;
+}
+
+.work-item__description {
+  @include font;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

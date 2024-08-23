@@ -1,3 +1,36 @@
 .main-footer {
 
 }
+
+.main-footer__socials-list {
+  @include flex;
+  justify-content: center;
+}
+
+.main-footer__socials-item {
+  list-style: none;
+}
+
+.main-footer__socials-link {
+  display: block;
+  width: 28px;
+  height: 22px;
+
+  &--vkontakte {
+    background-image: url("../../images/socials/vkontakte.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--youtube {
+    background-image: url("../../images/socials/youtube.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--telegram {
+    background-image: url("../../images/socials/telegram.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

@@ -1,5 +1,5 @@
 .navigation {
-  display: flex;
+  @include flex;
 }
 
 .navigation__toggle {
@@ -8,27 +8,22 @@
 }
 
 .navigation__list {
-  display: flex;
-  flex-wrap: wrap;
+  @include flex;
 }
 
 .navigation__item {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 20px;
+  @include font;
   text-decoration: none;
   text-transform: uppercase;
   list-style: none;
   padding: 10px;
 
-
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
   }
