@@ -1,3 +1,31 @@
 .products {
 
 }
+
+.products__title {
+  @include font;
+  font-size: 36px;
+  line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: start;
+  }
+}
+
+.products__list {
+  @include flex;
+
+  @media (min-width: $tablet-width) {
+    gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 80px;
+  }
+}
+
+.products__item {
+  list-style: none;
+}
