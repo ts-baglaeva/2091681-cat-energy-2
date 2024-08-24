@@ -1,4 +1,4 @@
-.product-card {
+/* .product-card {
 
 }
 
@@ -8,12 +8,10 @@
 
 .product-card__image{
 
-}
+} */
 
 .product-card__link {
   text-decoration: none;
-  Cat Energy PRO
-500 г
 }
 
 .product-card__subtitle {
@@ -24,28 +22,44 @@
   color: $third-dark-grey;
 
   @media (min-width: $tablet-width) {
+    font-size: 20px;
     line-height: 24px;
     text-align: right;
-    width: 135px;
   }
 }
 
 .product-card__list {
-
+  list-style: none;
+  padding: 0;
 }
 
 .product-card__item {
-
+  @include flex;
 }
 
-.product-card__name{
-
-}
-
+.product-card__name,
 .product-card__value {
+  @include font;
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 16px;
+  color: $dark-grey;
 
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .product-card__button {
 
+  min-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 169px;
+  }
 }

@@ -1,5 +1,7 @@
 .main-header {
-  //position: absolute;
+  @include flex;
+  position: absolute;
+  width: 100%;
 }
 
 .main-header__logo {

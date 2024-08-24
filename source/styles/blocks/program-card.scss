@@ -2,9 +2,9 @@
   background-color: #f2f2f2;
 }
 
-.program-card__img {
-  width: 100%;
-}
+/* .program-card__img {
+
+} */
 
 .program-card__title {
   @include font;
@@ -30,6 +30,7 @@
     line-height: 24px;
   }
 }
+
 
 .program-card__link {
   @include font;
