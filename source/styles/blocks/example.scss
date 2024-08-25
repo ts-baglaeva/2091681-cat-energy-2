@@ -18,7 +18,7 @@
   font-family: $primary-font;
   font-size: 14px;
   line-height: 18px;
-  color: $dark-grey;
+  color: $secondary-color;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -28,6 +28,7 @@
 
 .example__list {
   @include flex;
+  padding: 0;
 }
 
 .example__item {
@@ -52,6 +53,7 @@
   font-size: 12px;
   line-height: 12px;
   text-align: center;
+  color: $secondary-color;
 
   @media (min-width: $tablet-width) {
     font-size: 14px;

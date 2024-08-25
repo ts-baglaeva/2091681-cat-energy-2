@@ -30,7 +30,7 @@
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px;
-  color: #000000;
+  color: $primary-color;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -38,11 +38,11 @@
     line-height: 24px;
 
     &--active {
-      border-bottom: 2px solid $basic-color;
+      border-bottom: 2px solid $first-bg-color;
     }
 
     &--index-active {
-      border-bottom: 2px solid $basic-color;
+      border-bottom: 2px solid $first-bg-color;
     }
   }
 
@@ -51,12 +51,12 @@
     line-height: 30px;
 
     &--index {
-      color: #ffffff;
+      color: $main-color;
     }
 
     &--index-active {
-      color: #ffffff;
-      border-bottom: 2px solid $secondary-color;
+      color: $main-color;
+      border-bottom: 2px solid $main-color;
     }
   }
 }

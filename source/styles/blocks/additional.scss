@@ -1,3 +1,58 @@
 .additional {
 
 }
+
+.additional__title {
+  @include font;
+  font-size: 24px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.additional__list {
+  list-style: none;
+}
+
+.additional__item {
+  @include flex;
+}
+
+.additional__subtitle {
+  @include font;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $quaternary-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.additional__name,
+.additional__value {
+  @include font;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 14px;
+  color: $secondary-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.additional__button {
+  border: none;
+}

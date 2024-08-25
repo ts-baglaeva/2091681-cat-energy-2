@@ -19,12 +19,12 @@
   font-size: 16px;
   text-transform: uppercase;
   text-align: left;
-  color: $third-dark-grey;
+  color: $quaternary-color;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
-    text-align: right;
+    text-align: center;
   }
 }
 
@@ -43,11 +43,25 @@
   font-family: $primary-font;
   font-size: 12px;
   line-height: 16px;
-  color: $dark-grey;
+  color: $secondary-color;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
+  }
+}
+
+.product-card__text {
+  @include font;
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 16px;
+  color: $secondary-color;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 

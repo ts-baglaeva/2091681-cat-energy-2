@@ -2,7 +2,7 @@
   background-image: url("../../images/hero/hero-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top;
-  background-color: linear-gradient(180deg, #68b738 0%, #68b738 63%, #ffffff 63%, #ffffff);
+  background-color: linear-gradient(180deg, $first-bg-color 0%, $first-bg-color 63%, $main-color 63%, $main-color);
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../images/hero/hero-background-mobile@2x.jpg");
@@ -21,7 +21,7 @@
     background-image: url("../../images/hero/hero-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: right;
-    background-color: linear-gradient(270deg, #68b738 0%, #68b738 50%, #ffffff 50%, #ffffff);
+    background-color: linear-gradient(270deg, $first-bg-color 0%, $first-bg-color 50%, $main-color 50%, $main-color);
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../images/hero/hero-background-desktop@2x.jpg");
@@ -34,7 +34,7 @@
   @include font;
   font-size: 36px;
   line-height: 36px;
-  color: #ffffff;
+  color: $main-color;
   text-align: center;
   padding-top: 92px;
   margin: 0;
@@ -42,7 +42,7 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    color: #000000;
+    color: $primary-color;
     text-align: start;
   }
 }
@@ -51,14 +51,14 @@
   @include font;
   font-size: 14px;
   line-height: 14px;
-  color: #ffffff;
+  color: $main-color;
   text-align: center;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    color: #000000;
+    color: $primary-color;
     text-align: start;
   }
 }

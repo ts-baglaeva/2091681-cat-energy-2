@@ -1,15 +1,17 @@
 .main-footer {
-
+  @include flex;
 }
 
 .main-footer__socials-list {
   @include flex;
   justify-content: center;
+  list-style: none;
+  padding: 0;
 }
 
-.main-footer__socials-item {
-  list-style: none;
-}
+/* .main-footer__socials-item {
+
+} */
 
 .main-footer__socials-link {
   display: block;
@@ -33,4 +35,9 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+
+.main-footer__logo-academy {
+  @include flex;
+  text-decoration: none;
 }
