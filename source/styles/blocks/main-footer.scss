@@ -1,5 +1,6 @@
 .main-footer {
   @include flex;
+  background-color: $second-bg-color;
 }
 
 .main-footer__socials-list {

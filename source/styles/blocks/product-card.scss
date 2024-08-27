@@ -1,8 +1,14 @@
-/* .product-card {
+.product-card {
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 16%, #f2f2f2 16%, #f2f2f2 100%);
+  }
 
+  &--more {
+    background: none;
+  }
 }
 
-.product-card__link-image {
+/* .product-card__link-image {
 
 }
 
@@ -13,6 +19,7 @@
 .product-card__link {
   text-decoration: none;
 }
+
 
 .product-card__subtitle {
   @include font;

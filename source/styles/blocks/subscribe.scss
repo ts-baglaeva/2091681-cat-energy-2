@@ -1,3 +1,47 @@
 .subscribe {
 
 }
+
+.subscribe__title {
+  @include font;
+  font-size: 24px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.subscribe__description {
+  @include font;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.subscribe__field {
+  @include font;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $secondary-color;
+  border: 1px solid $border-color;
+
+  &::placeholder {
+    color: $secondary-color;
+  }
+}
+
+
+.button--subscribe {
+  border: none;
+}

@@ -1,5 +1,5 @@
 .additional {
-
+  @include flex;
 }
 
 .additional__title {
@@ -55,4 +55,60 @@
 
 .additional__button {
   border: none;
+}
+
+.additional__banner {
+  display: block;
+  width: 280px;
+  min-height: 290px;
+  background-image: url("../../images/additional/additional-banner-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-color: $first-bg-color;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/additional/additional-banner-mobile@2x.jpg");
+    background-size: contain;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 707px;
+    min-height: 200px;
+    background-image: url("../../images/additional/additional-banner-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-color: $first-bg-color;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/additional/additional-banner-tablet@2x.jpg");
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    min-height: 288px;
+    background-image: url("../../images/additional/additional-banner-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-color: $first-bg-color;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/additional/additional-banner-desktop@2x.jpg");
+      background-size: contain;
+    }
+  }
+}
+
+.additional__banner-text {
+  @include font;
+  font-family: $primary-font;
+  font-size: 16px;
+  color: $main-color;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
 }
