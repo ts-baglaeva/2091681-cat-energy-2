@@ -1,6 +1,14 @@
-/* .example {
+.example {
+  background: $third-bg-color;
 
-} */
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(180deg, $main-color 0%, $main-color 57%, $third-bg-color 57%, $third-bg-color 100%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: linear-gradient(180deg, $main-color 0%, $main-color 57%, $second-bg-color 57%, $second-bg-color 100%);
+  }
+}
 
 .example__title {
   @include font;
