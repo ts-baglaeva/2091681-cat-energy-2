@@ -41,6 +41,13 @@ img {
 }
 
 /* BLOCKS */
+/* .page {
+
+}
+
+.page__body {
+
+} */
 .main-header {
   display: flex;
   flex-wrap: wrap;
@@ -50,6 +57,16 @@ img {
   width: 100%;
 }
 
+/* .main-header__logo {
+
+}
+
+.main-header__navigation {
+
+} */
+/* .logo-header {
+
+} */
 .navigation {
   display: flex;
   flex-wrap: wrap;
@@ -122,6 +139,10 @@ img {
   }
 }
 
+.main-container {
+  margin: 0;
+}
+
 .hero {
   background: linear-gradient(180deg, #68b738 0%, #68b738 63%, #ffffff 63%, #ffffff);
   background-image: url("../images/hero/hero-background-mobile@1x.jpg");
@@ -172,7 +193,7 @@ img {
   line-height: 36px;
   color: #ffffff;
   text-align: center;
-  padding-top: 92px;
+  padding-top: 70px;
   margin: 0;
 }
 @media (min-width: 768px) {
@@ -280,6 +301,9 @@ img {
   }
 }
 
+/* .works {
+
+} */
 .works__title {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -322,6 +346,9 @@ img {
   }
 }
 
+/* .example {
+
+} */
 .example__title {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -455,6 +482,16 @@ img {
   }
 }
 
+/* .example__picture {
+
+}
+
+.example__curtain {
+
+} */
+/* .contacts {
+
+} */
 .contacts__address {
   display: flex;
   flex-wrap: wrap;
@@ -462,6 +499,9 @@ img {
   justify-content: space-between;
 }
 
+/* .address {
+
+} */
 .address-catalog {
   background-color: #f2f2f2;
 }
@@ -565,6 +605,13 @@ img {
   text-decoration: none;
 }
 
+.logo-footer {
+  margin: 0;
+}
+
+/* .logo-academy {
+
+} */
 .logo-academy__text {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -576,6 +623,12 @@ img {
   color: #444444;
 }
 
+/* .logo-academy__logo {
+
+} */
+/* .products {
+
+} */
 .products__title {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -584,7 +637,6 @@ img {
   color: #000000;
   font-size: 36px;
   line-height: 36px;
-  padding-top: 188px;
 }
 @media (min-width: 768px) {
   .products__title {
@@ -594,6 +646,12 @@ img {
     padding-top: 140px;
   }
 }
+@media (min-width: 768px) {
+  .products__title {
+    padding-top: 188px;
+  }
+}
+
 .products__list {
   display: flex;
   flex-wrap: wrap;
