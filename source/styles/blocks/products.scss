@@ -1,6 +1,6 @@
-.products {
+/* .products {
 
-}
+} */
 
 .products__title {
   @include font;
@@ -14,8 +14,9 @@
     padding-top: 140px;
   }
 
-  @media (min-width: $tablet-width) {}
-  padding-top: 188px;
+  @media (min-width: $tablet-width) {
+    padding-top: 188px;
+  }
 }
 
 .products__list {
