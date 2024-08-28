@@ -346,9 +346,20 @@ img {
   }
 }
 
-/* .example {
+.example {
+  background: #eaeaea;
+}
+@media (min-width: 768px) {
+  .example {
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 57%, #eaeaea 57%, #eaeaea 100%);
+  }
+}
+@media (min-width: 1440px) {
+  .example {
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 57%, #f2f2f2 57%, #f2f2f2 100%);
+  }
+}
 
-} */
 .example__title {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
