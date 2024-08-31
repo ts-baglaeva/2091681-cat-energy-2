@@ -14,11 +14,37 @@
 }
 
 .works__list {
+  @include flex;
+  counter-reset: item;
+  list-style: none;
   padding: 0;
 }
 
 .works__item {
-  list-style: none;
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 230px;
+    min-height: 280px;
+    outline: 2px solid red;
+    position: relative;
+  }
+}
+
+.works__item::before {
+  outline: 2px solid green;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+
+  @media (min-width: $tablet-width) {
+    counter-increment: item;
+    content: counter(item);
+
+    @include font;
+    font-size: 280px;
+    line-height: 280px;
+    color: $second-bg-color;
+  }
 }
 
 .work-item__description {
