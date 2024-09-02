@@ -188,8 +188,6 @@
   }
 
   &:active::after {
-    width: 32px;
-    background-image: url("../../icons/stack.svg#big-arrow");
     opacity: 0.3;
   }
 
