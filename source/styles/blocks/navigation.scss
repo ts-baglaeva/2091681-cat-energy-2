@@ -1,0 +1,73 @@
+.navigation {
+  @include flex;
+}
+
+.navigation__toggle {
+  width: 24px;
+  height: 16px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.navigation__list {
+  @include flex;
+  padding: 0;
+  list-style: none;
+}
+
+/* .navigation__item {
+
+} */
+
+.navigation__link {
+  @include font;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  color: $primary-color;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+
+    &--active {
+      border-bottom: 2px solid $first-bg-color;
+    }
+
+    &--index-active {
+      border-bottom: 2px solid $first-bg-color;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    &--index {
+      color: $main-color;
+    }
+
+    &--index-active {
+      color: $main-color;
+      border-bottom: 2px solid $main-color;
+    }
+  }
+}
+
+/* Пример из Sedona
+.navigation-link-current::after {
+  position: absolute;
+  content: "";
+  right: 16px;
+  bottom: -2px;
+  left: 16px;
+  height: 2px;
+  background-color: #756257;
+} */

@@ -1,0 +1,16 @@
+.main-header {
+  @include flex;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+  }
+}
+
+/* .main-header__logo {
+
+}
+
+.main-header__navigation {
+
+} */

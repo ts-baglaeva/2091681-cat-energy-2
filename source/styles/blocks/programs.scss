@@ -1,0 +1,12 @@
+/* .programs {
+
+} */
+
+.programs__list {
+  @include flex;
+  padding: 0;
+}
+
+.programs__item {
+  list-style: none;
+}

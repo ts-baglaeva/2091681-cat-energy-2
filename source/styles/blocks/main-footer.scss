@@ -1,0 +1,44 @@
+.main-footer {
+  @include flex;
+  background-color: $second-bg-color;
+}
+
+.main-footer__socials-list {
+  @include flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+/* .main-footer__socials-item {
+
+} */
+
+.main-footer__socials-link {
+  display: block;
+  width: 28px;
+  height: 22px;
+
+  &--vkontakte {
+    background-image: url("../../images/socials/vkontakte.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--youtube {
+    background-image: url("../../images/socials/youtube.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--telegram {
+    background-image: url("../../images/socials/telegram.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.main-footer__logo-academy {
+  @include flex;
+  text-decoration: none;
+}
