@@ -1,20 +1,150 @@
 .program-card {
-  background-color: #f2f2f2;
+  background-color: $second-bg-color;
+  position: relative;
+
+  &--weight-loss {
+    &::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      display: block;
+      background-color: $first-bg-color;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: 5px;
+    }
+
+    &::after {
+      content: "";
+      width: 36px;
+      height: 50px;
+      display: block;
+      background-image: url("../../icons/stack.svg#weight-loss");
+      background-size: 36px 50px;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 5px;
+      left: 10px;
+    }
+  }
+
+  &--weight-gain {
+    &::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      display: block;
+      background-color: $first-bg-color;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: 5px;
+    }
+
+    &::after {
+      content: "";
+      width: 67px;
+      height: 28px;
+      display: block;
+      background-image: url("../../icons/stack.svg#weight-gain");
+      background-size: 67px 28px;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 15px;
+      left: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--weight-loss {
+      &::before {
+        width: 200px;
+        height: 200px;
+        top: 10px;
+        left: 600px;
+      }
+
+      &::after {
+        width: 200px;
+        height: 211px;
+        background-size: 140px 194px;
+        top: 0;
+        left: 630px;
+      }
+    }
+
+    &--weight-gain {
+      &::before {
+        width: 200px;
+        height: 200px;
+        top: 10px;
+        left: 605px;
+      }
+
+      &::after {
+        width: 268px;
+        height: 200px;
+        background-size: 268px 112px;
+        top: 50px;
+        left: 550px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--weight-loss {
+      &::before {
+        width: 100px;
+        height: 100px;
+        top: 10px;
+        left: 0;
+      }
+
+      &::after {
+        width: 100px;
+        height: 106px;
+        background-size: 70px 97px;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &--weight-gain {
+      &::before {
+        width: 100px;
+        height: 100px;
+        top: 10px;
+        left: 0;
+      }
+
+      &::after {
+        width: 134px;
+        height: 100px;
+        background-size: 134px 56px;
+        top: 15px;
+        left: 0;
+      }
+    }
+  }
 }
 
-/* .program-card__img {
-
-} */
 
 .program-card__title {
   @include font;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  padding-left: 90px;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    padding-left: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 214px;
   }
 }
 
@@ -24,6 +154,7 @@
   font-size: 14px;
   line-height: 18px;
   color: $secondary-color;
+
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -38,9 +169,37 @@
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 24px;
+    height: 12px;
+    display: block;
+    background-image: url("../../icons/stack.svg#small-arrow");
+    position: absolute;
+    left: 98px;
+    bottom: 7px;
+  }
+
+  &:hover::after {
+    width: 32px;
+    background-image: url("../../icons/stack.svg#big-arrow");
+  }
+
+  &:active::after {
+    width: 32px;
+    background-image: url("../../icons/stack.svg#big-arrow");
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+
+    &::after {
+      left: 133px;
+      bottom: 10px;
+    }
   }
 }

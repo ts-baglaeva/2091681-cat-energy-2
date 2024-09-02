@@ -16,11 +16,18 @@
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo logo-header" href="#">
-      <img class="logo-header__logo-image" src="images/logo/logo-pic-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
-      <img class="logo-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип магазина Кэт энерджи.">
+      <picture>
+        <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo-pic-desktop.svg">
+        <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-pic-tablet.svg">
+        <img class="logo-header__logo-image" src="images/logo/logo-pic-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
+      </picture>
+      <picture>
+        <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo-text.svg">
+        <img class="logo-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип магазина Кэт энерджи.">
+      </picture>
     </a>
     <nav class="main-header__navigation navigation">
-      <button class="navigation__toggle" type="button">
+      <button class="navigation__toggle navigation__toggle--opened navigation__toggle--closed" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="navigation__list">
@@ -63,14 +70,12 @@
     <section class="programs">
       <h2 class="visually-hidden">Программы.</h2>
       <ul class="programs__list">
-        <li class="programs__item program-card">
-          <img class="program-card__img" src="images/programs/weight-loss.svg" width="50" height="53" alt="Стройный кот">
+        <li class="programs__item program-card program-card--weight-loss">
           <h3 class="program-card__title">Похудение</h3>
           <p class="program-card__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="program-card__link" href="#">Каталог slim</a>
         </li>
-        <li class="programs__item program-card">
-          <img class="program-card__img" src="images/programs/weight-gain.svg" width="67" height="50" alt="Мускулистый кот">
+        <li class="programs__item program-card program-card--weight-gain">
           <h3 class="program-card__title">Набор массы</h3>
           <p class="program-card__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="program-card__link" href="#">Каталог pro</a>

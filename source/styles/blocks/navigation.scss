@@ -4,7 +4,8 @@
 
 .navigation__toggle {
   width: 24px;
-  height: 16px;
+  height: 24px;
+  border: none;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -12,6 +13,16 @@
 
   @media (min-width: $desktop-width) {
     display: none;
+  }
+
+  &--opened {
+    background-color: transparent;
+    background-image: url("../../icons/stack.svg#menu-open-mobile");
+  }
+
+  &--closed {
+    background-color: transparent;
+    background-image: url("../../icons/stack.svg#menu-close-mobile");
   }
 }
 
