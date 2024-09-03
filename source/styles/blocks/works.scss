@@ -25,13 +25,11 @@
     display: block;
     width: 230px;
     min-height: 280px;
-    outline: 2px solid red;
     position: relative;
   }
 }
 
 .works__item::before {
-  outline: 2px solid green;
   position: absolute;
   right: 0;
   z-index: -1;
