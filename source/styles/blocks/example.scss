@@ -105,36 +105,67 @@
   }
 }
 
-.example__picture {
-  object-fit: contain;
-}
-
-
-.example__curtain {
-  background-color: #000000;
-}
-
-
-/* ::after {
-    outline: 1px solid green;
-    content: "";
-    width: 4px;
-    height: 256px;
-    display: block;
-    background-color: $curtain-color;
-    border-radius: 2px;
-  }
-
-  ::before {
-    content: "";
-    outline: 1px solid red;
-    width: 40px;
-    height: 256px;
-    background-color: none;
-    background-image: url("../../icons/stack.svg#curtain");
-  }
+.example__picture-slider {
+  min-width: 280px;
+  min-height: 256px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
-    height: 512px;
-  } */
+    min-width: 560px;
+    min-height: 512px;
+  }
+}
 
+/* .example__picture-wraper {
+  position: absolute;
+} */
+
+.example__button {
+  cursor: pointer;
+  background-color: $condition-color;
+  border: none;
+  border-radius: 2px;
+  width: 4px;
+  height: 100%;
+  display: block;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 5;
+
+
+  &::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: $main-color;
+    border: 2px solid $condition-color;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: $condition-color;
+    mask-image: url("../../icons/stack.svg#curtain");
+    mask-repeat: no-repeat;
+    mask-size: 24px 18px;
+    mask-position: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover::after {
+    background-color: aqua;
+  }
+}

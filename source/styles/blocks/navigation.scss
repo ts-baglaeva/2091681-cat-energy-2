@@ -18,11 +18,13 @@
   &--opened {
     background-color: transparent;
     background-image: url("../../icons/stack.svg#menu-open-mobile");
+    display: none;
   }
 
   &--closed {
     background-color: transparent;
     background-image: url("../../icons/stack.svg#menu-close-mobile");
+    display: none;
   }
 }
 

@@ -21,10 +21,7 @@
         <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-pic-tablet.svg">
         <img class="logo-header__logo-image" src="images/logo/logo-pic-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
       </picture>
-      <picture>
-        <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo-text.svg">
-        <img class="logo-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип магазина Кэт энерджи.">
-      </picture>
+      <img class="logo-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип магазина Кэт энерджи.">
     </a>
     <nav class="main-header__navigation navigation">
       <button class="navigation__toggle navigation__toggle--opened navigation__toggle--closed" type="button">
@@ -121,21 +118,28 @@
         <span class="example__total-value">15 000 РУБ.</span>
       </p>
 
-      <picture>
-        <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/example/cat-before@1x.webp 1x, images/example/cat-before@2x.webp 2x">
-        <source width="280" height="256" type="image/webp" srcset="images/example/cat-mobile-before@1x.webp 1x, images/example/cat-mobile-before@2x.webp 2x">
-        <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/example/cat-before@1x.png 1x, images/example/cat-before@2x.png 2x">
-        <img class="example__picture example__picture--cat-before" src="images/example/cat-mobile-before@1x.png" srcset="images/example/cat-mobile-before@2x.png 2x" width="280" height="256" alt="Кот до похудения">
-      </picture>
-      <button class="example__curtain" type="button">
-        <span class="visually-hidden">Изменить изображение кота.</span>
-      </button>
-      <picture>
-        <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/example/cat-after@1x.webp 1x, images/example/cat-after@2x.webp 2x">
-        <source width="280" height="256" type="image/webp" srcset="images/example/cat-mobile-after@1x.webp 1x, images/example/cat-mobile-after@2x.webp 2x">
-        <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/example/cat-after@1x.png 1x, images/example/cat-after@2x.png 2x">
-        <img class="example__picture example__picture--cat-after" src="images/example/cat-mobile-after@1x.png" srcset="images/example/cat-mobile-after@2x.png 2x" width="280" height="256" alt="Кот до похудения">
-      </picture>
+      <div class="example__picture-slider">
+        <div class="example__picture-wraper example__picture-wraper--before">
+          <picture>
+            <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/example/cat-before@1x.webp 1x, images/example/cat-before@2x.webp 2x">
+            <source width="280" height="256" type="image/webp" srcset="images/example/cat-mobile-before@1x.webp 1x, images/example/cat-mobile-before@2x.webp 2x">
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/example/cat-before@1x.png 1x, images/example/cat-before@2x.png 2x">
+            <img class="example__picture" src="images/example/cat-mobile-before@1x.png" srcset="images/example/cat-mobile-before@2x.png 2x" width="280" height="256" alt="Кот до похудения">
+          </picture>
+        </div>
+        <button class="example__button" type="button">
+          <span class="visually-hidden">Изменить изображение кота.</span>
+        </button>
+        <div class="example__picture-wraper example__picture-wraper--after">
+          <picture>
+            <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/example/cat-after@1x.webp 1x, images/example/cat-after@2x.webp 2x">
+            <source width="280" height="256" type="image/webp" srcset="images/example/cat-mobile-after@1x.webp 1x, images/example/cat-mobile-after@2x.webp 2x">
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/example/cat-after@1x.png 1x, images/example/cat-after@2x.png 2x">
+            <img class="example__picture" src="images/example/cat-mobile-after@1x.png" srcset="images/example/cat-mobile-after@2x.png 2x" width="280" height="256" alt="Кот до похудения">
+          </picture>
+        </div>
+
+      </div>
     </section>
 
     <section class="contacts">
@@ -147,13 +151,13 @@
           <p class="address__value">Санкт-Петербург</p>
         </address>
       </div>
-      <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aefe2e2002fc8f362ffb31cc2dcc5431c5e0101396b2360ad92f34b6ca8409ae1&amp;source=constructor" width="100%" height="362" style="border: 0;"></iframe>
+      <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aefe2e2002fc8f362ffb31cc2dcc5431c5e0101396b2360ad92f34b6ca8409ae1&amp;source=constructor" width="100%" height="362" style="border: 0;"></iframe>
     </section>
   </main>
 
   <footer class="main-footer">
-    <a class="main-footer__logo-link logo-footer" href="#">
-      <img class="logo-footer__logo-text" width="128" height="24" alt="Логотип «Кэт Энерджи»" src="images/logo/logo-text.svg">
+    <a class="main-footer__logo-link" href="index.html">
+      <img class="main-footer__logo" src="images/logo/logo-text.svg" width="128" height="24" alt="Логотип магазина Кэт энерджи.">
     </a>
     <ul class="main-footer__socials-list">
       <li class="main-footer__socials-item">
@@ -172,9 +176,8 @@
         </a>
       </li>
     </ul>
-    <a class="main-footer__logo-academy logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
+    <a class="main-footer__logo-academy logo-academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
       <p class="logo-academy__text">HTML Academy</p>
-      <img class="logo-academy__logo" src="images/logo/logo-html-academy.svg" width="27" height="34" alt="Логотип HTML Academy">
     </a>
   </footer>
 

@@ -5,3 +5,8 @@
 .contacts__address {
   @include flex;
 }
+
+/* Вставить изображения на случай незагрузки карты */
+.contacts__map {
+
+}

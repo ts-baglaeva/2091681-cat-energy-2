@@ -1,3 +1,13 @@
 .logo-header {
   text-decoration: none;
 }
+
+.logo-header__logo-text {
+  width: 101px;
+  height: 18px;
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
+}
