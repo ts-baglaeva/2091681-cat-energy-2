@@ -1,5 +1,7 @@
-.additional {
-  @include flex;
+.additional__wrapper {
+  @media (min-width: $desktop-width) {
+    @include flex;
+  }
 }
 
 .additional__title {
@@ -76,7 +78,19 @@
   background: linear-gradient($first-bg-color-translucent, $first-bg-color-translucent), url("../../images/additional/additional-banner-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+  position: relative;
 
+
+  &::before {
+    content: "";
+    width: 78px;
+    height: 80px;
+    display: block;
+    background-image: url("../../icons/stack.svg#gift");
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
 
   @media (min-resolution: 2dppx) {
     background: linear-gradient($first-bg-color-translucent, $first-bg-color-translucent), url("../../images/additional/additional-banner-mobile@2x.jpg");
@@ -90,6 +104,12 @@
     background-repeat: no-repeat;
     background-size: contain;
 
+    &::before {
+      background-size: 80px 83px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
 
     @media (min-resolution: 2dppx) {
       background: linear-gradient($first-bg-color-translucent, $first-bg-color-translucent), url("../../images/additional/additional-banner-tablet@2x.jpg");
@@ -104,6 +124,11 @@
     background-repeat: no-repeat;
     background-size: contain;
 
+    &::before {
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+    }
 
     @media (min-resolution: 2dppx) {
       background: linear-gradient($first-bg-color-translucent, $first-bg-color-translucent), url("../../images/additional/additional-banner-desktop@2x.jpg");

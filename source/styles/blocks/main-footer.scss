@@ -56,6 +56,10 @@
     mask-repeat: no-repeat;
     mask-position: center;
   }
+
+  &:hover::before {
+    background-color: aqua;
+  }
 }
 
 .main-footer__logo-academy {
@@ -64,6 +68,7 @@
 
 .logo-academy__text {
   position: relative;
+  padding-right: 100px;
 
   &::after {
     content: "";
@@ -79,7 +84,11 @@
     mask-repeat: no-repeat;
     mask-position: center;
     position: absolute;
-    top: 50px;
-    left: 20px;
+    top: 0;
+    left: 140px;
+  }
+
+  &:hover::after {
+    background-color: aqua;
   }
 }

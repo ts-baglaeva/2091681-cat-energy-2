@@ -4,7 +4,16 @@
   }
 
   &--more {
-    background: none;
+    background-color: none;
+    background-image: url("../../icons/stack.svg#small-plus");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 30px 30px;
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../../icons/stack.svg#big-plus");
+      background-size: 60px 60px;
+    }
   }
 }
 

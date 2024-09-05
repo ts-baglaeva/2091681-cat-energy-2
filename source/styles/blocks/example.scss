@@ -165,6 +165,14 @@
     transform: translate(-50%, -50%);
   }
 
+  &:hover {
+    background-color: aqua;
+  }
+
+  &:hover::before {
+    border-color: aqua;
+  }
+
   &:hover::after {
     background-color: aqua;
   }

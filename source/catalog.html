@@ -15,7 +15,11 @@
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo logo-header" href="#">
-      <img class="logo-header__logo-image" src="images/logo/logo-pic-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
+      <picture>
+        <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo-pic-desktop.svg">
+        <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-pic-tablet.svg">
+        <img class="logo-header__logo-image" src="images/logo/logo-pic-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
+      </picture>
       <img class="logo-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип магазина Кэт энерджи.">
     </a>
     <nav class="main-header__navigation navigation">
@@ -266,9 +270,6 @@
         </li>
 
         <li class="products__item product-card product-card--more">
-          <a class="product-card__link-image" href="#">
-            <img class="product-card__image" src="images/icons/plus-mobile.svg" width="30" height="30" alt="Плюс">
-          </a>
           <a class="product-card__link" href="#">
             <h3 class="product-card__subtitle">Показать еще 100500 товаров</h3>
           </a>
@@ -280,34 +281,36 @@
 
     <section class="additional">
       <h2 class="additional__title">Дополнительные товары</h2>
-      <ul class="additional__list">
-        <li class="additional__item">
-          <h3 class="additional__subtitle">Сахарозаменитель</h3>
-          <span class="additional__name">1 упаковка (100 г)</span>
-          <span class="additional__value">200 ₽</span>
-          <button class="additional__button button" type="button">Заказать</button>
-        </li>
-        <li class="additional__item">
-          <h3 class="additional__subtitle">Питьевая вода</h3>
-          <span class="additional__name">1 литр</span>
-          <span class="additional__value">100 ₽</span>
-          <button class="additional__button button" type="button">Заказать</button>
-        </li>
-        <li class="additional__item">
-          <h3 class="additional__subtitle">Молоко</h3>
-          <span class="additional__name">1 упаковка (100 г)</span>
-          <span class="additional__value">200 ₽</span>
-          <button class="additional__button button" type="button">Заказать</button>
-        </li>
-        <li class="additional__item">
-          <h3 class="additional__subtitle">Витамины</h3>
-          <span class="additional__name">1 упаковка (30 г)</span>
-          <span class="additional__value">300 ₽</span>
-          <button class="additional__button button" type="button">Заказать</button>
-        </li>
-      </ul>
-      <div class="additional__banner">
-        <p class="additional__banner-text">Закажите все и получите чехол для кота в подарок!</p>
+      <div class="additional__wrapper">
+        <ul class="additional__list">
+          <li class="additional__item">
+            <h3 class="additional__subtitle">Сахарозаменитель</h3>
+            <span class="additional__name">1 упаковка (100 г)</span>
+            <span class="additional__value">200 ₽</span>
+            <button class="additional__button button" type="button">Заказать</button>
+          </li>
+          <li class="additional__item">
+            <h3 class="additional__subtitle">Питьевая вода</h3>
+            <span class="additional__name">1 литр</span>
+            <span class="additional__value">100 ₽</span>
+            <button class="additional__button button" type="button">Заказать</button>
+          </li>
+          <li class="additional__item">
+            <h3 class="additional__subtitle">Молоко</h3>
+            <span class="additional__name">1 упаковка (100 г)</span>
+            <span class="additional__value">200 ₽</span>
+            <button class="additional__button button" type="button">Заказать</button>
+          </li>
+          <li class="additional__item">
+            <h3 class="additional__subtitle">Витамины</h3>
+            <span class="additional__name">1 упаковка (30 г)</span>
+            <span class="additional__value">300 ₽</span>
+            <button class="additional__button button" type="button">Заказать</button>
+          </li>
+        </ul>
+        <div class="additional__banner">
+          <p class="additional__banner-text">Закажите все и получите чехол для кота в подарок!</p>
+        </div>
       </div>
     </section>
 
@@ -337,8 +340,8 @@
   </main>
 
   <footer class="main-footer">
-    <a class="main-footer__logo-link logo-footer" href="#">
-      <img class="logo-footer__logo-text" width="128" height="24" alt="Логотип «Кэт Энерджи»" src="images/logo/logo-text.svg">
+    <a class="main-footer__logo-link" href="index.html">
+      <img class="main-footer__logo" src="images/logo/logo-text.svg" width="128" height="24" alt="Логотип магазина Кэт энерджи.">
     </a>
     <ul class="main-footer__socials-list">
       <li class="main-footer__socials-item">
@@ -357,11 +360,11 @@
         </a>
       </li>
     </ul>
-    <a class="main-footer__logo-academy logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
+    <a class="main-footer__logo-academy logo-academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
       <p class="logo-academy__text">HTML Academy</p>
-      <img class="logo-academy__logo" src="images/logo/logo-html-academy.svg" width="27" height="34" alt="Логотип HTML Academy">
     </a>
   </footer>
+
 </body>
 
 </html>

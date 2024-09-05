@@ -21,6 +21,7 @@
 
 .products__list {
   @include flex;
+  justify-content: flex-start;
 
   @media (min-width: $tablet-width) {
     gap: 60px;
