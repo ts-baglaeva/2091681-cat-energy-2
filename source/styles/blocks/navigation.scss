@@ -1,6 +1,6 @@
-.navigation {
+/* .navigation {
 
-}
+} */
 
 .navigation__toggle {
   width: 24px;
@@ -32,8 +32,14 @@
   padding: 0;
   list-style: none;
 
+  @include flex;
+  flex-direction: column;
+  align-items: center;
+
+
   @media (min-width: $tablet-width) {
     @include flex;
+    flex-direction: row;
   }
 }
 
@@ -49,16 +55,24 @@
   color: $primary-color;
   text-align: center;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
 
     &--active {
-      border-bottom: 2px solid $first-bg-color;
+      border-bottom: 2px solid $corporate;
     }
 
     &--index-active {
-      border-bottom: 2px solid $first-bg-color;
+      border-bottom: 2px solid $corporate;
     }
   }
 

@@ -1,11 +1,34 @@
 .main-footer {
   @include flex;
+  flex-direction: column;
+  align-items: center;
   background-color: $second-bg-color;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .main-footer__logo {
-  width: 200px;
-  height: 100px;
+  padding: 20px;
+
+  &::before {
+    content: "";
+    width: 128px;
+    height: 24px;
+    display: block;
+    background-color: $tertiary-color;
+    mask-image: url("../../icons/stack.svg#logo-text");
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    background-color: $tertiary-focus;
+  }
+
+  &:active::before {
+    background-color: $tertiary-active;
+  }
 }
 
 .main-footer__socials-list {
@@ -23,6 +46,15 @@
   display: block;
   width: 28px;
   height: 22px;
+
+  &:hover::before,
+  &:focus-visible::before {
+    background-color: $corporate;
+  }
+
+  &:active::before {
+    background-color: $corporate-active;
+  }
 
   &--vkontakte::before {
     content: "";
@@ -56,10 +88,6 @@
     mask-repeat: no-repeat;
     mask-position: center;
   }
-
-  &:hover::before {
-    background-color: aqua;
-  }
 }
 
 .main-footer__logo-academy {
@@ -88,7 +116,12 @@
     left: 140px;
   }
 
-  &:hover::after {
-    background-color: aqua;
+  &:hover::after,
+  &:focus-visible::after {
+    background-color: $corporate;
+  }
+
+  &:active::after {
+    background-color: rgba($corporate, 0.5);
   }
 }

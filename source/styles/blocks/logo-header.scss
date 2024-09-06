@@ -1,10 +1,20 @@
 .logo-header {
   text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo-header__logo-text {
   width: 101px;
   height: 18px;
+
 
   @media (min-width: $desktop-width) {
     width: 118px;

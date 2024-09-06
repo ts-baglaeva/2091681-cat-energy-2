@@ -32,7 +32,19 @@
   line-height: 30px;
   text-transform: uppercase;
   color: $secondary-color;
-  border: 1px solid $border-color;
+  border: 1px solid $border-color-light;
+
+  &:hover {
+    border-color: $border-color;
+  }
+
+  &:focus-visible {
+    border-color: $secondary-color;
+  }
+
+  &::invalid {
+    border-color: #ff8282;
+  }
 
   &::placeholder {
     color: $secondary-color;
