@@ -1,12 +1,12 @@
 .example {
-  background: $third-bg-color;
+  background: $bg-dark;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(180deg, $main-color 0%, $main-color 57%, $third-bg-color 57%, $third-bg-color 100%);
+    background: linear-gradient(180deg, $main-color 0%, $main-color 57%, $bg-dark 57%, $bg-dark 100%);
   }
 
   @media (min-width: $desktop-width) {
-    background: linear-gradient(180deg, $main-color 0%, $main-color 57%, $second-bg-color 57%, $second-bg-color 100%);
+    background: linear-gradient(180deg, $main-color 0%, $main-color 57%, $bg-color 57%, $bg-color 100%);
   }
 }
 
@@ -122,7 +122,7 @@
 
 .example__button {
   cursor: pointer;
-  background-color: $condition-color;
+  background-color: $link-color;
   border: none;
   border-radius: 2px;
   width: 4px;
@@ -140,7 +140,7 @@
     width: 40px;
     height: 40px;
     background-color: $main-color;
-    border: 2px solid $condition-color;
+    border: 2px solid $link-color;
     border-radius: 50%;
     box-sizing: border-box;
     position: absolute;
@@ -153,7 +153,7 @@
     content: "";
     width: 40px;
     height: 40px;
-    background-color: $condition-color;
+    background-color: $link-color;
     mask-image: url("../../icons/stack.svg#curtain");
     mask-repeat: no-repeat;
     mask-size: 24px 18px;
@@ -171,7 +171,7 @@
   }
 
   &:active {
-    background-color: $corporate-active;
+    background-color: rgba($corporate, 0.3);
   }
 
   &:hover::before,
@@ -180,7 +180,7 @@
   }
 
   &:active::before {
-    border-color: $corporate-active;
+    border-color: rgba($corporate, 0.3);
   }
 
   &:hover::after,
@@ -189,6 +189,6 @@
   }
 
   &:active::after {
-    background-color: $corporate-condition-active;
+    background-color: rgba($button-active, 0.6);
   }
 }

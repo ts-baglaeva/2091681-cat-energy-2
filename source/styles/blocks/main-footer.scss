@@ -2,7 +2,7 @@
   @include flex;
   flex-direction: column;
   align-items: center;
-  background-color: $second-bg-color;
+  background-color: $bg-color;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -17,17 +17,17 @@
     width: 128px;
     height: 24px;
     display: block;
-    background-color: $tertiary-color;
+    background-color: $add-color;
     mask-image: url("../../icons/stack.svg#logo-text");
   }
 
   &:hover::before,
   &:focus-visible::before {
-    background-color: $tertiary-focus;
+    background-color: $add-focus;
   }
 
   &:active::before {
-    background-color: $tertiary-active;
+    background-color: $add-focus;
   }
 }
 
@@ -53,7 +53,7 @@
   }
 
   &:active::before {
-    background-color: $corporate-active;
+    background-color: rgba($corporate, 0.3);
   }
 
   &--vkontakte::before {
@@ -61,7 +61,7 @@
     width: 28px;
     height: 22px;
     display: block;
-    background-color: $condition-color;
+    background-color: $link-color;
     mask-image: url("../../icons/stack.svg#vkontakte");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -72,7 +72,7 @@
     width: 28px;
     height: 22px;
     display: block;
-    background-color: $condition-color;
+    background-color: $link-color;
     mask-image: url("../../icons/stack.svg#youtube");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -83,7 +83,7 @@
     width: 28px;
     height: 22px;
     display: block;
-    background-color: $condition-color;
+    background-color: $link-color;
     mask-image: url("../../icons/stack.svg#telegram");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -106,7 +106,7 @@
 
     @include flex;
     text-decoration: none;
-    background-color: $condition-color;
+    background-color: $link-color;
     mask-image: url("../../icons/stack.svg#logo-html-academy");
     mask-size: 27px 34px;
     mask-repeat: no-repeat;

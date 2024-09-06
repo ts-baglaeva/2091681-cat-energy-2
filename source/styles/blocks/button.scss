@@ -13,23 +13,23 @@
 
   &:hover,
   &:focus-visible {
-    background-color: $corporate-condition;
+    background-color: $button-active;
   }
 
   &:active {
-    color: $main-color-transparent;
-    background-color: $corporate-condition;
+    color: rgba($main-color, 0.3);
+    background-color: $button-active;
   }
 
   &--all {
     color: $secondary-color;
-    background-color: $second-bg-color;
+    background-color: $bg-color;
 
     &:hover,
     &:focus-visible,
     &:active {
       color: $secondary-color;
-      background-color: $fourth-bg-color;
+      background-color: $bg-active;
     }
   }
 }
