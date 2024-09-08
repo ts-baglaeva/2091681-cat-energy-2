@@ -54,6 +54,7 @@
   padding: 10px;
   color: $primary-color;
   text-align: center;
+  position: relative;
 
   &:hover {
     opacity: 0.6;
@@ -66,30 +67,56 @@
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
-
-    &--active {
-      border-bottom: 2px solid $corporate;
-    }
-
-    &--index-active {
-      border-bottom: 2px solid $corporate;
-    }
   }
 
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
 
-    &--index {
-      color: $main-color;
-    }
+.navigation__link--index {
+  @media (min-width: $desktop-width) {
+    color: $main-color;
+  }
+}
 
-    &--index-active {
-      color: $main-color;
-      border-bottom: 2px solid $main-color;
+.navigation__link--active {
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 100%;
+      height: 2px;
+      background-color: $corporate;
     }
   }
 }
+
+.navigation__link--index-active {
+  @media (min-width: $desktop-width) {
+    color: $main-color;
+    padding: 20px 0;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+
+      bottom: -10px;
+      width: 100%;
+      height: 2px;
+      background-color: $main-color;
+    }
+  }
+}
+
 
 /* Пример из Sedona
 .navigation-link-current::after {
