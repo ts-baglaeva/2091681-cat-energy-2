@@ -1,5 +1,5 @@
 .product-card {
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     background: linear-gradient(180deg, #ffffff 0%, #ffffff 16%, #f2f2f2 16%, #f2f2f2 100%);
   }
 
@@ -10,7 +10,7 @@
     background-position: center top;
     background-size: 30px 30px;
 
-    @media (min-width: $tablet-width) {
+    @media screen and (min-width: $tablet-width) {
       background-image: url("../../icons/stack.svg#big-plus");
       background-size: 60px 60px;
     }
@@ -37,7 +37,7 @@
   text-align: left;
   color: $secondary-add;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -61,7 +61,7 @@
   line-height: 16px;
   color: $secondary-color;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
   }
@@ -75,7 +75,7 @@
   color: $secondary-color;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 18px;
   }
@@ -85,11 +85,11 @@
 
   min-width: 280px;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     min-width: 250px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     min-width: 169px;
   }
 }

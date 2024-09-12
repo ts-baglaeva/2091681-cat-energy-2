@@ -8,14 +8,14 @@
   line-height: 36px;
   margin: 0;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
     text-align: start;
     padding-top: 140px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     padding-top: 188px;
   }
 }
@@ -24,11 +24,11 @@
   @include flex;
   justify-content: flex-start;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     gap: 60px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     gap: 80px;
   }
 }

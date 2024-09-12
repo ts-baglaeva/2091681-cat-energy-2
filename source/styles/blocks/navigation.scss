@@ -7,11 +7,11 @@
   height: 24px;
   border: none;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     display: none;
   }
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     display: none;
   }
 
@@ -38,7 +38,7 @@
   align-items: center;
 
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     flex-direction: row;
   }
 }
@@ -63,12 +63,12 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
   }
@@ -82,7 +82,7 @@
   text-align: center;
   position: relative;
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     color: $main-color;
   }
 }
@@ -93,7 +93,7 @@
   text-decoration: none;
   padding: 15px;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     &::after {
       content: "";
       height: 2px;
@@ -108,7 +108,7 @@
 }
 
 .navigation__link--index-active {
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     position: relative;
     color: $primary-color;
     padding: 15px;
@@ -125,7 +125,7 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     position: relative;
     color: $main-color;
     padding: 15px;

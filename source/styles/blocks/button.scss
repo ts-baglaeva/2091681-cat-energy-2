@@ -1,5 +1,6 @@
 .button {
   @include font;
+
   font-size: 16px;
   line-height: 20px;
   color: $main-color;
@@ -19,6 +20,11 @@
   &:active {
     color: rgba($main-color, 0.3);
     background-color: $button-active;
+  }
+
+  &--big {
+    font-size: 20px;
+    line-height: 26px;
   }
 
   &--all {

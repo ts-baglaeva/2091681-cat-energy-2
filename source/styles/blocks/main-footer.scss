@@ -4,7 +4,7 @@
   align-items: center;
   background-color: $bg-color;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     flex-direction: row;
   }
 }

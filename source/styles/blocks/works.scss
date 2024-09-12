@@ -7,7 +7,7 @@
   font-size: 36px;
   line-height: 40px;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
   }
@@ -21,7 +21,7 @@
 }
 
 .works__item {
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     display: block;
     width: 230px;
     min-height: 280px;
@@ -34,7 +34,7 @@
   right: 0;
   z-index: -1;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     counter-increment: item;
     content: counter(item);
 
@@ -52,7 +52,7 @@
   line-height: 18px;
   color: $secondary-color;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
   }

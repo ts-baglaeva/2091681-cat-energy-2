@@ -1,11 +1,11 @@
 .example {
   background: $bg-dark;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     background: linear-gradient(180deg, $main-color 0%, $main-color 57%, $bg-dark 57%, $bg-dark 100%);
   }
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     background: linear-gradient(180deg, $main-color 0%, $main-color 57%, $bg-color 57%, $bg-color 100%);
   }
 }
@@ -15,7 +15,7 @@
   font-size: 36px;
   line-height: 40px;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
   }
@@ -28,7 +28,7 @@
   line-height: 18px;
   color: $secondary-color;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
   }
@@ -49,7 +49,7 @@
   line-height: 24px;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
   }
@@ -63,7 +63,7 @@
   text-align: center;
   color: $secondary-color;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 14px;
   }
@@ -73,12 +73,12 @@
   @include flex;
   justify-content: center;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     flex-direction: column;
     align-items: end;
   }
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: center;
   }
@@ -90,7 +90,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 20px;
   }
 }
@@ -100,7 +100,7 @@
   font-size: 14px;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 20px;
   }
 }
@@ -110,7 +110,7 @@
   min-height: 256px;
   position: relative;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     min-width: 560px;
     min-height: 512px;
   }

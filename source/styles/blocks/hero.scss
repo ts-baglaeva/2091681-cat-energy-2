@@ -1,33 +1,35 @@
 .hero {
   margin: auto;
-  width: 100%;
+  min-width: 320px;
   background: linear-gradient(180deg, rgba($corporate, 0.85) 0%, rgba($corporate, 0.85) 63%, $main-color 63%, $main-color), url("../../images/hero/hero-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
 
-  @media (min-resolution: 2dppx) {
+
+  @media screen and (min-resolution: 2dppx) {
     background: linear-gradient(180deg, rgba($corporate, 0.85) 0%, rgba($corporate, 0.85) 63%, $main-color 63%, $main-color), url("../../images/hero/hero-background-mobile@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
   }
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     background-image: none;
+    min-height: 690px;
 
-    @media (min-resolution: 2dppx) {
+    @media screen and (min-resolution: 2dppx) {
       background-image: none;
     }
   }
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     background: linear-gradient(270deg, rgba($corporate, 0.85) 0%, rgba($corporate, 0.85) 50%, $main-color 50%, $main-color), url("../../images/hero/hero-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
 
-    @media (min-resolution: 2dppx) {
+    @media screen and (min-resolution: 2dppx) {
       background: linear-gradient(270deg, rgba($corporate, 0.85) 0%, rgba($corporate, 0.85) 50%, $main-color 50%, $main-color), url("../../images/hero/hero-background-desktop@2x.jpg");
       background-repeat: no-repeat;
       background-position: right;
@@ -44,8 +46,9 @@
   text-align: center;
   padding-top: 70px;
   margin: 0;
+  position: relative;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
     color: $primary-color;
@@ -61,10 +64,32 @@
   text-align: center;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
     color: $primary-color;
     text-align: start;
+  }
+}
+
+.hero__image {
+  @media screen and (min-width: $tablet-width) {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+
+.hero__button {
+  display: block;
+  width: 100%;
+  min-height: 36px;
+
+  @media screen and (min-width: $tablet-width) {
+
+    width: 244px;
+    font-size: 20px;
+    line-height: 26px;
   }
 }
