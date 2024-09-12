@@ -1,6 +1,14 @@
-/* .works {
+.works {
+  margin: 0 20px;
 
-} */
+  @media screen and (min-width: $tablet-width) {
+    margin: 0 30px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin: 82px 110px;
+  }
+}
 
 .works__title {
   @include font;
@@ -14,16 +22,27 @@
 }
 
 .works__list {
-  @include flex;
+  display: grid;
+  grid-template-columns: 1fr;
   counter-reset: item;
   list-style: none;
   padding: 0;
+
+  @media screen and (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 58px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 77px;
+  }
 }
 
 .works__item {
   @media screen and (min-width: $tablet-width) {
-    display: block;
-    width: 230px;
+    max-width: 300px;
+
     min-height: 280px;
     position: relative;
   }

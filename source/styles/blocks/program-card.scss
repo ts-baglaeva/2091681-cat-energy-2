@@ -1,6 +1,5 @@
 .program-card {
   background-color: $bg-color;
-  position: relative;
 
   &--weight-loss {
     &::before {
@@ -55,14 +54,20 @@
       left: 0;
     }
   }
+}
 
-  @media screen and (min-width: $tablet-width) {
+@media screen and (min-width: $tablet-width) {
+  .program-card {
+    padding-right: 316px;
+    min-height: 372px;
+    max-width: 1020px;
+
     &--weight-loss {
       &::before {
         width: 200px;
         height: 200px;
         top: 10px;
-        left: 600px;
+        left: 750px;
       }
 
       &::after {
@@ -70,7 +75,7 @@
         height: 211px;
         background-size: 140px 194px;
         top: 0;
-        left: 630px;
+        left: 780px;
       }
     }
 
@@ -91,8 +96,14 @@
       }
     }
   }
+}
 
-  @media screen and (min-width: $desktop-width) {
+@media screen and (min-width: $desktop-width) {
+  .program-card {
+    padding-right: 0;
+    max-width: none;
+    width: 46%;
+
     &--weight-loss {
       &::before {
         width: 100px;
@@ -129,8 +140,7 @@
   }
 }
 
-
-.program-card__title {
+.program-card__subtitle {
   @include font;
   font-size: 24px;
   line-height: 37px;

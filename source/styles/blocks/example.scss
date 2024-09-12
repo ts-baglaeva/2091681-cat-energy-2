@@ -10,6 +10,18 @@
   }
 }
 
+.example__wrapper {
+  margin: 0 20px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin: 0 30px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin: 82px 110px;
+  }
+}
+
 .example__title {
   @include font;
   font-size: 36px;
@@ -31,6 +43,16 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.example__calculation {
+  @media screen and (min-width: $tablet-width) {
+    @include flex;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: block;
   }
 }
 
