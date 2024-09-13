@@ -19,6 +19,8 @@
   }
 
   &--leaf {
+    width: 230px;
+
     &::after {
       content: "";
       width: 30px;
@@ -34,6 +36,8 @@
   }
 
   &--powder {
+    width: 246px;
+
     &::after {
       content: "";
       width: 30px;
@@ -49,6 +53,8 @@
   }
 
   &--eat {
+    width: 248px;
+
     &::after {
       content: "";
       width: 30px;
@@ -64,6 +70,8 @@
   }
 
   &--time {
+    width: 250px;
+
     &::after {
       content: "";
       width: 30px;
