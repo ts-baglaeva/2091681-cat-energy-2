@@ -15,11 +15,14 @@
 
   @media screen and (min-width: $desktop-width) {
     @include flex;
-    gap: 80px;
+    gap: 1px;
   }
 }
 
 .programs__item {
   list-style: none;
   position: relative;
+  background-color: $bg-color;
+  margin-bottom: 30px;
 }
+

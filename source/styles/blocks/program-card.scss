@@ -1,5 +1,7 @@
 .program-card {
+
   background-color: $bg-color;
+  padding: 21px 33px 18px 20px;
 
   &--weight-loss {
     &::before {
@@ -10,8 +12,8 @@
       background-color: $corporate;
       border-radius: 50%;
       position: absolute;
-      top: 10px;
-      left: 5px;
+      top: 24px;
+      left: 20px;
     }
 
     &::after {
@@ -23,8 +25,8 @@
       background-size: 36px 50px;
       background-repeat: no-repeat;
       position: absolute;
-      top: 5px;
-      left: 10px;
+      top: 21px;
+      left: 27px;
     }
   }
 
@@ -37,8 +39,8 @@
       background-color: $corporate;
       border-radius: 50%;
       position: absolute;
-      top: 10px;
-      left: 5px;
+      top: 24px;
+      left: 21px;
     }
 
     &::after {
@@ -50,8 +52,8 @@
       background-size: 67px 28px;
       background-repeat: no-repeat;
       position: absolute;
-      top: 15px;
-      left: 0;
+      top: 35px;
+      left: 13px;
     }
   }
 }
@@ -60,22 +62,23 @@
   .program-card {
     padding-right: 316px;
     min-height: 372px;
-    max-width: 1020px;
 
     &--weight-loss {
       &::before {
+        content: "";
         width: 200px;
         height: 200px;
-        top: 10px;
-        left: 750px;
+        display: block;
+        top: 92px;
+        left: 70%;
       }
 
       &::after {
         width: 200px;
         height: 211px;
         background-size: 140px 194px;
-        top: 0;
-        left: 780px;
+        top: 81px;
+        left: 72%;
       }
     }
 
@@ -83,16 +86,16 @@
       &::before {
         width: 200px;
         height: 200px;
-        top: 10px;
-        left: 605px;
+        top: 91px;
+        left: 70%;
       }
 
       &::after {
         width: 268px;
         height: 200px;
         background-size: 268px 112px;
-        top: 50px;
-        left: 550px;
+        top: 135px;
+        left: 66%;
       }
     }
   }
@@ -102,22 +105,22 @@
   .program-card {
     padding-right: 0;
     max-width: none;
-    width: 46%;
+    width: 45%;
 
     &--weight-loss {
       &::before {
         width: 100px;
         height: 100px;
-        top: 10px;
-        left: 0;
+        top: 47px;
+        left: 52px;
       }
 
       &::after {
         width: 100px;
         height: 106px;
         background-size: 70px 97px;
-        top: 0;
-        left: 0;
+        top: 41px;
+        left: 67px;
       }
     }
 
@@ -125,16 +128,16 @@
       &::before {
         width: 100px;
         height: 100px;
-        top: 10px;
-        left: 0;
+        top: 47px;
+        left: 52px;
       }
 
       &::after {
         width: 134px;
         height: 100px;
         background-size: 134px 56px;
-        top: 15px;
-        left: 0;
+        top: 67px;
+        left: 33px;
       }
     }
   }
@@ -145,16 +148,17 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  margin: 0;
   padding-left: 90px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    padding-left: 53px;
+    padding-left: 0;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-left: 214px;
+    padding-left: 162px;
   }
 }
 
@@ -164,7 +168,7 @@
   font-size: 14px;
   line-height: 18px;
   color: $secondary-color;
-
+  margin: 0;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
