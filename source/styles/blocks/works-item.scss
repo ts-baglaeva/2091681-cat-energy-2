@@ -6,6 +6,13 @@
   padding-left: 80px;
   position: relative;
 
+  @include font;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $secondary-color;
+  margin: 0;
+
   &::before {
     content: "";
     width: 60px;
@@ -90,6 +97,8 @@
     padding-top: 151px;
     padding-left: 0;
     position: relative;
+    font-size: 16px;
+    line-height: 24px;
 
     &::before {
       width: 80px;
