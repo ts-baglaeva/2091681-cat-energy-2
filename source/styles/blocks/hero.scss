@@ -49,9 +49,7 @@
   color: $main-color;
   text-align: center;
   padding-top: 70px;
-  margin: 0;
   position: relative;
-
 
   @media screen and (min-width: $tablet-width) {
     font-size: 60px;
@@ -89,7 +87,6 @@
     z-index: 3;
   }
 }
-
 
 .hero__button {
   display: block;
