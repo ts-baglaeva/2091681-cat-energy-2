@@ -1,13 +1,23 @@
-.additional__wrapper {
-  @media screen and (min-width: $desktop-width) {
-    @include flex;
-  }
-}
-
 .additional__title {
   @include font;
   font-size: 24px;
   line-height: 24px;
+  padding: 0 40px;
+  background-color: $main-color;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    display: block;
+    background-color: $corporate;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 2;
+  }
 
   @media screen and (min-width: $tablet-width) {
     font-size: 32px;
@@ -20,8 +30,23 @@
   }
 }
 
+.additional__wrapper {
+  @include margin;
+
+  @media screen and (min-width: $desktop-width) {
+    @include flex;
+  }
+}
+
 .additional__list {
   list-style: none;
+  width: 100%;
+  padding: 0;
+
+  @media screen and (min-width: $desktop-width) {
+    width: 73.3%;
+    padding: 0;
+  }
 }
 
 .additional__item {
@@ -73,11 +98,11 @@
 
 .additional__banner {
   display: block;
-  width: 280px;
-  min-height: 290px;
+  width: 100%;
+  height: 290px;
   background: linear-gradient(rgba($corporate, 0.85), rgba($corporate, 0.85)), url("../../images/additional/additional-banner-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   position: relative;
 
 
@@ -92,17 +117,11 @@
     transform: translate(-50%);
   }
 
-  @media screen and (min-resolution: 2dppx) {
-    background: linear-gradient(rgba($corporate, 0.85), rgba($corporate, 0.85)), url("../../images/additional/additional-banner-mobile@2x.jpg");
-    background-size: contain;
-  }
-
   @media screen and (min-width: $tablet-width) {
-    width: 707px;
     min-height: 200px;
     background: linear-gradient(rgba($corporate, 0.85), rgba($corporate, 0.85)), url("../../images/additional/additional-banner-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 
     &::before {
       background-size: 80px 83px;
@@ -110,29 +129,19 @@
       left: 0;
       transform: translateY(-50%);
     }
-
-    @media screen and (min-resolution: 2dppx) {
-      background: linear-gradient(rgba($corporate, 0.85), rgba($corporate, 0.85)), url("../../images/additional/additional-banner-tablet@2x.jpg");
-      background-size: contain;
-    }
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 245px;
-    min-height: 288px;
+    width: 20%;
+    height: 288px;
     background: linear-gradient(rgba($corporate, 0.85), rgba($corporate, 0.85)), url("../../images/additional/additional-banner-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 
     &::before {
       top: 0;
       left: 50%;
       transform: translate(-50%);
-    }
-
-    @media screen and (min-resolution: 2dppx) {
-      background: linear-gradient(rgba($corporate, 0.85), rgba($corporate, 0.85)), url("../../images/additional/additional-banner-desktop@2x.jpg");
-      background-size: contain;
     }
   }
 }

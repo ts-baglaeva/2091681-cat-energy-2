@@ -11,11 +11,7 @@
 }
 
 .example__wrapper {
-  margin: 0 20px;
-
-  @media screen and (min-width: $tablet-width) {
-    margin: 0 30px;
-  }
+  @include margin;
 }
 
 .example__title {
