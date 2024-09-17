@@ -316,14 +316,14 @@
 
     <section class="subscribe">
       <h2 class="subscribe__title">Акции и новинки</h2>
-      <p class="subscribe__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
-      <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
-        <label class="subscribe__label">
-          <span class="visually-hidden">Введите Ваш e-mail</span>
-          <input class="subscribe__field" name="subscribe__email" type="email" placeholder="кuklachev@gmail.com">
-        </label>
-        <button class="subscribe__button button button--subscribe" type="submit">Подписаться</button>
-      </form>
+      <div class="subscribe__wrapper">
+        <p class="subscribe__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
+        <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="subscribe-field">Введите Ваш e-mail</label>
+          <input class="subscribe__field" type="email" name="subscribe__email" id="subscribe-field" placeholder="кuklachev@gmail.com" required>
+          <button class="subscribe__button button button--subscribe" type="submit">Подписаться</button>
+        </form>
+      </div>
     </section>
 
     <section class="contacts">

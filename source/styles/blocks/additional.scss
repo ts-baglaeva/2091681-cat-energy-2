@@ -50,7 +50,16 @@
 }
 
 .additional__item {
-  @include flex;
+  display: grid;
+  grid-template-columns: 75% 25%;
+
+  @media screen and (min-width: $tablet-width) {
+    grid-template-columns: 60% auto 14.4%;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    grid-template-columns: 36.4% 27.1% 9.2% 27.3%;
+  }
 }
 
 .additional__subtitle {
@@ -59,10 +68,12 @@
   line-height: 16px;
   text-transform: uppercase;
   color: $secondary-add;
+  grid-column: span 2;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    grid-column: span 1;
   }
 }
 
@@ -76,6 +87,11 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    justify-self: end;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    justify-self: start;
   }
 }
 
@@ -85,15 +101,30 @@
   font-size: 14px;
   line-height: 14px;
   color: $secondary-color;
+  justify-self: end;
+
 
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
   }
+
+  @media screen and (min-width: $desktop-width) {
+    justify-self: start;
+  }
 }
 
 .additional__button {
   border: none;
+  grid-column: span 2;
+
+  @media screen and (min-width: $tablet-width) {
+    grid-column: span 3;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    grid-column: span 1;
+  }
 }
 
 .additional__banner {

@@ -30,3 +30,18 @@
     margin: 0 30px;
   }
 }
+
+/* @mixin flex ($dir, $justify, $align) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin pseudo ($width, $height) {
+  content: "";
+  display: block;
+  position: absolute;
+  width: $width;
+  height: $height;
+} */
