@@ -34,7 +34,7 @@
   @include margin;
 
   @media screen and (min-width: $desktop-width) {
-    @include flex;
+    @include flex (column, space-between, 20px);
   }
 }
 

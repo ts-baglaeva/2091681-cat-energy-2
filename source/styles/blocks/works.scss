@@ -1,9 +1,5 @@
 .works {
-  margin: 0 20px;
-
-  @media screen and (min-width: $tablet-width) {
-    margin: 0 30px;
-  }
+  @include margin;
 }
 
 .works__title {
@@ -24,15 +20,17 @@
   counter-reset: item;
   list-style: none;
   padding: 0;
+  justify-content: center;
+
 
   @media screen and (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
-    gap: 58px;
+    column-gap: 58px;
   }
 
   @media screen and (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 77px;
+    column-gap: 94px;
   }
 }
 
@@ -40,25 +38,25 @@
   min-height: 60px;
 
   @media screen and (min-width: $tablet-width) {
-    max-width: 300px;
+    /* max-width: 300px; */
     min-height: 280px;
     position: relative;
-  }
 
-  &--leaf {
-    width: 230px;
-  }
+    &--leaf {
+      width: 230px;
+    }
 
-  &--powder {
-    width: 246px;
-  }
+    &--powder {
+      width: 246px;
+    }
 
-  &--eat {
-    width: 248px;
-  }
+    &--eat {
+      width: 248px;
+    }
 
-  &--time {
-    width: 250px;
+    &--time {
+      width: 250px;
+    }
   }
 }
 

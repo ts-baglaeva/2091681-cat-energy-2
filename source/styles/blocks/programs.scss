@@ -10,8 +10,7 @@
   padding: 0;
 
   @media screen and (min-width: $desktop-width) {
-    @include flex;
-    gap: 1px;
+    @include flex (row, center, 80px);
   }
 }
 

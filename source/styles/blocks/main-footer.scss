@@ -1,6 +1,5 @@
 .main-footer {
-  @include flex;
-  flex-direction: column;
+  @include flex (column, space-between, 20px);
   align-items: center;
   background-color: $bg-color;
 
@@ -32,8 +31,7 @@
 }
 
 .main-footer__socials-list {
-  @include flex;
-  justify-content: center;
+  @include flex (row, center, 20px);
   list-style: none;
   padding: 0;
 }
@@ -104,7 +102,7 @@
     height: 34px;
     display: block;
 
-    @include flex;
+    @include flex (row, center, 20px);
     text-decoration: none;
     background-color: $link-color;
     mask-image: url("../../icons/stack.svg#logo-html-academy");

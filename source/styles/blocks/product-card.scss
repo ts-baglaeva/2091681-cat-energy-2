@@ -6,7 +6,7 @@
 
 
   @media screen and (min-width: $tablet-width) {
-    @include flex;
+    @include flex (column, center, 20px);
     flex-direction: column;
 
     background: linear-gradient(180deg, $main-color 0%, $main-color 16%, $bg-color 16%, $bg-color 100%);
@@ -70,7 +70,7 @@
 }
 
 .product-card__item {
-  @include flex;
+  @include flex (column, center, 20px);
 }
 
 .product-card__name,

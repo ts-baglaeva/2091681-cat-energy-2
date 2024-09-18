@@ -12,9 +12,14 @@
 
 .example__wrapper {
   @include margin;
+
+  @media screen and (min-width: $desktop-width) {
+    @include flex (row, space-between, 20px);
+  }
 }
 
 .example__title {
+  @include margin;
   @include font;
   font-size: 36px;
   line-height: 40px;
@@ -24,6 +29,10 @@
     line-height: 60px;
   }
 }
+
+/* .example__text-wrapper {
+  @include flex (row, space-between, 20px);
+} */
 
 .example__description {
   @include font;
@@ -42,7 +51,7 @@
   padding-top: 20px;
 
   @media screen and (min-width: $tablet-width) {
-    @include flex;
+    @include flex (row, space-between, 20px);
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -51,19 +60,24 @@
 }
 
 .example__list {
-  @include flex;
-  gap: 32px;
+  @include flex (row, space-between, 32px);
   padding: 0;
 
   @media screen and (min-width: $tablet-width) {
-    gap: 43px;
+    width: 48%;
+    gap: 20px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin: auto;
+    width: 100%;
+    justify-content: flex-start;
   }
 }
 
 .example__item {
-  @include flex;
-  justify-content: center;
-  width: 124px;
+
+  width: 44%;
   list-style: none;
   position: relative;
   background-color: $bg-dark;
@@ -71,8 +85,8 @@
 
   &::after {
     content: "";
-    width: 124px;
-    height: 56px;
+    width: 100%;
+    height: 100%;
     display: block;
     border: 1px solid $border-color;
     border-radius: 2px;
@@ -83,18 +97,21 @@
   }
 
   @media screen and (min-width: $tablet-width) {
-    width: 162px;
+    width: 100%;
     background-color: $main-color;
 
     &::after {
-      width: 162px;
+      width: 100%;
       height: 72px;
     }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 34%;
   }
 }
 
 .example__item-wrapper {
-  width: 87px;
   background-color: $bg-dark;
 
   @media screen and (min-width: $tablet-width) {
@@ -112,6 +129,7 @@
   font-size: 24px;
   line-height: 24px;
   text-align: center;
+
 
   @media screen and (min-width: $tablet-width) {
     font-size: 30px;
@@ -136,8 +154,7 @@
 }
 
 .example__total {
-  @include flex;
-  justify-content: center;
+  @include flex (row, center, 20px);
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: column;
@@ -146,7 +163,8 @@
 
   @media screen and (min-width: $desktop-width) {
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 63px;
   }
 }
 

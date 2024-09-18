@@ -1,7 +1,8 @@
 .program-card {
-
   background-color: $bg-color;
   padding: 21px 33px 18px 20px;
+  width: 100%;
+  box-sizing: border-box;
 
   &--weight-loss {
     &::before {
@@ -103,9 +104,8 @@
 
 @media screen and (min-width: $desktop-width) {
   .program-card {
-    padding-right: 0;
-    max-width: none;
-    width: 45%;
+    padding-right: 20px;
+
 
     &--weight-loss {
       &::before {

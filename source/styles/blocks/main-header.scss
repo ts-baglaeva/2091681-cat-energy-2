@@ -3,7 +3,7 @@
   z-index: 10; */
   background-color: $main-color;
 
-  @include flex;
+  @include flex (column, space-between, 20px);
   flex-direction: column;
   min-width: 100%;
 
