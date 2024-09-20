@@ -1,4 +1,6 @@
 .logo-header {
+  @include flex (row, space-between, 15px);
+  align-items: center;
   text-decoration: none;
 
   &:hover,
@@ -11,10 +13,17 @@
   }
 }
 
+/* .logo-header__logo-image {
+  margin-right: 56px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-right: 0;
+  }
+} */
+
 .logo-header__logo-text {
   width: 101px;
   height: 18px;
-
 
   @media screen and (min-width: $desktop-width) {
     width: 118px;

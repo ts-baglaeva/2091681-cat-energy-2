@@ -20,17 +20,13 @@
   counter-reset: item;
   list-style: none;
   padding: 0;
-  justify-content: center;
-
 
   @media screen and (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
-    column-gap: 58px;
   }
 
   @media screen and (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 94px;
   }
 }
 
@@ -38,7 +34,6 @@
   min-height: 60px;
 
   @media screen and (min-width: $tablet-width) {
-    /* max-width: 300px; */
     min-height: 280px;
     position: relative;
 

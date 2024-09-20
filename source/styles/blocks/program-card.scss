@@ -1,7 +1,6 @@
 .program-card {
   background-color: $bg-color;
   padding: 21px 33px 18px 20px;
-  width: 100%;
   box-sizing: border-box;
 
   &--weight-loss {
@@ -71,7 +70,8 @@
         height: 200px;
         display: block;
         top: 92px;
-        left: 70%;
+        left: auto;
+        right: 10%;
       }
 
       &::after {
@@ -79,7 +79,8 @@
         height: 211px;
         background-size: 140px 194px;
         top: 81px;
-        left: 72%;
+        left: auto;
+        right: 10%;
       }
     }
 

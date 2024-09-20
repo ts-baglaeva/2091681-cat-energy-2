@@ -6,6 +6,9 @@
   width: 24px;
   height: 24px;
   border: none;
+  background-color: transparent;
+  background-image: url("../../icons/stack.svg#menu-open-mobile");
+
 
   @media screen and (min-width: $tablet-width) {
     display: none;
@@ -15,16 +18,11 @@
     display: none;
   }
 
-  &--opened {
-    background-color: transparent;
-    background-image: url("../../icons/stack.svg#menu-open-mobile");
-    display: none;
-  }
-
   &--closed {
+    width: 18px;
+    height: 18px;
     background-color: transparent;
     background-image: url("../../icons/stack.svg#menu-close-mobile");
-    display: none;
   }
 }
 
@@ -33,19 +31,16 @@
   padding: 0;
   list-style: none;
 
-  @include flex (column, center, 20px);
-  flex-direction: column;
-  align-items: center;
+  @include flex (column, space-between, 33px);
 
+  align-items: center;
+  display: none;
 
   @media screen and (min-width: $tablet-width) {
-    flex-direction: row;
+    @include flex (row, space-between, 33px);
+    align-items: end;
   }
 }
-
-/* .navigation__item {
-
-} */
 
 .navigation__link {
   @include font;
@@ -54,6 +49,7 @@
   color: $primary-color;
   text-align: center;
   position: relative;
+
 
   &:hover {
     opacity: 0.6;
@@ -76,6 +72,8 @@
 
 .navigation__link--index {
   @include font;
+  font-size: 18px;
+  line-height: 24px;
   text-decoration: none;
   text-transform: uppercase;
   color: $primary-color;
@@ -91,7 +89,7 @@
   position: relative;
   color: $primary-color;
   text-decoration: none;
-  padding: 15px;
+  padding-bottom: 16px;
 
   @media screen and (min-width: $tablet-width) {
     &::after {
@@ -99,8 +97,8 @@
       height: 2px;
       box-sizing: border-box;
       position: absolute;
-      left: 15px;
-      right: 15px;
+      left: 0;
+      right: 0;
       bottom: 7px;
       background-color: $corporate;
     }
@@ -111,15 +109,15 @@
   @media screen and (min-width: $tablet-width) {
     position: relative;
     color: $primary-color;
-    padding: 15px;
+    padding-bottom: 16px;
 
     &::after {
       content: "";
       height: 2px;
       box-sizing: border-box;
       position: absolute;
-      left: 15px;
-      right: 15px;
+      left: 0;
+      right: 0;
       bottom: 7px;
       background-color: $corporate;
     }
@@ -128,7 +126,6 @@
   @media screen and (min-width: $desktop-width) {
     position: relative;
     color: $main-color;
-    padding: 15px;
 
     &::after {
       content: "";
