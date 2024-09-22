@@ -3,6 +3,8 @@
   align-items: center;
 
   @include margin;
+  margin-top: 13px;
+  margin-bottom: 14px;
 
   background-color: $main-color;
 
@@ -10,13 +12,16 @@
   z-index: 10; */
 
   @media screen and (min-width: $tablet-width) {
+    top: 25px;
     left: 0;
     right: 0;
+
     position: absolute;
     z-index: 2;
   }
 
   @media screen and (min-width: $desktop-width) {
+    top: 55px;
     background-color: transparent;
   }
 }
