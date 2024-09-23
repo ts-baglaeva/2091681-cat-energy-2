@@ -5,8 +5,14 @@
 .programs__list {
   padding: 0;
 
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
   @media screen and (min-width: $desktop-width) {
-    @include flex (row, center, 80px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
   }
 }
 

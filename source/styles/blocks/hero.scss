@@ -1,14 +1,18 @@
 .hero {
   position: relative;
   min-height: 480px;
+  margin-top: 0;
+  margin-bottom: 20px;
 
   @media screen and (min-width: $tablet-width) {
-    height: 950px;
+    min-height: 950px;
+    margin-bottom: 1px;
   }
 
   @media screen and (min-width: $desktop-width) {
     min-width: $desktop-width;
-    height: 694px;
+    min-height: 694px;
+    margin-bottom: 82px;
   }
 }
 
@@ -37,9 +41,15 @@
 
     background-size: cover;
     position: absolute;
+    top: 0;
     left: 50%;
+    right: auto;
     z-index: -1;
   }
+}
+
+.hero__content {
+  @include margin;
 }
 
 .hero__title {
@@ -50,19 +60,21 @@
   text-align: center;
   padding: 27px 35px 25px;
   position: relative;
+  z-index: 2;
 
   @media screen and (min-width: $tablet-width) {
-    min-width: 68.7%;
+    /* min-width: 68.7%; */
     font-size: 60px;
     line-height: 60px;
     color: $primary-color;
     text-align: start;
-    padding: 140px 140px 40px 120px;
+    padding: 140px 90px 20px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-top: 224px;
-    padding-left: 190px;
+    width: 37%;
+    display: block;
+    padding: 224px 80px 20px;
   }
 }
 
@@ -73,38 +85,62 @@
   color: $main-color;
   text-align: center;
   text-transform: uppercase;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
     color: $primary-color;
     text-align: start;
+    padding: 20px 90px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 37%;
+    padding: 20px 80px;
   }
 }
 
 .hero__image {
   display: block;
   margin: auto;
+  padding-top: 9px;
+  padding-bottom: 3px;
 
   @media screen and (min-width: $tablet-width) {
     display: block;
     position: absolute;
+    top: 341px;
     left: 0;
     right: 0;
     z-index: 3;
+    padding-top: 1px;
+    padding-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    top: 143px;
+    z-index: 1;
   }
 }
 
 .hero__button {
   display: block;
   min-height: 36px;
-  margin: 0 20px;
 
   @media screen and (min-width: $tablet-width) {
     position: relative;
     width: 244px;
     font-size: 20px;
     line-height: 26px;
+    padding-left: 90px;
     z-index: 4;
+    margin: 30px 90px 20px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin: 32px 80px 20px;
   }
 }

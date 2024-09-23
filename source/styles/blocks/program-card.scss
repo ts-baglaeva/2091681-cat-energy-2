@@ -1,7 +1,8 @@
 .program-card {
+
   background-color: $bg-color;
-  padding: 21px 33px 18px 20px;
   box-sizing: border-box;
+  padding: 21px 20px 18px;
 
   &--weight-loss {
     &::before {
@@ -60,44 +61,38 @@
 
 @media screen and (min-width: $tablet-width) {
   .program-card {
-    padding-right: 316px;
+    padding: 65px 316px 40px 52px;
     min-height: 372px;
 
-    &--weight-loss {
-      &::before {
-        content: "";
-        width: 200px;
-        height: 200px;
-        display: block;
-        top: 92px;
-        left: auto;
-        right: 10%;
-      }
+    &::before {
+      content: "";
+      width: 200px;
+      height: 200px;
+      display: block;
+      top: 92px;
+      left: auto;
+      right: 63px;
+    }
 
+    &--weight-loss {
       &::after {
-        width: 200px;
+        width: 140px;
         height: 211px;
         background-size: 140px 194px;
         top: 81px;
         left: auto;
-        right: 10%;
+        right: 93px;
       }
     }
 
     &--weight-gain {
-      &::before {
-        width: 200px;
-        height: 200px;
-        top: 91px;
-        left: 70%;
-      }
-
       &::after {
         width: 268px;
-        height: 200px;
+        height: 112px;
         background-size: 268px 112px;
         top: 135px;
-        left: 66%;
+        left: auto;
+        right: 29px;
       }
     }
   }
@@ -105,20 +100,19 @@
 
 @media screen and (min-width: $desktop-width) {
   .program-card {
-    padding-right: 20px;
+    padding: 0;
 
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
 
     &--weight-loss {
-      &::before {
-        width: 100px;
-        height: 100px;
-        top: 47px;
-        left: 52px;
-      }
-
       &::after {
-        width: 100px;
-        height: 106px;
+        width: 70px;
+        height: 97px;
         background-size: 70px 97px;
         top: 41px;
         left: 67px;
@@ -126,16 +120,9 @@
     }
 
     &--weight-gain {
-      &::before {
-        width: 100px;
-        height: 100px;
-        top: 47px;
-        left: 52px;
-      }
-
       &::after {
         width: 134px;
-        height: 100px;
+        height: 56px;
         background-size: 134px 56px;
         top: 67px;
         left: 33px;
@@ -149,12 +136,12 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  padding-left: 90px;
+  padding: 9px 20px 9px 70px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    padding-left: 0;
+    padding: 12px 53px 12px 0;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -168,10 +155,14 @@
   font-size: 14px;
   line-height: 18px;
   color: $secondary-color;
+  padding: 20px 0 23px;
+  border-bottom: 1px solid $border-line;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    padding: 12px 53px 24px 0;
+    border: none;
   }
 }
 
@@ -183,6 +174,8 @@
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
+  padding-top: 15px;
+  display: block;
 
   &::after {
     content: "";
@@ -192,7 +185,7 @@
     background-image: url("../../icons/stack.svg#small-arrow");
     position: absolute;
     left: 98px;
-    bottom: 7px;
+    bottom: 2px;
   }
 
   &:hover::after {
@@ -207,10 +200,12 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-top: 24px;
+    padding-bottom: 13px;
 
     &::after {
       left: 133px;
-      bottom: 10px;
+      bottom: 22px;
     }
   }
 }
