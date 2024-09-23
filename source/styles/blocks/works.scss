@@ -1,15 +1,36 @@
 .works {
+  @media screen and (min-width: $tablet-width) {
+    border-bottom: 1px solid $border-work-line;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    border-bottom: none;
+  }
+}
+
+.works__wrapper {
   @include margin;
+  margin-bottom: 49px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 47px;
+  }
 }
 
 .works__title {
   @include font;
   font-size: 36px;
   line-height: 40px;
+  padding: 10px 0;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    padding: 30px 0 32px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 31px 0 32px;
   }
 }
 
@@ -19,6 +40,7 @@
   gap: 20px;
   counter-reset: item;
   list-style: none;
+  margin: 0;
   padding: 0;
 
   @media screen and (min-width: $tablet-width) {

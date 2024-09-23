@@ -107,6 +107,8 @@
 .navigation__link--index-active {
   @media screen and (min-width: $tablet-width) {
     position: relative;
+    font-size: 18px;
+    line-height: 24px;
     color: $primary-color;
     padding-bottom: 16px;
 
@@ -131,8 +133,8 @@
       height: 2px;
       box-sizing: border-box;
       position: absolute;
-      left: 15px;
-      right: 15px;
+      left: 0;
+      right: 0;
       bottom: 7px;
       background-color: $main-color;
     }

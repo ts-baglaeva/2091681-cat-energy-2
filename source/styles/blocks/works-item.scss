@@ -84,8 +84,7 @@
 
 @media screen and (min-width: $tablet-width) {
   .work-item__description {
-    padding-top: 151px;
-    padding-left: 0;
+    padding: 151px 0 20px;
     position: relative;
     font-size: 16px;
     line-height: 24px;
@@ -101,21 +100,5 @@
       top: 30px;
       left: 25px;
     }
-
-    /* &--leaf {
-      width: 230px;
-    }
-
-    &--powder {
-      width: 246px;
-    }
-
-    &--eat {
-      width: 248px;
-    }
-
-    &--time {
-      width: 250px;
-    } */
   }
 }

@@ -35,6 +35,12 @@
 
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
+    text-align: end;
+    padding: 10px 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    text-align: start;
   }
 }
 
