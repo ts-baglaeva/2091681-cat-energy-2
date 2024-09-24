@@ -36,7 +36,6 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     text-align: end;
-    padding: 10px 0;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -44,3 +43,18 @@
   }
 }
 
+.address__value-street {
+  @media screen and (min-width: $tablet-width) {
+    padding-bottom: 10px;
+  }
+}
+
+.address__value-town {
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 10px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 9px;
+  }
+}

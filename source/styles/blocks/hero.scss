@@ -63,7 +63,6 @@
   z-index: 2;
 
   @media screen and (min-width: $tablet-width) {
-    /* min-width: 68.7%; */
     font-size: 60px;
     line-height: 60px;
     color: $primary-color;
@@ -72,9 +71,9 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 37%;
+    width: calc(50% - 110px);
     display: block;
-    padding: 224px 80px 20px;
+    padding: 224px 30px 20px 80px;
   }
 }
 
@@ -91,15 +90,16 @@
 
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 30px;
     color: $primary-color;
     text-align: start;
     padding: 20px 90px;
+    z-index: 4;
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 37%;
-    padding: 20px 80px;
+    width: calc(50% - 110px);
+    padding: 20px 30px 20px 80px;
   }
 }
 
@@ -113,15 +113,18 @@
     display: block;
     position: absolute;
     top: 341px;
-    left: 0;
-    right: 0;
-    z-index: 3;
+    left: auto;
+    right: auto;
+    z-index: 1;
     padding-top: 1px;
     padding-bottom: 0;
   }
 
   @media screen and (min-width: $desktop-width) {
     top: 143px;
+    /* left: 50%; */
+    left: calc(50% - 165px);
+    right: auto;
     z-index: 1;
   }
 }

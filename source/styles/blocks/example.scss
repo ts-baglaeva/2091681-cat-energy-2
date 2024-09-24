@@ -143,13 +143,13 @@
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-  padding: 9px 9px 4px;
+  padding: 9px 0 4px;
 
 
   @media screen and (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
-    padding: 15px 15px 6px;
+    padding: 15px 0 6px;
   }
 }
 
@@ -160,13 +160,13 @@
   line-height: 12px;
   text-align: center;
   color: $secondary-color;
-  padding: 4px 25px 9px;
+  padding: 4px 0 9px;
 
 
   @media screen and (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 14px;
-    padding: 5px 15px 15px;
+    padding: 5px 0 15px;
   }
 }
 

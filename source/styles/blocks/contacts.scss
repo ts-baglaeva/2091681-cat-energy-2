@@ -5,7 +5,7 @@
 .contacts__address {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10;
+
   box-sizing: border-box;
 
   @media screen and (min-width: $tablet-width) {
