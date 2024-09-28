@@ -31,6 +31,12 @@
   }
 
   @media screen and (min-width: $desktop-width) {
+    width: 1220px;
+    margin: auto;
+  }
+
+  @media screen and (min-width: $desktop-big-width) {
+    width: auto;
     margin: 0 110px;
   }
 }

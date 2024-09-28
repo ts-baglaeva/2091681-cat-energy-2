@@ -113,8 +113,9 @@
     display: block;
     position: absolute;
     top: 341px;
-    left: auto;
-    right: auto;
+    left: 50%;
+    transform: translate(-50%);
+    /* right: auto; */
     z-index: 1;
     padding-top: 1px;
     padding-bottom: 0;
@@ -124,6 +125,7 @@
     top: 143px;
     /* left: 50%; */
     left: calc(50% - 165px);
+    transform: none;
     right: auto;
     z-index: 1;
   }
