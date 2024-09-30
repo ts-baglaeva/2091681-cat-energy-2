@@ -1,21 +1,41 @@
 .main-footer {
-  @include flex (column, space-between, 20px);
-  align-items: center;
+  min-height: 240px;
   background-color: $bg-color;
 
   @media screen and (min-width: $tablet-width) {
-    flex-direction: row;
+    min-height: 0;
+  }
+}
+
+.main-footer-wrapper {
+  @include content-width;
+  @include flex (column, space-between, 0);
+  align-items: center;
+  background-color: $bg-color;
+
+
+  @media screen and (min-width: $tablet-width) {
+    @include flex (row, space-between, 20px);
+    padding: 55px 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 66px 0;
   }
 }
 
 .main-footer__logo {
-  padding: 20px;
+  width: 280px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 20px;
+  border-bottom: 1px solid $border-dark-line;
 
   &::before {
     content: "";
     width: 128px;
     height: 24px;
-    display: block;
     background-color: $add-color;
     mask-image: url("../../icons/stack.svg#logo-text");
   }
@@ -28,17 +48,30 @@
   &:active::before {
     background-color: $add-focus;
   }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 128px;
+    border: none;
+    padding: 0;
+    justify-content: start;
+  }
 }
 
 .main-footer__socials-list {
   @include flex (row, center, 20px);
+  width: 280px;
   list-style: none;
-  padding: 0;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid $border-dark-line;
+
+
+  @media screen and (min-width: $tablet-width) {
+    width: 132px;
+    border: none;
+    padding: 0;
+  }
 }
-
-/* .main-footer__socials-item {
-
-} */
 
 .main-footer__socials-link {
   display: block;
@@ -53,6 +86,7 @@
   &:active::before {
     background-color: rgba($corporate, 0.3);
   }
+
 
   &--vkontakte::before {
     content: "";
@@ -89,37 +123,7 @@
 }
 
 .main-footer__logo-academy {
+  @include flex (row, space-between, 20px);
   text-decoration: none;
 }
 
-.logo-academy__text {
-  position: relative;
-  padding-right: 100px;
-
-  &::after {
-    content: "";
-    width: 27px;
-    height: 34px;
-    display: block;
-
-    @include flex (row, center, 20px);
-    text-decoration: none;
-    background-color: $link-color;
-    mask-image: url("../../icons/stack.svg#logo-html-academy");
-    mask-size: 27px 34px;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    position: absolute;
-    top: 0;
-    left: 140px;
-  }
-
-  &:hover::after,
-  &:focus-visible::after {
-    background-color: $corporate;
-  }
-
-  &:active::after {
-    background-color: rgba($corporate, 0.5);
-  }
-}

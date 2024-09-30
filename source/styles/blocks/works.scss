@@ -9,7 +9,7 @@
 }
 
 .works__wrapper {
-  @include margin;
+  @include content-width;
   margin-bottom: 49px;
 
   @media screen and (min-width: $tablet-width) {
@@ -48,7 +48,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    grid-template-columns: repeat(4, 1fr);
+    @include flex (row, space-between, 20px);
   }
 }
 

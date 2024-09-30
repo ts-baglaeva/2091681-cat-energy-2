@@ -2,16 +2,16 @@
   @include flex (row, space-between, 10px);
   align-items: center;
 
-  @include margin;
-  margin-top: 13px;
-  margin-bottom: 14px;
-
+  @include content-width;
+  padding-top: 13px;
+  padding-bottom: 14px;
   background-color: $main-color;
 
   /* position: fixed;
   z-index: 10; */
 
   @media screen and (min-width: $tablet-width) {
+    padding: 0;
     top: 25px;
     left: 0;
     right: 0;

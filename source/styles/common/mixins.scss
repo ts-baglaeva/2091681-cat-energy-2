@@ -23,7 +23,7 @@
   gap: $gap;
 }
 
-@mixin margin {
+/* @mixin margin {
   margin: 0 20px;
 
   @media screen and (min-width: $tablet-width) {
@@ -38,6 +38,20 @@
   @media screen and (min-width: $desktop-big-width) {
     width: auto;
     margin: 0 110px;
+  }
+} */
+
+
+@mixin content-width {
+  width: 280px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 708px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 1220px;
   }
 }
 

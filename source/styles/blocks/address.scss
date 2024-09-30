@@ -1,8 +1,10 @@
 .address {
-  padding: 26px 20px;
+  @include content-width;
+  padding: 26px 0;
 
-  @media screen and (min-width: $tablet-width) {
-    padding: 60px 70px;
+  @media screen and (min-width: $desktop-width) {
+    width: 565px;
+    padding: 60px 78px 60px 80px;
   }
 }
 

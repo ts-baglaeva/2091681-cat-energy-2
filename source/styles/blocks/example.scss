@@ -11,7 +11,7 @@
 }
 
 .example__wrapper {
-  @include margin;
+  @include content-width;
 
   @media screen and (min-width: $desktop-width) {
     @include flex (row, space-between, 20px);
@@ -19,7 +19,7 @@
 }
 
 .example__title {
-  @include margin;
+  @include content-width;
   @include font;
   font-size: 36px;
   line-height: 40px;

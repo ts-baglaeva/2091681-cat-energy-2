@@ -49,7 +49,9 @@
 
   <main class="main-container">
     <section class="products">
-      <h1 class="products__title"><span class="products__title-text">Каталог продукции</span></h1>
+      <div class="products__title">
+        <h1 class="products__title-text">Каталог продукции</h1>
+      </div>
 
       <ul class="products__list">
         <li class="products__item product-card">
@@ -280,7 +282,9 @@
     </section>
 
     <section class="additional">
-      <h2 class="additional__title">Дополнительные товары</h2>
+      <div class="additional__title">
+        <h2 class="additional__title-text">Дополнительные товары</h2>
+      </div>
       <div class="additional__wrapper">
         <ul class="additional__list">
           <li class="additional__item">
@@ -315,7 +319,9 @@
     </section>
 
     <section class="subscribe">
-      <h2 class="subscribe__title">Акции и новинки</h2>
+      <div class="subscribe__title">
+        <h2 class="subscribe__title-text">Акции и новинки</h2>
+      </div>
       <div class="subscribe__wrapper">
         <p class="subscribe__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
         <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
@@ -340,29 +346,31 @@
   </main>
 
   <footer class="main-footer">
-    <a class="main-footer__logo-link" href="index.html">
-      <img class="main-footer__logo" src="images/logo/logo-text.svg" width="128" height="24" alt="Логотип магазина Кэт энерджи.">
-    </a>
-    <ul class="main-footer__socials-list">
-      <li class="main-footer__socials-item">
-        <a class="main-footer__socials-link main-footer__socials-link--vkontakte" href="#">
-          <span class="visually-hidden">В контакте.</span>
-        </a>
-      </li>
-      <li class="main-footer__socials-item">
-        <a class="main-footer__socials-link main-footer__socials-link--youtube" href="#">
-          <span class="visually-hidden">Youtube.</span>
-        </a>
-      </li>
-      <li class="main-footer__socials-item">
-        <a class="main-footer__socials-link main-footer__socials-link--telegram" href="#">
-          <span class="visually-hidden">Telegram.</span>
-        </a>
-      </li>
-    </ul>
-    <a class="main-footer__logo-academy logo-academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
-      <p class="logo-academy__text">HTML Academy</p>
-    </a>
+    <div class="main-footer-wrapper">
+      <a class="main-footer__logo" href="index.html">
+        <span class="visually-hidden">Логотип.</span>
+      </a>
+      <ul class="main-footer__socials-list">
+        <li class="main-footer__socials-item">
+          <a class="main-footer__socials-link main-footer__socials-link--vkontakte" href="#">
+            <span class="visually-hidden">В контакте.</span>
+          </a>
+        </li>
+        <li class="main-footer__socials-item">
+          <a class="main-footer__socials-link main-footer__socials-link--youtube" href="#">
+            <span class="visually-hidden">Youtube.</span>
+          </a>
+        </li>
+        <li class="main-footer__socials-item">
+          <a class="main-footer__socials-link main-footer__socials-link--telegram" href="#">
+            <span class="visually-hidden">Telegram.</span>
+          </a>
+        </li>
+      </ul>
+      <a class="main-footer__logo-academy logo-academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
+        <p class="logo-academy__text">HTML Academy</p>
+      </a>
+    </div>
   </footer>
 
 </body>

@@ -1,5 +1,5 @@
 .subscribe__wrapper {
-  @include margin;
+  @include content-width;
 }
 
 .subscribe__form {
@@ -16,10 +16,14 @@
 }
 
 .subscribe__title {
+  @include content-width;
+}
+
+.subscribe__title-text {
   @include font;
   font-size: 24px;
   line-height: 24px;
-  padding: 0 40px;
+  padding: 0;
   position: relative;
   z-index: 1;
 
