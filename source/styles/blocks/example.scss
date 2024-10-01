@@ -79,7 +79,6 @@
   padding: 0;
 
   @media screen and (min-width: $tablet-width) {
-    width: 48%;
     gap: 20px;
   }
 
@@ -91,7 +90,7 @@
 }
 
 .example__item {
-  width: 44%;
+  width: 124px;
   list-style: none;
   position: relative;
   background-color: $bg-dark;
@@ -111,7 +110,7 @@
   }
 
   @media screen and (min-width: $tablet-width) {
-    width: 100%;
+    width: 162px;
     background-color: $main-color;
 
     &::after {
@@ -119,17 +118,12 @@
       height: 72px;
     }
   }
-
-  @media screen and (min-width: $desktop-width) {
-    width: 34%;
-  }
 }
 
 .example__item-wrapper {
   background-color: $bg-dark;
 
   @media screen and (min-width: $tablet-width) {
-    width: auto;
     background-color: $main-color;
   }
 
@@ -211,13 +205,14 @@
 }
 
 .example__picture-slider {
-  min-width: 280px;
+  width: 280px;
   min-height: 256px;
   position: relative;
+  margin: 0 auto;
   padding: 10px 0 40px;
 
   @media screen and (min-width: $tablet-width) {
-    min-width: 560px;
+    width: 560px;
     min-height: 512px;
     text-align: center;
     padding: 74px 0 101px;
