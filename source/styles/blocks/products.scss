@@ -17,6 +17,7 @@
   @include font;
   font-size: 36px;
   line-height: 36px;
+  background-color: transparent;
 
 
   @media screen and (min-width: $tablet-width) {
@@ -32,14 +33,16 @@
 }
 
 .products__list {
-  @include content-width;
+
   display: grid;
   grid-template-columns: 1fr;
-
+  margin: 0;
   padding: 0;
 
   @media screen and (min-width: $tablet-width) {
     width: 708px;
+
+    @include content-width;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
   }
@@ -53,5 +56,4 @@
 
 .products__item {
   list-style: none;
-  box-sizing: border-box;
 }

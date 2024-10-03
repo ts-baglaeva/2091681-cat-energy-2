@@ -14,6 +14,7 @@
   font-size: 20px;
   line-height: 20px;
   color: #000000;
+  background-color: red;
 }
 
 @mixin flex ($dir, $justify, $gap) {
@@ -22,25 +23,6 @@
   justify-content: $justify;
   gap: $gap;
 }
-
-/* @mixin margin {
-  margin: 0 20px;
-
-  @media screen and (min-width: $tablet-width) {
-    margin: 0 30px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    width: 1220px;
-    margin: auto;
-  }
-
-  @media screen and (min-width: $desktop-big-width) {
-    width: auto;
-    margin: 0 110px;
-  }
-} */
-
 
 @mixin content-width {
   width: 280px;

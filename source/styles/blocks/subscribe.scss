@@ -1,29 +1,22 @@
-.subscribe__wrapper {
-  @include content-width;
-}
-
-.subscribe__form {
-  @include flex (column, center, 20px);
-  gap: 16px;
-  justify-content: center;
-  width: 100%;
-
-
-  @media screen and (min-width: $tablet-width) {
-    flex-direction: row;
-    gap: 0;
-  }
-}
-
 .subscribe__title {
   @include content-width;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 46px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 52px;
+  }
 }
 
 .subscribe__title-text {
   @include font;
   font-size: 24px;
   line-height: 24px;
-  padding: 0;
+  background-color: transparent;
+  padding: 10px 0;
   position: relative;
   z-index: 1;
 
@@ -50,17 +43,48 @@
   }
 }
 
+.subscribe__wrapper {
+  @include content-width;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 104px;
+  }
+}
+
+.subscribe__form {
+  @include flex (column, center, 20px);
+  gap: 16px;
+  justify-content: center;
+
+
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
 .subscribe__description {
   @include font;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  padding: 20px;
+  background-color: transparent;
+  padding: 10px 0 20px;
 
 
   @media screen and (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 32px;
+    padding: 10px 68px 24px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    text-align: center;
   }
 }
 
@@ -69,9 +93,10 @@
   line-height: 30px;
   text-transform: uppercase;
   color: $secondary-color;
-  border: 1px solid $border-light;
-
+  background-color: transparent;
   padding: 13px;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
 
   &:hover {
     border-color: $border-color;
@@ -90,11 +115,11 @@
   }
 
   @media screen and (min-width: $tablet-width) {
-    width: 53%;
+    width: 376px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 40%;
+    width: 496px;
   }
 }
 
@@ -106,10 +131,6 @@
   box-sizing: border-box;
 
   @media screen and (min-width: $tablet-width) {
-    width: 36%;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    width: 21%;
+    width: 256px;
   }
 }

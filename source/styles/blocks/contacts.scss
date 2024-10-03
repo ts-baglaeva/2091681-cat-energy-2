@@ -1,5 +1,13 @@
 .contacts {
   position: relative;
+
+  &--catalog {
+    background-color: $bg-color;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    background-color: $main-color;
+  }
 }
 
 .contacts__address {
@@ -37,8 +45,7 @@
   }
 
   @media screen and (min-width: $tablet-width) {
-    min-width: 768px;
-    min-height: 400px;
+
     background: url("../../images/footer/map-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;

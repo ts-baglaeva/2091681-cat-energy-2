@@ -1,12 +1,27 @@
+.additional {
+  margin: 0;
+}
+
 .additional__title {
   @include content-width;
+  border-bottom: 1px solid $border-color;
+  padding: 15px 0 26px;
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 64px 0 70px;
+    border: none;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 61px 0 70px;
+  }
 }
 
 .additional__title-text {
   @include font;
   font-size: 24px;
   line-height: 24px;
-  padding: 0;
+  padding: 10px 0;
   background-color: $main-color;
   position: relative;
   z-index: 1;
@@ -27,17 +42,19 @@
   @include content-width;
 
   @media screen and (min-width: $desktop-width) {
-    @include flex (column, space-between, 20px);
+    @include flex (row, space-between, 81px);
+    margin-bottom: 86px;
   }
 }
 
 .additional__list {
   list-style: none;
   width: 100%;
+  margin: 0;
   padding: 0;
 
   @media screen and (min-width: $desktop-width) {
-    width: 73.3%;
+    width: 896px;
     padding: 0;
   }
 }
@@ -45,15 +62,24 @@
 .additional__item {
   display: grid;
   grid-template-columns: 75% 25%;
-  padding: 26px 38px 28px;
-  border: 1px solid $border-color;
+  row-gap: 13px;
+  padding: 13px 0 19px;
+
+  border-bottom: 1px solid $border-color;
 
   @media screen and (min-width: $tablet-width) {
-    grid-template-columns: 60% auto 14.4%;
+    grid-template-columns: 60% auto 86px;
+    gap: 25px 10px;
+    border: 1px solid $border-color;
+    padding: 26px 38px 28px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    grid-template-columns: 36.4% 27.1% 9.2% 27.3%;
+    grid-template-columns: 320px 233px 72px 239px;
+    border: none;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    padding: 15px 0 17px 1px;
   }
 }
 
@@ -63,6 +89,7 @@
   line-height: 16px;
   text-transform: uppercase;
   color: $secondary-add;
+  background-color: transparent;
   grid-column: span 2;
 
   @media screen and (min-width: $tablet-width) {
@@ -78,6 +105,8 @@
   font-size: 14px;
   line-height: 14px;
   color: $secondary-color;
+  background-color: transparent;
+  padding: 1px 0;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
@@ -96,7 +125,9 @@
   font-size: 14px;
   line-height: 14px;
   color: $secondary-color;
+  background-color: transparent;
   justify-self: end;
+  padding: 1px 0;
 
 
   @media screen and (min-width: $tablet-width) {
@@ -125,12 +156,12 @@
 .additional__banner {
   display: block;
   width: 100%;
-  height: 290px;
+  min-height: 290px;
   background: linear-gradient(rgba($corporate, 0.85), rgba($corporate, 0.85)), url("../../images/additional/additional-banner-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-
+  margin: 35px 0 30px;
 
   &::before {
     content: "";
@@ -139,6 +170,7 @@
     display: block;
     background-image: url("../../icons/stack.svg#gift");
     position: absolute;
+    top: 59px;
     left: 50%;
     transform: translate(-50%);
   }
@@ -148,24 +180,27 @@
     background: linear-gradient(rgba($corporate, 0.85), rgba($corporate, 0.85)), url("../../images/additional/additional-banner-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 70px 0;
 
     &::before {
       background-size: 80px 83px;
       top: 50%;
-      left: 0;
+      left: 77px;
       transform: translateY(-50%);
+      padding: 0;
     }
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 20%;
-    height: 288px;
+    width: 245px;
+    min-height: 288px;
     background: linear-gradient(rgba($corporate, 0.85), rgba($corporate, 0.85)), url("../../images/additional/additional-banner-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
 
     &::before {
-      top: 0;
+      top: 56px;
       left: 50%;
       transform: translate(-50%);
     }
@@ -177,13 +212,17 @@
   font-family: $primary-font;
   font-size: 16px;
   color: $main-color;
+  background-color: transparent;
   text-align: center;
+  padding: 187px 61px 43px 58px;
 
   @media screen and (min-width: $tablet-width) {
     text-align: start;
+    padding: 71px 125px 68px 421px;
   }
 
   @media screen and (min-width: $desktop-width) {
     text-align: center;
+    padding: 185px 42px 43px;
   }
 }

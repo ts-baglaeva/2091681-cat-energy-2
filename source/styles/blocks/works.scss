@@ -21,6 +21,7 @@
   @include font;
   font-size: 36px;
   line-height: 40px;
+  background-color: transparent;
   padding: 10px 0;
 
   @media screen and (min-width: $tablet-width) {
@@ -90,6 +91,7 @@
     font-size: 280px;
     line-height: 280px;
     color: $bg-color;
+    background-color: transparent;
   }
 }
 
