@@ -1,12 +1,14 @@
-/* .address {
+.address {
+  @include content-width;
+  padding: 26px 0;
 
-} */
+  @media screen and (min-width: $tablet-width) {
+    padding: 60px 40px;
+  }
 
-.address-catalog {
-  background-color: $second-bg-color;
-
-  @media (min-width: $desktop-width) {
-    background-color: $main-color;
+  @media screen and (min-width: $desktop-width) {
+    width: 565px;
+    padding: 60px 78px 60px 80px;
   }
 }
 
@@ -14,9 +16,10 @@
   @include font;
   font-size: 16px;
   text-transform: uppercase;
-  color: $tertiary-color;
+  color: $add-color;
+  background-color: transparent;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     line-height: 26px;
   }
 }
@@ -27,10 +30,31 @@
   font-size: 14px;
   font-style: normal;
   color: $secondary-color;
+  background-color: transparent;
   text-decoration: none;
 
-  @media (min-width: $tablet-width) {
+  @media screen and (min-width: $tablet-width) {
     font-size: 16px;
+    text-align: end;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    text-align: start;
   }
 }
 
+.address__value-street {
+  @media screen and (min-width: $tablet-width) {
+    padding-bottom: 10px;
+  }
+}
+
+.address__value-town {
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 10px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 9px;
+  }
+}

@@ -1,9 +1,10 @@
 .button {
   @include font;
+
   font-size: 16px;
   line-height: 20px;
   color: $main-color;
-  background-color: $first-bg-color;
+  background-color: $corporate;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -11,9 +12,31 @@
   white-space: nowrap;
   box-sizing: border-box;
 
+  &:hover,
+  &:focus-visible {
+    background-color: $button-active;
+  }
+
+  &:active {
+    color: rgba($main-color, 0.3);
+    background-color: $button-active;
+  }
+
+  &--big {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
   &--all {
     color: $secondary-color;
-    background-color: $second-bg-color;
+    background-color: $bg-color;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: $secondary-color;
+      background-color: $bg-active;
+    }
   }
 }
 

@@ -14,11 +14,26 @@
   font-size: 20px;
   line-height: 20px;
   color: #000000;
+  background-color: red;
 }
 
-@mixin flex {
+@mixin flex ($dir, $justify, $gap) {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
+  flex-direction: $dir;
+  justify-content: $justify;
+  gap: $gap;
 }
+
+@mixin content-width {
+  width: 280px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 708px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 1220px;
+  }
+}
+
