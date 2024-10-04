@@ -1,0 +1,46 @@
+/* .logo-academy {
+
+} */
+
+.logo-academy__text {
+  @include flex (row, space-between, 20px);
+  align-items: center;
+  width: 280px;
+  padding: 20px 0 40px;
+  position: relative;
+
+  @include font;
+  font-family: $primary-font;
+  font-size: 16px;
+  color: $secondary-color;
+  background-color: transparent;
+
+  &::after {
+    content: "";
+    width: 27px;
+    height: 34px;
+    display: block;
+    text-decoration: none;
+    background-color: $link-color;
+    mask-image: url("../../icons/stack.svg#logo-html-academy");
+    mask-size: 27px 34px;
+    mask-repeat: no-repeat;
+    mask-position: end;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-color: $corporate;
+  }
+
+  &:active::after {
+    background-color: rgba($corporate, 0.5);
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 168px;
+    gap: 23px;
+    border: none;
+    padding: 0;
+  }
+}

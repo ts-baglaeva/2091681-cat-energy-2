@@ -1,0 +1,152 @@
+.hero {
+  position: relative;
+  min-height: 480px;
+
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet-width) {
+    min-height: 950px;
+    margin-bottom: 1px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    min-width: $desktop-width;
+    min-height: 694px;
+    margin-bottom: 82px;
+  }
+}
+
+.hero::after {
+  content: "";
+  width: 100%;
+  min-height: 63%;
+  display: block;
+  background: linear-gradient(180deg, rgba($corporate, 0.85) 0%, rgba($corporate, 0.85)), url("../../images/hero/hero-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+  @media screen and (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 50%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(180deg, rgba($corporate, 0.85) 0%, rgba($corporate, 0.85)), url("../../images/hero/hero-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: auto;
+    z-index: -1;
+  }
+}
+
+.hero__content {
+  @include content-width;
+}
+
+.hero__title {
+  @include font;
+  font-size: 36px;
+  line-height: 36px;
+  color: $main-color;
+  background-color: transparent;
+  text-align: center;
+  padding: 27px 0 25px;
+  position: relative;
+  z-index: 2;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: $primary-color;
+    text-align: start;
+    padding: 140px  90px 20px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 500px;
+    display: block;
+    padding: 224px 30px 20px 80px;
+  }
+}
+
+.hero__intro {
+  @include font;
+  font-size: 14px;
+  line-height: 14px;
+  color: $main-color;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 0;
+  position: relative;
+  z-index: 2;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    color: $primary-color;
+    text-align: start;
+    padding: 20px  90px;
+    z-index: 4;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 500px;
+    padding: 20px 30px 20px 80px;
+  }
+}
+
+.hero__image {
+  display: block;
+  margin: auto;
+  padding-top: 9px;
+  padding-bottom: 3px;
+
+  @media screen and (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top: 341px;
+    left: 50%;
+    transform: translate(-50%);
+    /* right: auto; */
+    z-index: 1;
+    padding-top: 1px;
+    padding-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    top: 143px;
+    left: calc(50% - 165px);
+    transform: none;
+    right: auto;
+    z-index: 1;
+  }
+}
+
+.hero__button {
+  display: block;
+  min-height: 36px;
+
+  @media screen and (min-width: $tablet-width) {
+    position: relative;
+    width: 244px;
+    font-size: 20px;
+    line-height: 26px;
+    padding-left: 90px;
+    z-index: 4;
+    margin: 30px 90px 20px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin: 32px 80px 20px;
+  }
+}

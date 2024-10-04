@@ -1,0 +1,239 @@
+.program-card {
+  background-color: $bg-color;
+  box-sizing: border-box;
+  padding: 21px 20px 18px;
+
+  &--weight-loss {
+    &::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      display: block;
+      background-color: $corporate;
+      border-radius: 50%;
+      position: absolute;
+      top: 24px;
+      left: 20px;
+    }
+
+    &::after {
+      content: "";
+      width: 36px;
+      height: 50px;
+      display: block;
+      background-image: url("../../icons/stack.svg#weight-loss");
+      background-size: 36px 50px;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 21px;
+      left: 27px;
+    }
+  }
+
+  &--weight-gain {
+    &::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      display: block;
+      background-color: $corporate;
+      border-radius: 50%;
+      position: absolute;
+      top: 24px;
+      left: 21px;
+    }
+
+    &::after {
+      content: "";
+      width: 67px;
+      height: 28px;
+      display: block;
+      background-image: url("../../icons/stack.svg#weight-gain");
+      background-size: 67px 28px;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 35px;
+      left: 13px;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .program-card {
+    padding: 65px 316px 40px 52px;
+    min-height: 372px;
+
+    &::before {
+      content: "";
+      width: 200px;
+      height: 200px;
+      display: block;
+      top: 92px;
+      left: auto;
+      right: 63px;
+    }
+
+    &--weight-loss {
+      &::after {
+        width: 140px;
+        height: 211px;
+        background-size: 140px 194px;
+        top: 81px;
+        left: auto;
+        right: 93px;
+      }
+    }
+
+    &--weight-gain {
+      &::after {
+        width: 268px;
+        height: 112px;
+        background-size: 268px 112px;
+        top: 135px;
+        left: auto;
+        right: 29px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .program-card {
+    padding: 41px 52px 40px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+
+    &--weight-loss {
+      &::after {
+        width: 70px;
+        height: 97px;
+        background-size: 70px 97px;
+        top: 41px;
+        left: 67px;
+      }
+    }
+
+    &--weight-gain {
+      &::after {
+        width: 134px;
+        height: 56px;
+        background-size: 134px 56px;
+        top: 67px;
+        left: 33px;
+      }
+    }
+  }
+}
+
+.program-card__subtitle {
+  @include font;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding: 9px 0 9px 70px;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 12px 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 36px 0 34px 214px;
+  }
+}
+
+.program-card__description {
+  @include font;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $secondary-color;
+  background-color: transparent;
+  padding: 20px 0 23px;
+  border-bottom: 1px solid $border-light-line;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 0 24px;
+    border: none;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 39px 0 12px;
+  }
+}
+
+
+.program-card__link {
+  @include font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+  position: relative;
+  padding-top: 15px;
+  padding-right: 56px;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    width: 24px;
+    height: 12px;
+    display: block;
+    background-image: url("../../icons/stack.svg#small-arrow");
+    position: absolute;
+    top: 50%;
+    right: 9px;
+  }
+
+  &:hover {
+    padding-right: 64px;
+  }
+
+  &:hover::after {
+    width: 32px;
+    background-image: url("../../icons/stack.svg#big-arrow");
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 24px 57px 13px 0;
+
+    &::after {
+      top: 50%;
+      right: 9px;
+    }
+
+    &:hover {
+      padding-right: 65px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 11px 60px 15px 0;
+
+    &::after {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 9px;
+    }
+
+    &:hover {
+      padding-right: 68px;
+    }
+  }
+}

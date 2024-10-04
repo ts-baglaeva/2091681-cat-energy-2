@@ -1,0 +1,35 @@
+.main-header {
+  @include flex (row, space-between, 10px);
+  align-items: center;
+
+  @include content-width;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  background-color: $main-color;
+
+  /* position: fixed;
+  z-index: 10; */
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 0;
+    top: 25px;
+    left: 0;
+    right: 0;
+
+    position: absolute;
+    z-index: 4;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    top: 55px;
+    background-color: transparent;
+  }
+}
+
+/* .main-header__logo {
+
+} */
+
+/* .main-header__navigation {
+  width: 20%;
+} */

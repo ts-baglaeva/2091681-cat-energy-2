@@ -1,0 +1,129 @@
+.main-footer {
+  min-height: 240px;
+  background-color: $bg-color;
+
+  @media screen and (min-width: $tablet-width) {
+    min-height: 0;
+  }
+}
+
+.main-footer-wrapper {
+  @include content-width;
+  @include flex (column, space-between, 0);
+  align-items: center;
+  background-color: $bg-color;
+
+
+  @media screen and (min-width: $tablet-width) {
+    @include flex (row, space-between, 20px);
+    padding: 55px 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 66px 0;
+  }
+}
+
+.main-footer__logo {
+  width: 280px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 20px;
+  border-bottom: 1px solid $border-dark-line;
+
+  &::before {
+    content: "";
+    width: 128px;
+    height: 24px;
+    background-color: $add-color;
+    mask-image: url("../../icons/stack.svg#logo-text");
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    background-color: $add-focus;
+  }
+
+  &:active::before {
+    background-color: $add-focus;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 128px;
+    border: none;
+    padding: 0;
+    justify-content: start;
+  }
+}
+
+.main-footer__socials-list {
+  @include flex (row, center, 20px);
+  width: 280px;
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid $border-dark-line;
+
+
+  @media screen and (min-width: $tablet-width) {
+    width: 132px;
+    border: none;
+    padding: 0;
+  }
+}
+
+.main-footer__socials-link {
+  display: block;
+  width: 28px;
+  height: 22px;
+
+  &:hover::before,
+  &:focus-visible::before {
+    background-color: $corporate;
+  }
+
+  &:active::before {
+    background-color: rgba($corporate, 0.3);
+  }
+
+
+  &--vkontakte::before {
+    content: "";
+    width: 28px;
+    height: 22px;
+    display: block;
+    background-color: $link-color;
+    mask-image: url("../../icons/stack.svg#vkontakte");
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &--youtube::before {
+    content: "";
+    width: 28px;
+    height: 22px;
+    display: block;
+    background-color: $link-color;
+    mask-image: url("../../icons/stack.svg#youtube");
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &--telegram::before {
+    content: "";
+    width: 28px;
+    height: 22px;
+    display: block;
+    background-color: $link-color;
+    mask-image: url("../../icons/stack.svg#telegram");
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+}
+
+.main-footer__logo-academy {
+  @include flex (row, space-between, 20px);
+  text-decoration: none;
+}
+
