@@ -1,14 +1,9 @@
 .main-header {
-  @include flex (row, space-between, 10px);
-  align-items: center;
+  /*@include flex (row, space-between, 10px);
+  align-items: center;*/
 
   @include content-width;
-  padding-top: 13px;
-  padding-bottom: 14px;
   background-color: $main-color;
-
-  /* position: fixed;
-  z-index: 10; */
 
   @media screen and (min-width: $tablet-width) {
     padding: 0;
@@ -26,10 +21,27 @@
   }
 }
 
-/* .main-header__logo {
+.main-header__logo {
+  @include flex (row, space-between, 15px);
+  align-items: center;
+  text-decoration: none;
 
-} */
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
 
-/* .main-header__navigation {
-  width: 20%;
-} */
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-header__logo-text {
+  width: 101px;
+  height: 18px;
+
+  @media screen and (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
+}
