@@ -1,21 +1,38 @@
 .navigation {
-  /*@include flex (row, space-between, 0);
-  align-items: center;*/
+  @include flex (row, space-between, 0);
+  align-items: center;
   min-height: 65px;
   position: relative;
+
+  /*
+  &--opened {
+    outline: 3px solid red;
+  }
+
+  &--closed {
+    outline: 3px solid green;
+  } */
+
+  &--nojs {
+
+  }
 }
 
 .navigation__toggle {
-  position: absolute;
-  top: -20px;
-  right: 0;
   width: 24px;
   height: 24px;
   border: none;
   background-color: transparent;
-  background-image: url("../../icons/stack.svg#menu-open-mobile");
   cursor: pointer;
   padding: 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media screen and (min-width: $tablet-width) {
     display: none;
@@ -26,27 +43,115 @@
   }
 }
 
+// A class for an opened mobile menu
+.navigation--opened .navigation__toggle {
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 32px;
+    right: 0;
+    width: 25px;
+    height: 2px;
+    background-color: $primary-color;
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
 
-.navigation__toggle--closed {
-  width: 18px;
-  height: 18px;
-  background-color: transparent;
-  background-image: url("../../icons/stack.svg#menu-close-mobile");
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+//A class for a closed mobile menu
+.navigation--closed .navigation__toggle::before {
+  content: " ";
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: $primary-color;
+  box-shadow: 0 8px 0 0 $primary-color, 0 16px 0 0 $primary-color;
+}
+
+.navigation--nojs .menu__toggle {
+  display: none;
+}
+
+.navigation--opened .navigation__wrapper {
+  width: 500px;
+  background-color: $main-color;
+  position: relative;
+  z-index: 9;
 }
 
 .navigation__list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
 
-  @include flex (column, space-between, 33px);
+.navigation--opened .navigation__list {
+  @include flex (column, space-between, 0);
   align-items: center;
-  /*display: none;*/
+  position: absolute;
+  top: 65px;
+  left: auto;
+  right: -20px;
+  min-width: 320px;
+  z-index: 3;
+  background-color: $main-color;
+
 
   @media screen and (min-width: $tablet-width) {
     @include flex (row, space-between, 33px);
     align-items: end;
+    position: static;
+    width: auto;
+    background-color: transparent;
   }
+}
+
+.navigation--closed .navigation__list {
+  display: none;
+}
+
+.navigation--nojs .menu__content-list {
+  position: static;
+  display: block;
+  min-height: 0;
+}
+
+.navigation__item {
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid $border-light-line;
+  text-align: center;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $tablet-width) {
+    width: auto;
+    padding: 0;
+    border: none;
+    box-sizing: content-box;
+  }
+}
+
+.navigation__item:first-child {
+  border-top: 1px solid $border-light-line;
+
+  @media screen and (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.navigation--nojs .navigation-item {
+  display: block;
 }
 
 .navigation__link {
@@ -57,7 +162,6 @@
   background-color: transparent;
   text-align: center;
   position: relative;
-
 
   &:hover {
     opacity: 0.6;
@@ -80,14 +184,17 @@
 
 .navigation__link--index {
   @include font;
-  font-size: 18px;
-  line-height: 24px;
   text-decoration: none;
   text-transform: uppercase;
   color: $primary-color;
   background-color: transparent;
   text-align: center;
   position: relative;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 
   @media screen and (min-width: $desktop-width) {
     color: $main-color;
@@ -122,16 +229,17 @@
     line-height: 24px;
     color: $primary-color;
     background-color: transparent;
-    padding-bottom: 16px;
+    padding-bottom: 8px;
+    box-sizing: border-box;
 
     &::after {
       content: "";
       height: 2px;
-      box-sizing: border-box;
+
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 7px;
+      bottom: 0;
       background-color: $corporate;
     }
   }

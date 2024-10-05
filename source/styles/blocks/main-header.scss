@@ -1,17 +1,17 @@
 .main-header {
-  /*@include flex (row, space-between, 10px);
-  align-items: center;*/
+  @include flex (row, space-between, 10px);
+  align-items: center;
 
   @include content-width;
   background-color: $main-color;
 
   @media screen and (min-width: $tablet-width) {
+    border: none;
     padding: 0;
+    position: absolute;
     top: 25px;
     left: 0;
     right: 0;
-
-    position: absolute;
     z-index: 4;
   }
 
