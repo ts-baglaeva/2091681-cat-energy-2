@@ -2,7 +2,7 @@
   @include flex (row, space-between, 0);
   align-items: center;
   min-height: 65px;
-  position: relative;
+  // position: relative;
 
   /*
   &--opened {
@@ -14,7 +14,7 @@
   } */
 
   &--nojs {
-
+    position: static;
   }
 }
 
@@ -25,6 +25,9 @@
   background-color: transparent;
   cursor: pointer;
   padding: 0;
+  position: absolute;
+  top: 22px;
+  right: calc(50% - 140px);
 
   &:hover {
     opacity: 0.8;
@@ -49,8 +52,8 @@
   &::after {
     content: " ";
     position: absolute;
-    top: 32px;
-    right: 0;
+    top: 12px;
+    right: -1px;
     width: 25px;
     height: 2px;
     background-color: $primary-color;
@@ -71,7 +74,7 @@
 .navigation--closed .navigation__toggle::before {
   content: " ";
   position: absolute;
-  top: 24px;
+  top: 4px;
   left: 0;
   width: 24px;
   height: 2px;
@@ -101,16 +104,15 @@
   align-items: center;
   position: absolute;
   top: 65px;
-  left: auto;
-  right: -20px;
-  min-width: 320px;
+  left: 0;
+  right: 0;
+  min-width: 100%;
   z-index: 3;
   background-color: $main-color;
 
 
   @media screen and (min-width: $tablet-width) {
     @include flex (row, space-between, 33px);
-    align-items: end;
     position: static;
     width: auto;
     background-color: transparent;
@@ -119,6 +121,11 @@
 
 .navigation--closed .navigation__list {
   display: none;
+
+  @media screen and (min-width: $tablet-width) {
+    @include flex (row, space-between, 33px);
+    align-items: center;
+  }
 }
 
 .navigation--nojs .menu__content-list {
@@ -155,6 +162,9 @@
 }
 
 .navigation__link {
+  width: 280px;
+  margin: 0 auto;
+
   @include font;
   text-decoration: none;
   text-transform: uppercase;
@@ -162,6 +172,7 @@
   background-color: transparent;
   text-align: center;
   position: relative;
+
 
   &:hover {
     opacity: 0.6;
@@ -172,8 +183,10 @@
   }
 
   @media screen and (min-width: $tablet-width) {
+    width: auto;
     font-size: 18px;
     line-height: 24px;
+    padding-bottom: 8px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -197,6 +210,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
     color: $main-color;
   }
 }
@@ -206,7 +221,7 @@
   color: $primary-color;
   background-color: transparent;
   text-decoration: none;
-  padding-bottom: 16px;
+
 
   @media screen and (min-width: $tablet-width) {
     &::after {
@@ -216,7 +231,7 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 7px;
+      bottom: 0;
       background-color: $corporate;
     }
   }
@@ -229,13 +244,11 @@
     line-height: 24px;
     color: $primary-color;
     background-color: transparent;
-    padding-bottom: 8px;
-    box-sizing: border-box;
+
 
     &::after {
       content: "";
       height: 2px;
-
       position: absolute;
       left: 0;
       right: 0;
@@ -246,6 +259,8 @@
 
   @media screen and (min-width: $desktop-width) {
     position: relative;
+    font-size: 20px;
+    line-height: 30px;
     color: $main-color;
     background-color: transparent;
 
@@ -256,7 +271,7 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 7px;
+      bottom: 0;
       background-color: $main-color;
     }
   }

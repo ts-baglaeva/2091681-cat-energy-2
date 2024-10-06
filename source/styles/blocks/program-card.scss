@@ -184,6 +184,19 @@
   padding-right: 56px;
   display: inline-block;
 
+  /* &::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    display: block;
+    background-color: $primary-color;
+    //background-image: url("../../icons/stack.svg#small-arrow");
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+  } */
+
   &::after {
     content: "";
     width: 24px;
@@ -192,6 +205,7 @@
     background-image: url("../../icons/stack.svg#small-arrow");
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     right: 9px;
   }
 
