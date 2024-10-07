@@ -1,7 +1,7 @@
 .program-card {
   background-color: $bg-color;
   box-sizing: border-box;
-  padding: 21px 20px 18px;
+  padding: 21px 20px 8px;
 
   &--weight-loss {
     &::before {
@@ -173,6 +173,8 @@
 
 
 .program-card__link {
+  max-width: 272px;
+
   @include font;
   font-size: 16px;
   line-height: 20px;
@@ -180,44 +182,44 @@
   text-decoration: none;
   background-color: transparent;
   position: relative;
-  padding-top: 15px;
-  padding-right: 56px;
+  padding: 15px 50px 10px 0;
   display: inline-block;
 
-  /* &::before {
+  &::before {
     content: "";
     width: 18px;
     height: 2px;
     display: block;
     background-color: $primary-color;
-    //background-image: url("../../icons/stack.svg#small-arrow");
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 23px;
     right: 15px;
-  } */
+    transition: all 0.3s ease;
+  }
 
   &::after {
     content: "";
-    width: 24px;
+    width: 9px;
     height: 12px;
-    display: block;
-    background-image: url("../../icons/stack.svg#small-arrow");
+    background-image: url("../../icons/stack.svg#arrow");
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 9px;
+    top: 18px;
+    right: 8px;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
   }
 
-  &:hover {
-    padding-right: 64px;
+  &:hover::before {
+    width: 26px;
+    right: 7px;
   }
 
   &:hover::after {
-    width: 32px;
-    background-image: url("../../icons/stack.svg#big-arrow");
+    transform: translateX(8px);
   }
 
+  &:active,
+  &:active::before,
   &:active::after {
     opacity: 0.3;
   }
@@ -226,28 +228,31 @@
     font-size: 20px;
     line-height: 30px;
     padding: 24px 57px 13px 0;
+    position: relative;
 
-    &::after {
-      top: 50%;
-      right: 9px;
+
+    &::before {
+      top: 38px;
+      right: 15px;
     }
 
-    &:hover {
-      padding-right: 65px;
+    &::after {
+      top: 33px;
+      transform: translateX(0);
     }
   }
 
   @media screen and (min-width: $desktop-width) {
     padding: 11px 60px 15px 0;
 
-    &::after {
-      top: 50%;
-      transform: translateY(-50%);
-      right: 9px;
+    &::before {
+      top: 25px;
+      right: 15px;
     }
 
-    &:hover {
-      padding-right: 68px;
+    &::after {
+      top: 20px;
+      transform: translateX(0);
     }
   }
 }
