@@ -1,25 +1,38 @@
 .example {
   background: $bg-dark;
+  padding-bottom: 40px;
 
   @media screen and (min-width: $tablet-width) {
     background: linear-gradient(180deg, $main-color 0%, $main-color 57%, $bg-dark 57%, $bg-dark 100%);
+    padding-bottom: 101px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    background: linear-gradient(180deg, $main-color 0%, $main-color 57%, $bg-color 57%, $bg-color 100%);
+
+    background: linear-gradient(180deg, $main-color 0%, $main-color 23%, $bg-color 23%, $bg-color 100%);
+  }
+}
+
+.example-content {
+  @include content-width;
+
+  @media screen and (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto 560px;
+    gap: 224px;
   }
 }
 
 .example__wrapper {
-  @include content-width;
+  //outline: 1px solid blue;
 
   @media screen and (min-width: $desktop-width) {
-    @include flex (row, space-between, 20px);
+    //width: 100%;
+    //max-width: 512px;
   }
 }
 
 .example__title {
-  @include content-width;
   @include font;
   font-size: 36px;
   line-height: 40px;
@@ -44,7 +57,7 @@
   line-height: 18px;
   color: $secondary-color;
   background-color: transparent;
-  padding: 20px 0 10px;
+  padding: 20px 0;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
@@ -58,11 +71,11 @@
 }
 
 .example__calculation {
-  padding: 15px 0 10px;
+  padding: 14px 0 0;
 
   @media screen and (min-width: $tablet-width) {
     @include flex (row, space-between, 20px);
-    padding: 25px 0;
+    padding: 10px 0 99px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -74,7 +87,7 @@
 .example__list {
   @include flex (row, space-between, 32px);
   margin: 0;
-  padding: 0;
+  padding: 0 0 10px;
 
   @media screen and (min-width: $tablet-width) {
     gap: 20px;
@@ -91,13 +104,12 @@
   width: 124px;
   list-style: none;
   position: relative;
-  background-color: $bg-dark;
   z-index: 1;
 
   &::after {
     content: "";
-    width: 100%;
-    height: 100%;
+    width: 124px;
+    min-height: 56px;
     display: block;
     border: 1px solid $border-color;
     border-radius: 2px;
@@ -109,40 +121,48 @@
 
   @media screen and (min-width: $tablet-width) {
     width: 162px;
-    background-color: $main-color;
 
     &::after {
       width: 100%;
-      height: 72px;
+      top: -12px;
+      min-height: 72px;
     }
   }
 }
 
-/* .example__item-wrapper {
+.example__item-wrapper {
+  width: 87px;
+  margin: 0 auto;
   background-color: $bg-dark;
 
   @media screen and (min-width: $tablet-width) {
     background-color: $main-color;
+
+    &--weight {
+      width: 114px;
+    }
+
+    &--time {
+      width: 142px;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
-    background-color: $bg-dark;
+    background-color: $bg-color;
   }
-} */
+}
 
 .example__item-value {
   @include font;
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-  background-color: transparent;
-  padding: 9px 0 4px;
-
+  padding: 4px 5px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
-    padding: 15px 0 6px;
+    padding: 4px 0 6px;
   }
 }
 
@@ -153,20 +173,18 @@
   line-height: 12px;
   text-align: center;
   color: $secondary-color;
-  background-color: transparent;
-  padding: 4px 0 9px;
-
+  padding: 4px 15px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 14px;
-    padding: 5px 0 15px;
+    padding: 5px 0;
   }
 }
 
 .example__total {
-  @include flex (row, center, 20px);
-  padding: 10px 0;
+  @include flex (row, center, 3px);
+  padding: 10px 0 20px;
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: column;
@@ -208,16 +226,45 @@
 
 .example__picture-slider {
   width: 280px;
-  min-height: 256px;
+  height: 256px;
   position: relative;
+  overflow: hidden;
   margin: 0 auto;
-  padding: 10px 0 40px;
+  outline: 1px solid red;
 
   @media screen and (min-width: $tablet-width) {
     width: 560px;
-    min-height: 512px;
-    text-align: center;
-    padding: 74px 0 101px;
+    height: 512px;
+    //margin: 74px auto 61px;
+  }
+}
+
+.example__picture-wraper {
+  width: 280px;
+  height: 256px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $bg-dark;
+  overflow: hidden;
+
+  outline: 1px solid green;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+    background-color: transparent;
+    //background: linear-gradient(0deg, rgba(234, 234, 234, 1) 0, rgba(234, 234, 234, 1) 361px, rgba(255, 255, 255, 1) 361px, rgba(255, 255, 255, 1) 512px);
+  }
+
+  &--before {
+    width: 50%;
+    z-index: 4;
+    //background-color: $bg-dark;
+  }
+
+  &--after {
+    z-index: 3;
   }
 }
 
@@ -228,13 +275,11 @@
   border-radius: 2px;
   width: 4px;
   height: 100%;
-  display: block;
   padding: 0;
   position: absolute;
   top: 0;
   left: 50%;
   z-index: 5;
-
 
   &::before {
     content: "";

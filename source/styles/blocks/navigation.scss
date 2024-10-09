@@ -97,6 +97,10 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media screen and (min-width: $tablet-width) {
+    max-width: 497px;
+  }
 }
 
 .navigation--opened .navigation__list {
@@ -106,10 +110,9 @@
   top: 65px;
   left: 0;
   right: 0;
-  min-width: 100%;
+  //min-width: 100%;
   z-index: 3;
   background-color: $main-color;
-
 
   @media screen and (min-width: $tablet-width) {
     @include flex (row, space-between, 33px);
@@ -138,7 +141,7 @@
   width: 100%;
   padding: 20px;
   border-bottom: 1px solid $border-light-line;
-  text-align: center;
+  text-align: start;
   box-sizing: border-box;
 
   @media screen and (min-width: $tablet-width) {
@@ -170,7 +173,6 @@
   text-transform: uppercase;
   color: $primary-color;
   background-color: transparent;
-  text-align: center;
   position: relative;
 
 
@@ -200,8 +202,7 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $primary-color;
-  background-color: transparent;
-  text-align: center;
+  //background-color: transparent;
   position: relative;
 
   @media screen and (min-width: $tablet-width) {

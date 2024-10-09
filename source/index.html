@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
-
+  <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -23,7 +23,7 @@
       </picture>
       <img class="main-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип магазина Кэт энерджи.">
     </a>
-    <nav class="navigation  navigation--opened navigation--nojs">
+    <nav class="navigation  navigation--closed navigation--nojs">
       <button class="navigation__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -104,35 +104,33 @@
     </section>
 
     <section class="example">
-
-      <h2 class="example__title">Живой пример</h2>
-      <div class="example__wrapper">
-        <div class="example__text-wrapper">
-          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-
-          <div class="example__calculation">
-            <ul class="example__list">
-              <li class="example__item">
-                <div class="example__item-wrapper">
-                  <p class="example__item-value">5 кг</p>
-                  <p class="example__item-indicator example__item-indicator--weight">снижение веса</p>
-                </div>
-              </li>
-              <li class="example__item">
-                <div class="example__item-wrapper">
-                  <p class="example__item-value">60 дней</p>
-                  <p class="example__item-indicator example__item-indicator--time">затрачено времени</p>
-                </div>
-              </li>
-            </ul>
-
-            <p class="example__total">
-              <span class="example__total-text">Затраты на питание:</span>
-              <span class="example__total-value">15 000 РУБ.</span>
-            </p>
+      <div class="example-content">
+        <div class="example__wrapper">
+          <h2 class="example__title">Живой пример</h2>
+          <div class="example__text-wrapper">
+            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__calculation">
+              <ul class="example__list">
+                <li class="example__item">
+                  <div class="example__item-wrapper example__item-wrapper--weight">
+                    <p class="example__item-value">5 кг</p>
+                    <p class="example__item-indicator">снижение веса</p>
+                  </div>
+                </li>
+                <li class="example__item">
+                  <div class="example__item-wrapper example__item-wrapper--time">
+                    <p class="example__item-value">60 дней</p>
+                    <p class="example__item-indicator">затрачено времени</p>
+                  </div>
+                </li>
+              </ul>
+              <p class="example__total">
+                <span class="example__total-text">Затраты на питание:</span>
+                <span class="example__total-value">15 000 РУБ.</span>
+              </p>
+            </div>
           </div>
         </div>
-
         <div class="example__picture-slider">
           <div class="example__picture-wraper example__picture-wraper--before">
             <picture>
@@ -152,6 +150,7 @@
               <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/example/cat-after@1x.png 1x, images/example/cat-after@2x.png 2x">
               <img class="example__picture" src="images/example/cat-mobile-after@1x.png" srcset="images/example/cat-mobile-after@2x.png 2x" width="280" height="256" alt="Кот до похудения">
             </picture>
+
           </div>
         </div>
       </div>
@@ -197,8 +196,6 @@
       </a>
     </div>
   </footer>
-
 </body>
-<script src="scripts/index.js" defer></script>
 
 </html>

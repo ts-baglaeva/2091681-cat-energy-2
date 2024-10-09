@@ -18,7 +18,7 @@
 
 @mixin flex ($dir, $justify, $gap) {
   display: flex;
-  flex-direction: $dir;
+  flex-flow: $dir wrap;
   justify-content: $justify;
   gap: $gap;
 }
