@@ -141,7 +141,7 @@
   width: 100%;
   padding: 20px;
   border-bottom: 1px solid $border-light-line;
-  text-align: start;
+  text-align: center;
   box-sizing: border-box;
 
   @media screen and (min-width: $tablet-width) {
@@ -149,6 +149,7 @@
     padding: 0;
     border: none;
     box-sizing: content-box;
+    text-align: start;
   }
 }
 

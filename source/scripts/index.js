@@ -13,7 +13,7 @@ navToggle.addEventListener('click', () => {
   }
 });
 
-/*function getTextNodesIn(elem, opt_fnFilter) {
+function getTextNodesIn(elem, opt_fnFilter) {
   let textNodes = [];
   if (elem) {
     for (let nodes = elem.childNodes, i = nodes.length; i--;) {
@@ -30,13 +30,13 @@ navToggle.addEventListener('click', () => {
   }
   return textNodes;
 }
+
 getTextNodesIn(document.body).forEach((item) => {
   item.textContent = 'У меня есть несколько клиентов, которые записались ко мне на стрижку, не успев даже зайти в салон.';
-});*/
+});
 
-const li = document.querySelectorAll('li');
+/*const li = document.querySelectorAll('li');
 li.forEach((item) => {
   const clone = item.cloneNode(true);
   item.before(clone);
-});
-
+});*/

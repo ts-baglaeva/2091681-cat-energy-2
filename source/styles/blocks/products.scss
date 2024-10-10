@@ -33,7 +33,6 @@
 }
 
 .products__list {
-
   display: grid;
   grid-template-columns: 1fr;
   margin: 0;
@@ -56,4 +55,5 @@
 
 .products__item {
   list-style: none;
+  display: flex;
 }
