@@ -42,7 +42,7 @@
   @include content-width;
 
   @media screen and (min-width: $desktop-width) {
-    @include flex (row, space-between, 81px);
+    @include flex (row, space-between, 80px);
     margin-bottom: 86px;
   }
 }
@@ -54,7 +54,7 @@
   padding: 0;
 
   @media screen and (min-width: $desktop-width) {
-    width: 896px;
+    width: 895px;
     padding: 0;
   }
 }

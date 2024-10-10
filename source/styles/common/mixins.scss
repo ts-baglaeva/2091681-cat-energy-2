@@ -14,12 +14,11 @@
   font-size: 20px;
   line-height: 20px;
   color: #000000;
-  background-color: red;
 }
 
 @mixin flex ($dir, $justify, $gap) {
   display: flex;
-  flex-direction: $dir;
+  flex-flow: $dir wrap;
   justify-content: $justify;
   gap: $gap;
 }
