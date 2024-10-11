@@ -13,7 +13,7 @@ navToggle.addEventListener('click', () => {
   }
 });
 
-function getTextNodesIn(elem, opt_fnFilter) {
+/*function getTextNodesIn(elem, opt_fnFilter) {
   let textNodes = [];
   if (elem) {
     for (let nodes = elem.childNodes, i = nodes.length; i--;) {

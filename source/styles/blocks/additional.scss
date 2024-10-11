@@ -1,40 +1,92 @@
 .additional {
-  margin: 0;
+  overflow: hidden;
 }
 
 .additional__title {
-  @include content-width;
-  border-bottom: 1px solid $border-color;
-  padding: 15px 0 26px;
-
-  @media screen and (min-width: $tablet-width) {
-    padding: 64px 0 70px;
-    border: none;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    padding: 61px 0 70px;
-  }
-}
-
-.additional__title-text {
   @include font;
   font-size: 24px;
   line-height: 24px;
-  padding: 10px 0;
-  background-color: $main-color;
+  padding: 25px 0 26px;
   position: relative;
   z-index: 1;
+  width: fit-content;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 40px);
+    width: 100vw;
+    height: 2px;
+    background-color: $corporate;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 40px);
+    width: 100vw;
+    height: 2px;
+    background-color: $corporate;
+    z-index: -1;
+  }
 
   @media screen and (min-width: $tablet-width) {
     font-size: 32px;
     line-height: 32px;
+    padding: 64px 40px 70px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      width: 100vw;
+      height: 2px;
+      background-color: $corporate;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      width: 100vw;
+      height: 2px;
+      background-color: $corporate;
+      z-index: -1;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
     font-size: 40px;
     line-height: 40px;
+    padding: 61px 0 70px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: calc(100% + 40px);
+      width: 100vw;
+      height: 2px;
+      background-color: $corporate;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: calc(100% + 40px);
+      width: 100vw;
+      height: 2px;
+      background-color: $corporate;
+      z-index: -1;
+    }
   }
 }
 
@@ -81,6 +133,10 @@
     border-bottom: 1px solid $border-color;
     padding: 15px 0 17px 1px;
   }
+}
+
+.additional__item:first-child {
+  border-top: 1px solid $border-color;
 }
 
 .additional__subtitle {
