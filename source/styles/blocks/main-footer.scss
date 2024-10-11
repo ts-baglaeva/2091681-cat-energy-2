@@ -124,6 +124,7 @@
 
 .main-footer__logo-academy {
   @include flex (row, space-between, 20px);
+  flex-wrap: nowrap;
   text-decoration: none;
 }
 

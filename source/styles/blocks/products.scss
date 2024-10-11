@@ -9,6 +9,7 @@
 
   @media screen and (min-width: $tablet-width) {
     border: none;
+    padding: 0;
   }
 }
 
@@ -24,11 +25,11 @@
     font-size: 60px;
     line-height: 60px;
     text-align: start;
-    padding: 140px 0 84px;
+    padding: 65px 0 84px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 188px 0 84px;
+    padding: 74px 0 84px;
   }
 }
 

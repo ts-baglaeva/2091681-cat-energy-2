@@ -9,16 +9,17 @@
   @media screen and (min-width: $tablet-width) {
     border: none;
     padding: 0;
-    position: absolute;
-    top: 25px;
-    left: 0;
-    right: 0;
-    z-index: 4;
   }
 
   @media screen and (min-width: $desktop-width) {
-    top: 55px;
-    background-color: transparent;
+    &__bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 4;
+      top: 55px;
+      background-color: transparent;
+    }
   }
 }
 

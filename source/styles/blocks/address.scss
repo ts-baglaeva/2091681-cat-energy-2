@@ -1,5 +1,4 @@
 .address {
-  @include content-width;
   padding: 26px 0;
 
   @media screen and (min-width: $tablet-width) {

@@ -90,6 +90,7 @@
   padding: 0 0 10px;
 
   @media screen and (min-width: $tablet-width) {
+    width: 370px;
     gap: 20px;
   }
 
@@ -234,7 +235,6 @@
   @media screen and (min-width: $tablet-width) {
     width: 560px;
     height: 512px;
-    //margin: 74px auto 61px;
   }
 }
 
@@ -257,7 +257,6 @@
   &--before {
     width: 50%;
     z-index: 4;
-    //background-color: $bg-dark;
   }
 
   &--after {
