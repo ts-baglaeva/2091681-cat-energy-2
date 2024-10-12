@@ -6,7 +6,7 @@
   @include font;
   font-size: 24px;
   line-height: 24px;
-  padding: 25px 0 26px;
+  padding: 25px 0 35px;
   position: relative;
   z-index: 1;
   width: fit-content;
@@ -14,8 +14,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
-    right: calc(100% + 40px);
+    top: 35px;
+    right: calc(100% + 41px);
     width: 100vw;
     height: 2px;
     background-color: $corporate;
@@ -25,8 +25,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
-    left: calc(100% + 40px);
+    top: 35px;
+    left: calc(100% + 41px);
     width: 100vw;
     height: 2px;
     background-color: $corporate;
@@ -115,7 +115,7 @@
   display: grid;
   grid-template-columns: 75% 25%;
   row-gap: 13px;
-  padding: 13px 0 19px;
+  padding: 13px 0 18px;
 
   border-bottom: 1px solid $border-color;
 

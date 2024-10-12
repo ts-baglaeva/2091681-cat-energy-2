@@ -29,10 +29,12 @@
 
   &--more {
     grid-template-columns: 1fr;
+    gap: 8px;
     background-image: url("../../icons/stack.svg#small-plus");
     background-repeat: no-repeat;
     background-position: center 25px;
     background-size: 30px 30px;
+    padding-bottom: 23px;
 
     @media screen and (min-width: $tablet-width) {
       width: 250px;
@@ -127,8 +129,7 @@
     text-align: center;
     color: $secondary-color;
     background-color: transparent;
-    padding-bottom: 13px;
-    flex-shrink: 1;
+    padding-bottom: 15px;
 
     @media screen and (min-width: $tablet-width) {
       font-size: 16px;

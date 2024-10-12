@@ -2,16 +2,6 @@
   @include flex (row, space-between, 0);
   align-items: center;
   min-height: 65px;
-  // position: relative;
-
-  /*
-  &--opened {
-    outline: 3px solid red;
-  }
-
-  &--closed {
-    outline: 3px solid green;
-  } */
 
   &--nojs {
     position: static;
@@ -52,8 +42,8 @@
   &::after {
     content: " ";
     position: absolute;
-    top: 12px;
-    right: -1px;
+    top: 9px;
+    right: -3px;
     width: 25px;
     height: 2px;
     background-color: $primary-color;
@@ -74,8 +64,8 @@
 .navigation--closed .navigation__toggle::before {
   content: " ";
   position: absolute;
-  top: 4px;
-  left: 0;
+  top: 0;
+  left: -1px;
   width: 24px;
   height: 2px;
   background-color: $primary-color;
@@ -110,7 +100,6 @@
   top: 65px;
   left: 0;
   right: 0;
-  //min-width: 100%;
   z-index: 3;
   background-color: $main-color;
 
@@ -139,7 +128,7 @@
 
 .navigation__item {
   width: 100%;
-  padding: 20px;
+  padding: 22px;
   border-bottom: 1px solid $border-light-line;
   text-align: center;
   box-sizing: border-box;

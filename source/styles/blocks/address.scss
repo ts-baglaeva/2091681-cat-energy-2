@@ -17,6 +17,7 @@
   text-transform: uppercase;
   color: $add-color;
   background-color: transparent;
+  //padding-right: 20px;
 
   @media screen and (min-width: $tablet-width) {
     line-height: 26px;

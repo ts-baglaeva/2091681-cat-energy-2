@@ -59,7 +59,7 @@
   color: $main-color;
   background-color: transparent;
   text-align: center;
-  padding: 27px 0 25px;
+  padding: 27px 0 15px;
   position: relative;
   z-index: 2;
 
@@ -86,7 +86,7 @@
   background-color: transparent;
   text-align: center;
   text-transform: uppercase;
-  padding: 20px 0;
+  padding: 10px 0;
   position: relative;
   z-index: 2;
 
@@ -95,7 +95,7 @@
     line-height: 30px;
     color: $primary-color;
     text-align: start;
-    padding: 20px  90px;
+    padding: 20px 90px;
     z-index: 4;
   }
 
@@ -108,7 +108,7 @@
 .hero__image {
   display: block;
   margin: auto;
-  padding-top: 9px;
+  padding-top: 19px;
   padding-bottom: 3px;
 
   @media screen and (min-width: $tablet-width) {

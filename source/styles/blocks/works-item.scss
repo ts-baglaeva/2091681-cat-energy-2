@@ -1,5 +1,5 @@
 .work-item__description {
-  padding-left: 80px;
+  padding: 2px 0 0 80px;
   position: relative;
 
   @include font;
@@ -39,45 +39,45 @@
   &--powder {
     &::after {
       content: "";
-      width: 30px;
-      height: 32px;
+      width: 27px;
+      height: 31px;
       display: block;
       background-image: url("../../icons/stack.svg#powder");
-      background-size: 30px 32px;
+      background-size: 27px 31px;
       background-repeat: no-repeat;
       position: absolute;
       top: 15px;
-      left: 15px;
+      left: 17px;
     }
   }
 
   &--eat {
     &::after {
       content: "";
-      width: 30px;
+      width: 26px;
       height: 32px;
       display: block;
       background-image: url("../../icons/stack.svg#eat");
-      background-size: 30px 32px;
+      background-size: 26px 32px;
       background-repeat: no-repeat;
       position: absolute;
       top: 15px;
-      left: 15px;
+      left: 17px;
     }
   }
 
   &--time {
     &::after {
       content: "";
-      width: 30px;
+      width: 28px;
       height: 32px;
       display: block;
       background-image: url("../../icons/stack.svg#time");
-      background-size: 30px 32px;
+      background-size: 27px 32px;
       background-repeat: no-repeat;
       position: absolute;
       top: 15px;
-      left: 15px;
+      left: 17px;
     }
   }
 }

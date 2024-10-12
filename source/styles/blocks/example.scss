@@ -157,8 +157,9 @@
   @include font;
   font-size: 24px;
   line-height: 24px;
+  text-transform: uppercase;
   text-align: center;
-  padding: 4px 5px;
+  padding: 1px 0 4px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 30px;
@@ -174,7 +175,7 @@
   line-height: 12px;
   text-align: center;
   color: $secondary-color;
-  padding: 4px 15px;
+  padding: 4px 15px 0 13px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 14px;
@@ -184,7 +185,7 @@
 }
 
 .example__total {
-  @include flex (row, center, 3px);
+  @include flex (row, center, 5px);
   padding: 10px 0 20px;
 
   @media screen and (min-width: $tablet-width) {
@@ -275,6 +276,7 @@
   position: absolute;
   top: 0;
   left: 50%;
+  transform: translate(-50%);
   z-index: 5;
 
   &::before {
