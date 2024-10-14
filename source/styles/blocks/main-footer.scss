@@ -16,7 +16,7 @@
 
   @media screen and (min-width: $tablet-width) {
     @include flex (row, space-between, 20px);
-    padding: 55px 0;
+    padding: 56px 0;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -25,10 +25,9 @@
 }
 
 .main-footer__logo {
+  @include flex (row, center, 0);
   width: 280px;
   height: 24px;
-  display: flex;
-  justify-content: center;
   padding: 37px 0 19px;
   border-bottom: 1px solid $border-dark-line;
 
@@ -52,8 +51,8 @@
   @media screen and (min-width: $tablet-width) {
     width: 128px;
     border: none;
-    padding: 0;
-    justify-content: start;
+    padding: 6px 0;
+    margin-right: 38px;
   }
 }
 

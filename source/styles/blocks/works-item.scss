@@ -93,13 +93,40 @@
     &::before {
       width: 80px;
       height: 80px;
-      top: 10px;
+      top: 40px;
       left: 0;
     }
 
-    &::after {
-      top: 30px;
-      left: 25px;
+    &--leaf {
+      &::after {
+        content: "";
+        top: 64px;
+        left: 24px;
+      }
+    }
+
+    &--powder {
+      &::after {
+        content: "";
+        top: 65px;
+        left: 26px;
+      }
+    }
+
+    &--eat {
+      &::after {
+        content: "";
+        top: 63px;
+        left: 27px;
+      }
+    }
+
+    &--time {
+      &::after {
+        content: "";
+        top: 63px;
+        left: 27px;
+      }
     }
   }
 }

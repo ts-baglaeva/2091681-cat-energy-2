@@ -90,6 +90,7 @@
 
   @media screen and (min-width: $tablet-width) {
     max-width: 497px;
+    padding-right: 4px;
   }
 }
 
@@ -104,9 +105,8 @@
   background-color: $main-color;
 
   @media screen and (min-width: $tablet-width) {
-    @include flex (row, space-between, 33px);
+    @include flex (row, space-between, 34px);
     position: static;
-    width: auto;
     background-color: transparent;
   }
 }
@@ -115,7 +115,7 @@
   display: none;
 
   @media screen and (min-width: $tablet-width) {
-    @include flex (row, space-between, 33px);
+    @include flex (row, space-between, 34px);
     align-items: center;
   }
 }
@@ -178,7 +178,7 @@
     width: auto;
     font-size: 18px;
     line-height: 24px;
-    padding-bottom: 8px;
+    padding-bottom: 9px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -192,7 +192,6 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $primary-color;
-  //background-color: transparent;
   position: relative;
 
   @media screen and (min-width: $tablet-width) {
