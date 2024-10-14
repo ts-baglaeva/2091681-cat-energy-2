@@ -36,12 +36,12 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 32px;
     line-height: 32px;
-    padding: 64px 40px 70px;
+    padding: 10px 40px 56px;
 
     &::before {
       content: "";
       position: absolute;
-      top: 50%;
+      top: 24px;
       right: 100%;
       width: 100vw;
       height: 2px;
@@ -52,7 +52,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 50%;
+      top: 24px;
       left: 100%;
       width: 100vw;
       height: 2px;
@@ -157,7 +157,7 @@
   }
 
   @media screen and (min-width: $tablet-width) {
-    width: 376px;
+    width: 348px;
   }
 
   @media screen and (min-width: $desktop-width) {

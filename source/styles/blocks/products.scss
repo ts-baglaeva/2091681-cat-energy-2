@@ -21,7 +21,7 @@
     font-size: 60px;
     line-height: 60px;
     text-align: start;
-    padding: 65px 0 84px;
+    padding: 57px 0 84px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -40,7 +40,7 @@
 
     @include content-width;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 58px;
   }
 
   @media screen and (min-width: $desktop-width) {

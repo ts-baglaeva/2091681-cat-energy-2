@@ -36,12 +36,12 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 32px;
     line-height: 32px;
-    padding: 64px 40px 70px;
+    padding: 75px 40px 79px;
 
     &::before {
       content: "";
       position: absolute;
-      top: 50%;
+      top: 89px;
       right: 100%;
       width: 100vw;
       height: 2px;
@@ -52,7 +52,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 50%;
+      top: 89px;
       left: 100%;
       width: 100vw;
       height: 2px;
@@ -120,10 +120,11 @@
   border-bottom: 1px solid $border-color;
 
   @media screen and (min-width: $tablet-width) {
-    grid-template-columns: 60% auto 86px;
-    gap: 25px 10px;
+    grid-template-columns: 60% auto 84px;
+    align-items: start;
+    gap: 23px 10px;
     border: 1px solid $border-color;
-    padding: 26px 38px 28px;
+    padding: 26px 38px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -168,6 +169,7 @@
     font-size: 16px;
     line-height: 20px;
     justify-self: end;
+    padding: 2px 0 0;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -182,13 +184,14 @@
   line-height: 14px;
   color: $secondary-color;
   background-color: transparent;
-  justify-self: end;
-  padding: 1px 0;
+  place-self: end end;
+  padding: 2px 0 0;
 
 
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    padding: 0;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -236,12 +239,12 @@
     background: linear-gradient(rgba($corporate, 0.85), rgba($corporate, 0.85)), url("../../images/additional/additional-banner-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 70px 0;
+    margin: 71px 0;
 
     &::before {
       background-size: 80px 83px;
-      top: 50%;
-      left: 77px;
+      top: 98px;
+      left: 78px;
       transform: translateY(-50%);
       padding: 0;
     }
