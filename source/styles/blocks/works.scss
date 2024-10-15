@@ -31,7 +31,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 31px 0 32px;
+    padding: 33px 0 32px;
   }
 }
 
@@ -76,6 +76,24 @@
       width: 250px;
     }
   }
+
+  @media screen and (min-width: $desktop-width) {
+    &--leaf {
+      margin-right: 20px;
+    }
+
+    &--powder {
+      margin-right: 3px;
+    }
+
+    &--eat {
+      margin-right: -2px;
+    }
+
+    &--time {
+      margin-right: -5px;
+    }
+  }
 }
 
 .works__item::before {
@@ -92,6 +110,10 @@
     line-height: 280px;
     color: $bg-color;
     background-color: transparent;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    right: 1px;
   }
 }
 
