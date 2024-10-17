@@ -64,12 +64,12 @@
   @media screen and (min-width: $desktop-width) {
     font-size: 40px;
     line-height: 40px;
-    padding: 61px 0 70px;
+    padding: 71px 0 80px;
 
     &::before {
       content: "";
       position: absolute;
-      top: 50%;
+      top: 88px;
       right: calc(100% + 40px);
       width: 100vw;
       height: 2px;
@@ -80,7 +80,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 50%;
+      top: 88px;
       left: calc(100% + 40px);
       width: 100vw;
       height: 2px;
@@ -92,10 +92,12 @@
 
 .additional__wrapper {
   @include content-width;
+}
 
+.additional__content {
   @media screen and (min-width: $desktop-width) {
     @include flex (row, space-between, 80px);
-    margin-bottom: 86px;
+    margin-bottom: 25px;
   }
 }
 
@@ -107,7 +109,6 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 895px;
-    padding: 0;
   }
 }
 
@@ -116,7 +117,6 @@
   grid-template-columns: 75% 25%;
   row-gap: 13px;
   padding: 13px 0 18px;
-
   border-bottom: 1px solid $border-color;
 
   @media screen and (min-width: $tablet-width) {
@@ -128,11 +128,13 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    grid-template-columns: 320px 233px 72px 239px;
+    grid-template-columns: 325px 243px 82px 244px;
     border: none;
     border-top: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
-    padding: 15px 0 17px 1px;
+    padding: 14px 0 16px;
+    align-items: center;
+    gap: 0;
   }
 }
 
@@ -173,7 +175,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    justify-self: start;
+    padding-top: 3px;
+    place-self: center start;
   }
 }
 
@@ -184,7 +187,7 @@
   line-height: 14px;
   color: $secondary-color;
   background-color: transparent;
-  place-self: end end;
+  place-self: center end;
   padding: 2px 0 0;
 
 
@@ -196,6 +199,7 @@
 
   @media screen and (min-width: $desktop-width) {
     justify-self: start;
+    padding-top: 3px;
   }
 }
 
@@ -208,6 +212,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
+    width: 245px;
     grid-column: span 1;
   }
 }
