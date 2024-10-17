@@ -1,45 +1,92 @@
-.subscribe__title {
-  @include content-width;
-  margin-bottom: 12px;
-
-  @media screen and (min-width: $tablet-width) {
-    margin-bottom: 46px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    margin-bottom: 52px;
-  }
+.subscribe {
+  overflow: hidden;
 }
 
-.subscribe__title-text {
+.subscribe__title {
   @include font;
   font-size: 24px;
   line-height: 24px;
-  background-color: transparent;
-  padding: 10px 0;
+  padding: 10px 0 26px;
   position: relative;
   z-index: 1;
+  width: fit-content;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: calc(100% + 40px);
+    width: 100vw;
+    height: 2px;
+    background-color: $corporate;
+    z-index: -1;
+  }
 
   &::after {
     content: "";
-    width: 100%;
-    height: 2px;
-    display: block;
-    background-color: $corporate;
     position: absolute;
-    top: 50%;
-    right: 0;
-    z-index: 2;
+    top: 20px;
+    left: calc(100% + 40px);
+    width: 100vw;
+    height: 2px;
+    background-color: $corporate;
+    z-index: -1;
   }
 
   @media screen and (min-width: $tablet-width) {
     font-size: 32px;
     line-height: 32px;
+    padding: 10px 40px 56px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      right: 100%;
+      width: 100vw;
+      height: 2px;
+      background-color: $corporate;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 100%;
+      width: 100vw;
+      height: 2px;
+      background-color: $corporate;
+      z-index: -1;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
     font-size: 40px;
     line-height: 40px;
+    padding: 68px 0 66px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 88px;
+      right: calc(100% + 40px);
+      width: 100vw;
+      height: 2px;
+      background-color: $corporate;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 88px;
+      left: calc(100% + 40px);
+      width: 100vw;
+      height: 2px;
+      background-color: $corporate;
+      z-index: -1;
+    }
   }
 }
 
@@ -74,7 +121,7 @@
   line-height: 24px;
   text-align: center;
   background-color: transparent;
-  padding: 10px 0 20px;
+  padding: 5px 0 25px;
 
 
   @media screen and (min-width: $tablet-width) {
@@ -94,9 +141,8 @@
   text-transform: uppercase;
   color: $secondary-color;
   background-color: transparent;
-  padding: 13px;
+  padding: 12px 13px 13px;
   border: 1px solid $border-color;
-  box-sizing: border-box;
 
   &:hover {
     border-color: $border-color;
@@ -106,20 +152,20 @@
     border-color: $secondary-color;
   }
 
-  /* &::invalid {
-    border-color: #ff8282;
-  } */
-
   &::placeholder {
     color: $secondary-color;
   }
 
   @media screen and (min-width: $tablet-width) {
-    width: 376px;
+    width: 348px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 496px;
+    width: 468px;
+  }
+
+  &--error {
+    border-color: $error;
   }
 }
 
@@ -127,6 +173,8 @@
 .button--subscribe {
   border: none;
   width: 100%;
+  font-size: 20px;
+  line-height: 26px;
   padding: 15px;
   box-sizing: border-box;
 

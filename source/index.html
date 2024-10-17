@@ -14,17 +14,17 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
-    <a class="main-header__logo logo-header" href="#">
+  <header class="main-header main-header__bg">
+    <a class="main-header__logo" href="#">
       <picture>
         <source width="70" height="59" type="image/svg+xml" media="(min-width: 1280px)" srcset="images/logo/logo-pic-desktop.svg">
         <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-pic-tablet.svg">
-        <img class="logo-header__logo-image" src="images/logo/logo-pic-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
+        <img class="main-header__logo-image" src="images/logo/logo-pic-mobile.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи.">
       </picture>
-      <img class="logo-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип магазина Кэт энерджи.">
+      <img class="main-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип магазина Кэт энерджи.">
     </a>
-    <nav class="main-header__navigation navigation">
-      <button class="navigation__toggle navigation__toggle--closed" type="button">
+    <nav class="navigation  navigation--closed navigation--nojs">
+      <button class="navigation__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="navigation__list">
@@ -63,7 +63,7 @@
           <img class="hero__image" src="images/hero/hero-cat-food-mobile@1x.png" srcset="images/hero/hero-cat-food-mobile@2x.png 2x" width="280" height="270" alt="Оранжевая банка корма 'CAT ENERGY PR' со вкусом курицы.">
         </picture>
 
-        <a class="hero__button button button-big" href="form.html">Подобрать программу</a>
+        <a class="hero__button button button--big" href="form.html">Подобрать программу</a>
       </div>
     </section>
 
@@ -104,35 +104,33 @@
     </section>
 
     <section class="example">
-
-      <h2 class="example__title">Живой пример</h2>
-      <div class="example__wrapper">
-        <div class="example__text-wrapper">
-          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-
-          <div class="example__calculation">
-            <ul class="example__list">
-              <li class="example__item">
-                <div class="example__item-wrapper">
-                  <p class="example__item-value">5 кг</p>
-                  <p class="example__item-indicator example__item-indicator--weight">снижение веса</p>
-                </div>
-              </li>
-              <li class="example__item">
-                <div class="example__item-wrapper">
-                  <p class="example__item-value">60 дней</p>
-                  <p class="example__item-indicator example__item-indicator--time">затрачено времени</p>
-                </div>
-              </li>
-            </ul>
-
-            <p class="example__total">
-              <span class="example__total-text">Затраты на питание:</span>
-              <span class="example__total-value">15 000 РУБ.</span>
-            </p>
+      <div class="example-content">
+        <div class="example__wrapper">
+          <h2 class="example__title">Живой пример</h2>
+          <div class="example__text-wrapper">
+            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__calculation">
+              <ul class="example__list">
+                <li class="example__item">
+                  <div class="example__item-wrapper example__item-wrapper--weight">
+                    <p class="example__item-value">5 кг</p>
+                    <p class="example__item-indicator">снижение веса</p>
+                  </div>
+                </li>
+                <li class="example__item">
+                  <div class="example__item-wrapper example__item-wrapper--time">
+                    <p class="example__item-value">60 дней</p>
+                    <p class="example__item-indicator">затрачено времени</p>
+                  </div>
+                </li>
+              </ul>
+              <p class="example__total">
+                <span class="example__total-text">Затраты на питание:</span>
+                <span class="example__total-value">15 000 РУБ.</span>
+              </p>
+            </div>
           </div>
         </div>
-
         <div class="example__picture-slider">
           <div class="example__picture-wraper example__picture-wraper--before">
             <picture>
@@ -152,6 +150,7 @@
               <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/example/cat-after@1x.png 1x, images/example/cat-after@2x.png 2x">
               <img class="example__picture" src="images/example/cat-mobile-after@1x.png" srcset="images/example/cat-mobile-after@2x.png 2x" width="280" height="256" alt="Кот до похудения">
             </picture>
+
           </div>
         </div>
       </div>
@@ -160,13 +159,13 @@
     <section class="contacts">
       <h2 class="visually-hidden">Контакты.</h2>
       <div class="contacts__address address">
-        <p class="address__slogan">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="address__slogan">Приглашаем<br>к сотрудничеству дилеров!</p>
         <address class="address__value">
           <p class="address__value-street">ул. Большая Конюшенная, д. 19/8</p>
           <p class="address__value-town">Санкт-Петербург</p>
         </address>
       </div>
-      <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aefe2e2002fc8f362ffb31cc2dcc5431c5e0101396b2360ad92f34b6ca8409ae1&amp;source=constructor" width="100%" height="362" style="border: 0;"></iframe>
+      <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aefe2e2002fc8f362ffb31cc2dcc5431c5e0101396b2360ad92f34b6ca8409ae1&amp;source=constructor" width="100%" height="362" style="border: 0;" title="Адрес магазина Cat Energy"></iframe>
     </section>
   </main>
 
@@ -197,7 +196,6 @@
       </a>
     </div>
   </footer>
-
 </body>
 
 </html>

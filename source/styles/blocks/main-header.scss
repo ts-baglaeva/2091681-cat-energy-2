@@ -3,33 +3,57 @@
   align-items: center;
 
   @include content-width;
-  padding-top: 13px;
-  padding-bottom: 14px;
   background-color: $main-color;
 
-  /* position: fixed;
-  z-index: 10; */
 
   @media screen and (min-width: $tablet-width) {
+    border: none;
     padding: 0;
-    top: 25px;
-    left: 0;
-    right: 0;
-
-    position: absolute;
-    z-index: 4;
   }
 
   @media screen and (min-width: $desktop-width) {
-    top: 55px;
-    background-color: transparent;
+    &__bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 4;
+      top: 53px;
+      background-color: transparent;
+    }
   }
 }
 
-/* .main-header__logo {
+.main-header__logo {
+  @include flex (row, space-between, 56px);
+  align-items: center;
+  text-decoration: none;
 
-} */
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
 
-/* .main-header__navigation {
-  width: 20%;
-} */
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    gap: 13px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+
+    gap: 14px;
+  }
+}
+
+.main-header__logo-text {
+  width: 101px;
+  height: 18px;
+
+  @media screen and (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+    margin-top: -3px;
+  }
+}
