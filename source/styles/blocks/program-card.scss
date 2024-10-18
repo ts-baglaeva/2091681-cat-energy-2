@@ -211,7 +211,7 @@
 
   &:hover::before {
     width: 26px;
-    right: 5px;
+    right: 7px;
   }
 
   &:hover::after {
@@ -241,6 +241,10 @@
       right: 6px;
       transform: translateX(0);
     }
+
+    &:hover::before {
+      right: 5px;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -255,6 +259,10 @@
       top: 24px;
       right: 9px;
       transform: translateX(0);
+    }
+
+    &:hover::before {
+      right: 7px;
     }
   }
 }
