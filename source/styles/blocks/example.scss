@@ -254,10 +254,12 @@
   @media screen and (min-width: $tablet-width) {
     width: 560px;
     height: 512px;
-    background-color: transparent;
-    //background: linear-gradient(0deg, rgba(234, 234, 234, 1) 0, rgba(234, 234, 234, 1) 361px, rgba(255, 255, 255, 1) 361px, rgba(255, 255, 255, 1) 512px);
+    background: linear-gradient(0deg, $bg-dark 0, $bg-dark 359px, $main-color 359px, $main-color 512px);
   }
 
+  @media screen and (min-width: $desktop-width) {
+    background: linear-gradient(0deg, $bg-color 0, $bg-color 378px, $main-color 378px, $main-color 512px);
+  }
 
   &--before {
     width: 50%;
