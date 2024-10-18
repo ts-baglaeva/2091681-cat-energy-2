@@ -11,6 +11,7 @@
 }
 
 .contacts__address {
+  @include content-width;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   box-sizing: border-box;
@@ -21,17 +22,19 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 565px;
-    gap: 70px;
+    gap: 92px;
     background-color: $main-color;
     position: absolute;
     top: 95px;
-    left: 110px;
+    left: auto;
+    right: calc(50% + 45px);
   }
 }
 
 .contacts__map {
   min-width: 320px;
   min-height: 362px;
+  display: block;
   background: url("../../images/footer/map-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -45,7 +48,7 @@
   }
 
   @media screen and (min-width: $tablet-width) {
-
+    min-height: 400px;
     background: url("../../images/footer/map-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;

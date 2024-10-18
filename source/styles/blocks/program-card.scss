@@ -1,7 +1,7 @@
 .program-card {
   background-color: $bg-color;
   box-sizing: border-box;
-  padding: 21px 20px 18px;
+  padding: 21px 20px 8px;
 
   &--weight-loss {
     &::before {
@@ -53,7 +53,7 @@
       background-repeat: no-repeat;
       position: absolute;
       top: 35px;
-      left: 13px;
+      left: 12px;
     }
   }
 }
@@ -68,7 +68,7 @@
       width: 200px;
       height: 200px;
       display: block;
-      top: 92px;
+      top: 91px;
       left: auto;
       right: 63px;
     }
@@ -78,7 +78,7 @@
         width: 140px;
         height: 211px;
         background-size: 140px 194px;
-        top: 81px;
+        top: 80px;
         left: auto;
         right: 93px;
       }
@@ -89,7 +89,7 @@
         width: 268px;
         height: 112px;
         background-size: 268px 112px;
-        top: 135px;
+        top: 134px;
         left: auto;
         right: 29px;
       }
@@ -145,7 +145,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 36px 0 34px 214px;
+    padding: 36px 0 34px 162px;
   }
 }
 
@@ -156,13 +156,13 @@
   line-height: 18px;
   color: $secondary-color;
   background-color: transparent;
-  padding: 20px 0 23px;
+  padding: 19px 0 22px;
   border-bottom: 1px solid $border-light-line;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    padding: 12px 0 24px;
+    padding: 10px 0 24px;
     border: none;
   }
 
@@ -173,6 +173,8 @@
 
 
 .program-card__link {
+  max-width: 272px;
+
   @include font;
   font-size: 16px;
   line-height: 20px;
@@ -180,30 +182,44 @@
   text-decoration: none;
   background-color: transparent;
   position: relative;
-  padding-top: 15px;
-  padding-right: 56px;
+  padding: 17px 50px 12px 0;
   display: inline-block;
+
+  &::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    display: block;
+    background-color: $primary-color;
+    position: absolute;
+    top: 26px;
+    right: 15px;
+    transition: all 0.3s ease;
+  }
 
   &::after {
     content: "";
-    width: 24px;
+    width: 9px;
     height: 12px;
-    display: block;
-    background-image: url("../../icons/stack.svg#small-arrow");
+    background-image: url("../../icons/stack.svg#arrow");
     position: absolute;
-    top: 50%;
-    right: 9px;
+    top: 21px;
+    right: 8px;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
   }
 
-  &:hover {
-    padding-right: 64px;
+  &:hover::before {
+    width: 26px;
+    right: 7px;
   }
 
   &:hover::after {
-    width: 32px;
-    background-image: url("../../icons/stack.svg#big-arrow");
+    transform: translateX(8px);
   }
 
+  &:active,
+  &:active::before,
   &:active::after {
     opacity: 0.3;
   }
@@ -211,29 +227,42 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    padding: 24px 57px 13px 0;
+    padding: 29px 57px 13px 0;
+    position: relative;
 
-    &::after {
-      top: 50%;
-      right: 9px;
+
+    &::before {
+      top: 43px;
+      right: 13px;
     }
 
-    &:hover {
-      padding-right: 65px;
+    &::after {
+      top: 38px;
+      right: 6px;
+      transform: translateX(0);
+    }
+
+    &:hover::before {
+      right: 5px;
     }
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 11px 60px 15px 0;
+    padding: 16px 60px 15px 0;
 
-    &::after {
-      top: 50%;
-      transform: translateY(-50%);
-      right: 9px;
+    &::before {
+      top: 29px;
+      right: 15px;
     }
 
-    &:hover {
-      padding-right: 68px;
+    &::after {
+      top: 24px;
+      right: 9px;
+      transform: translateX(0);
+    }
+
+    &:hover::before {
+      right: 7px;
     }
   }
 }

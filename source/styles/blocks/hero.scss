@@ -5,7 +5,7 @@
   margin-bottom: 20px;
 
   @media screen and (min-width: $tablet-width) {
-    min-height: 950px;
+    min-height: 858px;
     margin-bottom: 1px;
   }
 
@@ -59,7 +59,7 @@
   color: $main-color;
   background-color: transparent;
   text-align: center;
-  padding: 27px 0 25px;
+  padding: 27px 0 15px;
   position: relative;
   z-index: 2;
 
@@ -68,7 +68,7 @@
     line-height: 60px;
     color: $primary-color;
     text-align: start;
-    padding: 140px  90px 20px;
+    padding: 57px 90px 20px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -86,16 +86,16 @@
   background-color: transparent;
   text-align: center;
   text-transform: uppercase;
-  padding: 20px 0;
+  padding: 10px 0;
   position: relative;
   z-index: 2;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 20px;
     color: $primary-color;
     text-align: start;
-    padding: 20px  90px;
+    padding: 20px 90px;
     z-index: 4;
   }
 
@@ -108,16 +108,15 @@
 .hero__image {
   display: block;
   margin: auto;
-  padding-top: 9px;
+  padding-top: 19px;
   padding-bottom: 3px;
 
   @media screen and (min-width: $tablet-width) {
     display: block;
     position: absolute;
-    top: 341px;
+    top: 257px;
     left: 50%;
     transform: translate(-50%);
-    /* right: auto; */
     z-index: 1;
     padding-top: 1px;
     padding-bottom: 0;
@@ -125,7 +124,7 @@
 
   @media screen and (min-width: $desktop-width) {
     top: 143px;
-    left: calc(50% - 165px);
+    left: calc(50% - 163px);
     transform: none;
     right: auto;
     z-index: 1;
@@ -141,6 +140,7 @@
     width: 244px;
     font-size: 20px;
     line-height: 26px;
+    white-space: pre-wrap;
     padding-left: 90px;
     z-index: 4;
     margin: 30px 90px 20px;

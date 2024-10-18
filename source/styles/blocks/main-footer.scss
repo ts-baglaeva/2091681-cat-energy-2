@@ -16,7 +16,7 @@
 
   @media screen and (min-width: $tablet-width) {
     @include flex (row, space-between, 20px);
-    padding: 55px 0;
+    padding: 56px 0;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -25,11 +25,10 @@
 }
 
 .main-footer__logo {
+  @include flex (row, center, 0);
   width: 280px;
   height: 24px;
-  display: flex;
-  justify-content: center;
-  padding: 40px 0 20px;
+  padding: 37px 0 19px;
   border-bottom: 1px solid $border-dark-line;
 
   &::before {
@@ -52,13 +51,13 @@
   @media screen and (min-width: $tablet-width) {
     width: 128px;
     border: none;
-    padding: 0;
-    justify-content: start;
+    padding: 6px 0;
+    margin-right: 38px;
   }
 }
 
 .main-footer__socials-list {
-  @include flex (row, center, 20px);
+  @include flex (row, center, 24px);
   width: 280px;
   list-style: none;
   margin: 0;
@@ -124,6 +123,7 @@
 
 .main-footer__logo-academy {
   @include flex (row, space-between, 20px);
+  flex-wrap: nowrap;
   text-decoration: none;
 }
 

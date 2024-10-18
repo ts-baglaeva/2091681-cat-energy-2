@@ -1,25 +1,29 @@
 .example {
   background: $bg-dark;
+  padding-bottom: 40px;
 
   @media screen and (min-width: $tablet-width) {
-    background: linear-gradient(180deg, $main-color 0%, $main-color 57%, $bg-dark 57%, $bg-dark 100%);
+    background: linear-gradient(180deg, $main-color 0, $main-color 620px, $bg-dark 620px, $bg-dark 100%);
+    padding-bottom: 101px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    background: linear-gradient(180deg, $main-color 0%, $main-color 57%, $bg-color 57%, $bg-color 100%);
+    padding-bottom: 0;
+    background: linear-gradient(180deg, $main-color 0, $main-color 157px, $bg-color 157px, $bg-color 100%);
   }
 }
 
-.example__wrapper {
+.example-content {
   @include content-width;
 
   @media screen and (min-width: $desktop-width) {
-    @include flex (row, space-between, 20px);
+    display: grid;
+    grid-template-columns: auto 560px;
+    gap: 224px;
   }
 }
 
 .example__title {
-  @include content-width;
   @include font;
   font-size: 36px;
   line-height: 40px;
@@ -29,7 +33,7 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    padding: 45px 0 30px;
+    padding: 44px 0 30px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -44,46 +48,49 @@
   line-height: 18px;
   color: $secondary-color;
   background-color: transparent;
-  padding: 20px 0 10px;
+  padding: 20px 0;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    padding: 30px 0;
+    padding: 30px 0 57px;
   }
 
   @media screen and (min-width: $desktop-width) {
+    width: 433px;
     padding: 70px 0 44px;
   }
 }
 
 .example__calculation {
-  padding: 15px 0 10px;
+  padding: 14px 0 0;
 
   @media screen and (min-width: $tablet-width) {
     @include flex (row, space-between, 20px);
-    padding: 25px 0;
+    padding: 10px 0 94px;
   }
 
   @media screen and (min-width: $desktop-width) {
     display: block;
-    padding: 25px 0;
+    padding: 38px 0 26px;
   }
 }
 
 .example__list {
   @include flex (row, space-between, 32px);
   margin: 0;
-  padding: 0;
+  padding: 0 0 10px;
 
   @media screen and (min-width: $tablet-width) {
-    gap: 20px;
+    width: 367px;
+    gap: 18px;
+    padding: 0;
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin: auto;
-    width: 100%;
-    justify-content: flex-start;
+    width: 367px;
+    justify-content: fspace-between;
+    gap: 10px;
   }
 }
 
@@ -91,13 +98,12 @@
   width: 124px;
   list-style: none;
   position: relative;
-  background-color: $bg-dark;
   z-index: 1;
 
   &::after {
     content: "";
-    width: 100%;
-    height: 100%;
+    width: 124px;
+    min-height: 56px;
     display: block;
     border: 1px solid $border-color;
     border-radius: 2px;
@@ -109,40 +115,54 @@
 
   @media screen and (min-width: $tablet-width) {
     width: 162px;
-    background-color: $main-color;
 
     &::after {
       width: 100%;
-      height: 72px;
+      top: -12px;
+      min-height: 72px;
     }
   }
 }
 
-/* .example__item-wrapper {
+.example__item-wrapper {
+  width: 87px;
+  margin: 0 auto;
   background-color: $bg-dark;
 
   @media screen and (min-width: $tablet-width) {
     background-color: $main-color;
+
+    &--weight {
+      width: 114px;
+    }
+
+    &--time {
+      width: 142px;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
-    background-color: $bg-dark;
+    background-color: $bg-color;
+    padding-bottom: 2px;
   }
-} */
+}
 
 .example__item-value {
   @include font;
   font-size: 24px;
   line-height: 24px;
+  text-transform: uppercase;
   text-align: center;
-  background-color: transparent;
-  padding: 9px 0 4px;
-
+  padding: 1px 0 4px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
-    padding: 15px 0 6px;
+    padding: 4px 0 6px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 2px 0 6px;
   }
 }
 
@@ -153,33 +173,32 @@
   line-height: 12px;
   text-align: center;
   color: $secondary-color;
-  background-color: transparent;
-  padding: 4px 0 9px;
-
+  padding: 4px 15px 0 13px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 14px;
-    padding: 5px 0 15px;
+    padding: 4px 0 5px;
   }
 }
 
 .example__total {
-  @include flex (row, center, 20px);
-  padding: 10px 0;
+  @include flex (row, center, 5px);
+  padding: 10px 0 20px;
 
   @media screen and (min-width: $tablet-width) {
     flex-direction: column;
+    justify-content: flex-start;
     align-items: end;
     gap: 9px;
-    padding: 10px 0;
+    padding: 0;
   }
 
   @media screen and (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: flex-start;
-    gap: 100px;
-    padding: 40px 0;
+    gap: 66px;
+    padding: 49px 0;
   }
 }
 
@@ -208,16 +227,47 @@
 
 .example__picture-slider {
   width: 280px;
-  min-height: 256px;
+  height: 256px;
   position: relative;
+  overflow: hidden;
   margin: 0 auto;
-  padding: 10px 0 40px;
 
   @media screen and (min-width: $tablet-width) {
     width: 560px;
-    min-height: 512px;
-    text-align: center;
-    padding: 74px 0 101px;
+    height: 512px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin: 22px auto 0;
+  }
+}
+
+.example__picture-wraper {
+  width: 280px;
+  height: 256px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $bg-dark;
+  overflow: hidden;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+    background: linear-gradient(0deg, $bg-dark 0, $bg-dark 359px, $main-color 359px, $main-color 512px);
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    background: linear-gradient(0deg, $bg-color 0, $bg-color 378px, $main-color 378px, $main-color 512px);
+  }
+
+  &--before {
+    width: 50%;
+    z-index: 4;
+  }
+
+  &--after {
+    z-index: 3;
   }
 }
 
@@ -228,13 +278,12 @@
   border-radius: 2px;
   width: 4px;
   height: 100%;
-  display: block;
   padding: 0;
   position: absolute;
   top: 0;
   left: 50%;
+  transform: translate(-50%);
   z-index: 5;
-
 
   &::before {
     content: "";

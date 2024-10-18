@@ -6,42 +6,99 @@
   }
 }
 
-.product-card-wrapper {
+.product-card__wrapper {
   @include content-width;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
   row-gap: 14px;
   padding: 20px 0 25px;
 
   @media screen and (min-width: $tablet-width) {
     width: 250px;
-    grid-template-columns: 1fr;
-    background: linear-gradient(180deg, $main-color 0%, $main-color 16%, $bg-color 16%, $bg-color 100%);
-    padding: 10px 36px 40px;
+    //grid-template-columns: 1fr;
+    background: linear-gradient(180deg, $main-color 0, $main-color 81px, $bg-color 81px, $bg-color 100%);
+    padding: 11px 36px 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 169px;
+    width: 173px;
+    row-gap: 10px;
+    padding-left: 32px;
   }
 
   &--more {
     grid-template-columns: 1fr;
+    gap: 8px;
     background-image: url("../../icons/stack.svg#small-plus");
     background-repeat: no-repeat;
     background-position: center 25px;
     background-size: 30px 30px;
+    padding-bottom: 23px;
 
     @media screen and (min-width: $tablet-width) {
       width: 250px;
       background-image: url("../../icons/stack.svg#big-plus");
       background-size: 60px 60px;
+      background-position: center 52px;
       border: 2px solid $bg-color;
+      margin-top: 81px;
+      padding-bottom: 40px;
     }
 
     @media screen and (min-width: $desktop-width) {
       width: 169px;
     }
   }
+}
+
+.product-card__subtitle {
+  @include font;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $secondary-add;
+  background-color: transparent;
+  padding-right: 40%;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0 57px 0 55px;
+    flex-grow: 1;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 0 14px 0 15px;
+  }
+
+  &--more {
+    @include font;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $add-color;
+    background-color: transparent;
+    padding-top: 58px;
+
+    @media screen and (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      padding: 150px 50px 15px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding: 137px 0 3px;
+    }
+  }
+}
+
+.product-card__discription {
+  flex-grow: 1;
 }
 
 .product-card__link-image {
@@ -72,43 +129,6 @@
   }
 }
 
-.product-card__subtitle {
-  @include font;
-  font-size: 16px;
-  text-transform: uppercase;
-  color: $secondary-add;
-  background-color: transparent;
-  padding-right: 40%;
-
-  @media screen and (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    padding: 0 57px 0 58px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    padding: 0 14px 0 15px;
-  }
-
-  &--more {
-    @include font;
-    font-size: 16px;
-    text-transform: uppercase;
-    text-align: center;
-    color: $add-color;
-    background-color: transparent;
-    padding-top: 78px;
-
-
-    @media screen and (min-width: $tablet-width) {
-      font-size: 20px;
-      line-height: 24px;
-      text-align: center;
-    }
-  }
-}
-
 .product-card__text {
   &--more {
     @include font;
@@ -118,12 +138,17 @@
     text-align: center;
     color: $secondary-color;
     background-color: transparent;
-    padding-bottom: 13px;
+    padding-bottom: 15px;
 
     @media screen and (min-width: $tablet-width) {
       font-size: 16px;
       line-height: 18px;
       text-align: center;
+      padding: 0 30px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding: 13px 0;
     }
   }
 }
@@ -131,10 +156,30 @@
 .product-card__list {
   list-style: none;
   padding: 0 0 7px;
+  flex-shrink: 1;
+
+  @media screen and (min-width: $tablet-width) {
+    @include flex (column, space-between, 7px);
+    padding-bottom: 12px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 13px 2px 26px 3px;
+    gap: 6px;
+  }
 }
 
 .product-card__item {
   @include flex (row, space-between, 20px);
+
+  @media screen and (min-width: $tablet-width) {
+    padding-bottom: 3px;
+    border-bottom: 1px solid $border-color;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-bottom: 6px;
+  }
 }
 
 .product-card__name,
