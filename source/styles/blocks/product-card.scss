@@ -42,9 +42,10 @@
       width: 250px;
       background-image: url("../../icons/stack.svg#big-plus");
       background-size: 60px 60px;
-      background-position: center 52px;
+      background-position: 132px 49px;
       border: 2px solid $bg-color;
-      margin-top: 80px;
+      margin-top: 83px;
+      margin-left: 3px;
       padding-bottom: 40px;
     }
 
@@ -66,7 +67,7 @@
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    padding: 0 57px 0 56px;
+    padding: 0 58px 0 55px;
     flex-grow: 1;
   }
 
@@ -88,7 +89,7 @@
       font-size: 20px;
       line-height: 24px;
       text-align: center;
-      padding: 150px 50px 15px;
+      padding: 148px 50px 15px;
     }
 
     @media screen and (min-width: $desktop-width) {
@@ -165,7 +166,10 @@
   flex-shrink: 1;
 
   @media screen and (min-width: $tablet-width) {
-    @include flex (column, space-between, 7px);
+    @include flex (column, space-between, 0);
+
+    min-height: 86px;
+    padding: 0;
     padding-bottom: 12px;
   }
 
@@ -229,6 +233,7 @@
   grid-column: span 2;
 
   @media screen and (min-width: $tablet-width) {
+    margin-top: 1px;
     grid-column: span 1;
   }
 

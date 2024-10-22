@@ -187,7 +187,11 @@
     width: auto;
     font-size: 18px;
     line-height: 24px;
-    padding-bottom: 9px;
+    padding-bottom: 8px;
+
+    &--catalog {
+      padding-bottom: 7px;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -226,7 +230,6 @@
     &::after {
       content: "";
       height: 2px;
-      box-sizing: border-box;
       position: absolute;
       left: 0;
       right: 0;
