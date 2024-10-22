@@ -5,7 +5,7 @@
   margin-bottom: 20px;
 
   @media screen and (min-width: $tablet-width) {
-    min-height: 858px;
+    min-height: 857px;
     margin-bottom: 1px;
   }
 
@@ -19,7 +19,7 @@
 .hero::after {
   content: "";
   width: 100%;
-  min-height: 63%;
+  min-height: 302px;
   display: block;
   background: linear-gradient(180deg, rgba($corporate, 0.85) 0%, rgba($corporate, 0.85)), url("../../images/hero/hero-background-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -38,7 +38,6 @@
     display: block;
     background: linear-gradient(180deg, rgba($corporate, 0.85) 0%, rgba($corporate, 0.85)), url("../../images/hero/hero-background-desktop@1x.jpg");
     background-repeat: no-repeat;
-
     background-size: cover;
     position: absolute;
     top: 0;
@@ -59,7 +58,7 @@
   color: $main-color;
   background-color: transparent;
   text-align: center;
-  padding: 27px 0 15px;
+  padding: 27px 0 15px 2px;
   position: relative;
   z-index: 2;
 
@@ -86,7 +85,7 @@
   background-color: transparent;
   text-align: center;
   text-transform: uppercase;
-  padding: 10px 0;
+  padding: 10px 2px 10px 0;
   position: relative;
   z-index: 2;
 
@@ -114,7 +113,7 @@
   @media screen and (min-width: $tablet-width) {
     display: block;
     position: absolute;
-    top: 257px;
+    top: 256px;
     left: 50%;
     transform: translate(-50%);
     z-index: 1;
@@ -141,12 +140,12 @@
     font-size: 20px;
     line-height: 26px;
     white-space: pre-wrap;
-    padding-left: 90px;
     z-index: 4;
-    margin: 30px 90px 20px;
+    margin: 29px 90px 20px;
   }
 
   @media screen and (min-width: $desktop-width) {
     margin: 32px 80px 20px;
+    padding-left: 90px;
   }
 }

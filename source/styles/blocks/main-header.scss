@@ -25,8 +25,9 @@
 
 .main-header__logo {
   @include flex (row, space-between, 56px);
-  align-items: center;
+  //align-items: center;
   text-decoration: none;
+
 
   &:hover,
   &:focus-visible {
@@ -50,10 +51,27 @@
 .main-header__logo-text {
   width: 101px;
   height: 18px;
+  padding-top: 10px;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 15px;
+  }
 
   @media screen and (min-width: $desktop-width) {
     width: 118px;
     height: 21px;
-    margin-top: -3px;
+    padding-top: 20px;
+  }
+
+  &--catalog {
+    padding-top: 13px;
+
+    @media screen and (min-width: $tablet-width) {
+      padding-top: 15px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding-top: 20px;
+    }
   }
 }

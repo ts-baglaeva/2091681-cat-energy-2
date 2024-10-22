@@ -42,7 +42,7 @@
 .works__list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 37px 60px;
+  gap: 20px;
   counter-reset: item;
   list-style: none;
   margin: 0;
@@ -50,6 +50,7 @@
 
   @media screen and (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
+    gap: 37px 60px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -65,37 +66,41 @@
     position: relative;
 
     &--leaf {
-      width: 230px;
+      width: 227px;
     }
 
     &--powder {
-      width: 246px;
-    }
-
-    &--eat {
       width: 248px;
     }
 
-    &--time {
+    &--eat {
       width: 250px;
+    }
+
+    &--time {
+      width: 252px;
     }
   }
 
   @media screen and (min-width: $desktop-width) {
     &--leaf {
-      margin-right: 20px;
+      margin-right: 22px;
+      width: 229px;
     }
 
     &--powder {
-      margin-right: 7px;
+      margin-right: 2px;
+      width: 248px;
     }
 
     &--eat {
       margin-right: 0;
+      width: 250px;
     }
 
     &--time {
-      margin-right: -5px;
+      margin-right: -6px;
+      width: 252px;
     }
   }
 }

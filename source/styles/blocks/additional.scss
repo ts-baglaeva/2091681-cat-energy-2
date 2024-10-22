@@ -6,7 +6,7 @@
   @include font;
   font-size: 24px;
   line-height: 24px;
-  padding: 25px 0 35px;
+  padding: 26px 0 35px;
   position: relative;
   z-index: 1;
   width: fit-content;
@@ -116,7 +116,7 @@
   display: grid;
   grid-template-columns: 75% 25%;
   row-gap: 13px;
-  padding: 13px 0 18px;
+  padding: 13px 0 19px;
   border-bottom: 1px solid $border-color;
 
   @media screen and (min-width: $tablet-width) {
@@ -165,7 +165,7 @@
   line-height: 14px;
   color: $secondary-color;
   background-color: transparent;
-  padding: 1px 0;
+  padding-bottom: 1px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
@@ -188,7 +188,7 @@
   color: $secondary-color;
   background-color: transparent;
   place-self: center end;
-  padding: 2px 0 0;
+  padding-bottom: 1px;
 
 
   @media screen and (min-width: $tablet-width) {
@@ -200,6 +200,14 @@
   @media screen and (min-width: $desktop-width) {
     justify-self: start;
     padding-top: 3px;
+  }
+
+  &--whitespace {
+    margin-right: 2px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin-right: 0;
+    }
   }
 }
 

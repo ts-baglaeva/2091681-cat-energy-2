@@ -12,16 +12,15 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   row-gap: 14px;
-  padding: 20px 0 25px;
+  padding: 21px 0 24px;
 
   @media screen and (min-width: $tablet-width) {
     width: 250px;
-    //grid-template-columns: 1fr;
     background: linear-gradient(180deg, $main-color 0, $main-color 81px, $bg-color 81px, $bg-color 100%);
-    padding: 11px 36px 40px;
+    padding: 11px 36px 41px;
     display: flex;
     flex-direction: column;
-    row-gap: 22px;
+    row-gap: 21px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -32,7 +31,7 @@
 
   &--more {
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 7px;
     background-image: url("../../icons/stack.svg#small-plus");
     background-repeat: no-repeat;
     background-position: center 25px;
@@ -45,7 +44,7 @@
       background-size: 60px 60px;
       background-position: center 52px;
       border: 2px solid $bg-color;
-      margin-top: 81px;
+      margin-top: 80px;
       padding-bottom: 40px;
     }
 
@@ -67,7 +66,7 @@
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    padding: 0 57px 0 55px;
+    padding: 0 57px 0 56px;
     flex-grow: 1;
   }
 
@@ -83,6 +82,7 @@
     color: $add-color;
     background-color: transparent;
     padding-top: 58px;
+    padding-right: 1px;
 
     @media screen and (min-width: $tablet-width) {
       font-size: 20px;
@@ -94,6 +94,12 @@
     @media screen and (min-width: $desktop-width) {
       padding: 137px 0 3px;
     }
+  }
+}
+
+.product-card-weight {
+  @media screen and (min-width: $tablet-width) {
+    margin-right: -5px;
   }
 }
 
@@ -112,7 +118,7 @@
 
   @media screen and (min-width: $tablet-width) {
     width: 200px;
-    height: 210px;
+    height: 211px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -172,6 +178,7 @@
 .product-card__item {
   @include flex (row, space-between, 20px);
 
+
   @media screen and (min-width: $tablet-width) {
     padding-bottom: 3px;
     border-bottom: 1px solid $border-color;
@@ -182,7 +189,20 @@
   }
 }
 
-.product-card__name,
+.product-card__name {
+  @include font;
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 16px;
+  color: $secondary-color;
+  background-color: transparent;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 .product-card__value {
   @include font;
   font-family: $primary-font;
@@ -194,6 +214,14 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  &--whitespace {
+    margin-right: 2px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin-right: 0;
+    }
   }
 }
 
