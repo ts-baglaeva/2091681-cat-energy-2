@@ -1,7 +1,3 @@
-/* .logo-academy {
-
-} */
-
 .logo-academy__text {
   @include flex (row, space-between, 20px);
   align-items: center;
@@ -39,7 +35,7 @@
 
   @media screen and (min-width: $tablet-width) {
     width: 163px;
-    gap: 23px;
+    //gap: 23px;
     border: none;
     padding: 0;
   }
