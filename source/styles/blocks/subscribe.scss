@@ -64,12 +64,12 @@
   @media screen and (min-width: $desktop-width) {
     font-size: 40px;
     line-height: 40px;
-    padding: 68px 0 66px;
+    padding: 71px 0 63px;
 
     &::before {
       content: "";
       position: absolute;
-      top: 88px;
+      top: 89px;
       right: calc(100% + 40px);
       width: 100vw;
       height: 2px;
@@ -80,7 +80,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 88px;
+      top: 89px;
       left: calc(100% + 40px);
       width: 100vw;
       height: 2px;
@@ -161,14 +161,13 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 468px;
+    width: 471px;
   }
 
   &--error {
     border-color: $error;
   }
 }
-
 
 .button--subscribe {
   border: none;

@@ -37,7 +37,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 22px 0 76px;
+    padding: 21px 0 76px;
   }
 }
 
@@ -88,9 +88,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 367px;
-    justify-content: fspace-between;
-    gap: 10px;
+    width: 366px;
+    justify-content: space-between;
   }
 }
 

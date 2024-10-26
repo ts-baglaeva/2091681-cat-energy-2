@@ -20,7 +20,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 66px 0;
+    padding: 68px 2px 68px 0;
   }
 }
 
@@ -53,6 +53,11 @@
     border: none;
     padding: 5px 0;
     margin-right: 38px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-top: -1px;
+    padding: 1px;
   }
 }
 

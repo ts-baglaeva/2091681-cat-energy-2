@@ -7,7 +7,7 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 565px;
-    padding: 60px 78px 60px 80px;
+    padding: 60px 78px 60px 79px;
   }
 }
 
@@ -17,12 +17,16 @@
   text-transform: uppercase;
   color: $add-color;
   background-color: transparent;
-  //padding-right: 20px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 26px;
     padding-top: 2px;
+  }
+
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 0;
   }
 }
 

@@ -19,7 +19,8 @@
   top: 22px;
   right: calc(50% - 140px);
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     opacity: 0.8;
   }
 
@@ -92,10 +93,6 @@
     max-width: 497px;
     padding-right: 4px;
   }
-
-  @media screen and (min-width: $desktop-width) {
-    padding: 0;
-  }
 }
 
 .navigation--opened .navigation__list {
@@ -123,13 +120,12 @@
     align-items: center;
   }
 
-
   @media screen and (min-width: $desktop-width) {
-    gap: 34px;
+    padding-right: 1px;
   }
 }
 
-.navigation--nojs .menu__content-list {
+.navigation--nojs .navigation__list {
   position: static;
   display: block;
   min-height: 0;
@@ -174,8 +170,8 @@
   background-color: transparent;
   position: relative;
 
-
-  &:hover {
+  &:hover,
+  &:focus-visible {
     opacity: 0.6;
   }
 
@@ -197,6 +193,10 @@
   @media screen and (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &--catalog {
+    padding-bottom: 10px;
   }
 }
 

@@ -24,9 +24,10 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 173px;
+    width: 169px;
     row-gap: 10px;
-    padding-left: 32px;
+    padding: 11px 38px 40px;
+    margin: 0 auto;
   }
 
   &--more {
@@ -50,7 +51,10 @@
     }
 
     @media screen and (min-width: $desktop-width) {
-      width: 169px;
+      width: 165px;
+      background-position: 91px 49px;
+      margin: 81px 0 0;
+      padding: 11px 38px 40px;
     }
   }
 }
@@ -63,6 +67,15 @@
   background-color: transparent;
   padding-right: 40%;
 
+  &:hover,
+  &:focus-visible {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
@@ -72,7 +85,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 0 14px 0 15px;
+    padding: 2px 14px 0 12px;
   }
 
   &--more {
@@ -85,6 +98,15 @@
     padding-top: 58px;
     padding-right: 1px;
 
+    &:hover,
+    &:focus-visible {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
     @media screen and (min-width: $tablet-width) {
       font-size: 20px;
       line-height: 24px;
@@ -93,7 +115,7 @@
     }
 
     @media screen and (min-width: $desktop-width) {
-      padding: 137px 0 3px;
+      padding: 138px 0 4px;
     }
   }
 }
@@ -116,6 +138,15 @@
   @include flex (row, center, 0);
   align-items: center;
   margin: 0 auto;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media screen and (min-width: $tablet-width) {
     width: 200px;
@@ -174,8 +205,9 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 13px 2px 26px 3px;
-    gap: 6px;
+    padding: 14px 2px 24px 3px;
+    gap: 5px;
+    //min-height: 95px;
   }
 }
 
@@ -190,6 +222,7 @@
 
   @media screen and (min-width: $desktop-width) {
     padding-bottom: 6px;
+    //min-height: 23px;
   }
 }
 
