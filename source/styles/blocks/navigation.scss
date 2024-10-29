@@ -1,7 +1,6 @@
 .navigation {
   @include flex (row, space-between, 0);
   align-items: center;
-  min-height: 65px;
 
   &--nojs {
     position: static;
@@ -75,13 +74,6 @@
 
 .navigation--nojs .menu__toggle {
   display: none;
-}
-
-.navigation--opened .navigation__wrapper {
-  width: 500px;
-  background-color: $main-color;
-  position: relative;
-  z-index: 9;
 }
 
 .navigation__list {

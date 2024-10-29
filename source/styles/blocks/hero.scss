@@ -1,7 +1,6 @@
 .hero {
   position: relative;
   min-height: 480px;
-
   margin-bottom: 20px;
 
   @media screen and (min-width: $tablet-width) {
@@ -19,6 +18,7 @@
 .hero::after {
   content: "";
   width: 100%;
+  min-width: 280px;
   min-height: 302px;
   display: block;
   background: linear-gradient(180deg, rgba($corporate, 0.85) 0%, rgba($corporate, 0.85)), url("../../images/hero/hero-background-mobile@1x.jpg");
@@ -36,7 +36,7 @@
     width: 50%;
     height: 100%;
     display: block;
-    background: linear-gradient(180deg, rgba($corporate, 0.85) 0%, rgba($corporate, 0.85)), url("../../images/hero/hero-background-desktop@1x.jpg");
+    background: linear-gradient(180deg, rgba($corporate, 0.85) 0%, rgba($corporate, 0.85) 100%), url("../../images/hero/hero-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
