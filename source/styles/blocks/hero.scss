@@ -4,7 +4,7 @@
   margin-bottom: 20px;
 
   @media screen and (min-width: $tablet-width) {
-    min-height: 857px;
+    min-height: 855px;
     margin-bottom: 1px;
   }
 
@@ -67,7 +67,7 @@
     line-height: 60px;
     color: $primary-color;
     text-align: start;
-    padding: 56px 90px 20px;
+    padding: 55px 90px 20px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -117,7 +117,7 @@
     left: 50%;
     transform: translate(-50%);
     z-index: 1;
-    padding-top: 1px;
+    padding-top: 0;
     padding-bottom: 0;
   }
 

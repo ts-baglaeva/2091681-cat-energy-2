@@ -3,18 +3,18 @@
 
   @media screen and (min-width: $tablet-width) {
     @include flex (row, space-between, 10px);
-    align-items: center;
+    align-items: start;
 
     @include content-width;
     background-color: $main-color;
     border: none;
-    padding: 13px 0 7px;
+    padding: 26px 0 7px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 4px 0 1px;
+    padding: 1px 0;
 
-    &__bg {
+    &--bg {
       position: absolute;
       left: 0;
       right: 0;
@@ -31,6 +31,7 @@
 
   @include content-width;
   @include flex (row,  flex-start, 56px);
+  align-self: start;
   text-decoration: none;
 
   &:hover,

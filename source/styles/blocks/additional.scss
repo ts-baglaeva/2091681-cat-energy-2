@@ -92,14 +92,13 @@
 
 .additional__wrapper {
   @include content-width;
-}
 
-.additional__content {
   @media screen and (min-width: $desktop-width) {
-    @include flex (row, space-between, 79px);
-    margin-bottom: 25px;
+    @include flex (row, space-between, 0);
+    column-gap: 79px;
   }
 }
+
 
 .additional__list {
   list-style: none;

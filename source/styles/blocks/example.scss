@@ -11,17 +11,17 @@
 
   @media screen and (min-width: $desktop-width) {
     padding-bottom: 0;
-    background: linear-gradient(180deg, $main-color 0, $main-color 157px, $bg-color 157px, $bg-color 100%);
+    background: linear-gradient(180deg, $main-color 0, $main-color 160px, $bg-color 160px, $bg-color 100%);
   }
 }
 
-.example-content {
+.example__content {
   @include content-width;
 
   @media screen and (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: auto 560px;
-    gap: 224px;
+    gap: 0;
   }
 }
 
@@ -39,11 +39,11 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 21px 0 76px;
+    padding: 23px 0 76px;
   }
 }
 
-.example__description {
+.example__discription {
   @include font;
   font-family: $primary-font;
   font-size: 14px;
@@ -69,7 +69,7 @@
 
   @media screen and (min-width: $tablet-width) {
     @include flex (row, space-between, 20px);
-    padding: 10px 0 94px;
+    padding: 8px 0 94px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -81,7 +81,7 @@
 .example__list {
   @include flex (row, space-between, 0);
   margin: 0;
-  padding: 0 0 10px;
+  padding: 0 0 5px;
 
   @media screen and (min-width: $tablet-width) {
     width: 367px;
@@ -125,45 +125,52 @@
   }
 }
 
-.example__item-wrapper {
-  width: 87px;
-  margin: 0 auto;
-  background-color: $bg-dark;
-
-  @media screen and (min-width: $tablet-width) {
-    background-color: $main-color;
-
-    &--weight {
-      width: 114px;
-    }
-
-    &--time {
-      width: 142px;
-    }
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    background-color: $bg-color;
-    padding-bottom: 2px;
-  }
-}
-
 .example__item-value {
   @include font;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
   text-align: center;
-  padding: 1px 0 4px;
+  background-color: $bg-dark;
+  display: inline-block;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
-    padding: 4px 0 6px;
+    padding: 4px 0;
+    background-color: $main-color;
   }
 
   @media screen and (min-width: $desktop-width) {
     padding: 2px 0 6px;
+  }
+
+  &--weight {
+    margin: 0 32px;
+    padding: 1px 10px 4px 11px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin: 0 47px 0 48px;
+      padding: 4px 9px 5px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      background-color: $bg-color;
+    }
+  }
+
+  &--time {
+    margin: 0 21px;
+    padding: 1px 0 4px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin: 0 20px;
+      padding: 4px 9px 5px 11px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    background-color: $bg-color;
   }
 }
 
@@ -174,12 +181,42 @@
   line-height: 12px;
   text-align: center;
   color: $secondary-color;
+  background-color: $bg-dark;
   padding: 4px 15px 0 13px;
+  display: inline-block;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 14px;
-    padding: 4px 0 5px;
+    background-color: $main-color;
+  }
+
+  &--weight {
+    margin: 0 18px;
+    padding: 4px 5px 5px 3px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin: 0 25px;
+      padding: 4px 8px 5px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      background-color: $bg-color;
+    }
+  }
+
+  &--time {
+    margin: 0 19px;
+    padding: 4px 10px 5px;
+
+    @media screen and (min-width: $tablet-width) {
+      margin: 0 10px;
+      padding: 4px 8px 5px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      background-color: $bg-color;
+    }
   }
 }
 
@@ -239,7 +276,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin: 22px auto 0;
+    margin: 23px auto 0;
   }
 }
 
@@ -259,7 +296,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    background: linear-gradient(0deg, $bg-color 0, $bg-color 378px, $main-color 378px, $main-color 512px);
+    background: linear-gradient(0deg, $bg-color 0, $bg-color 375px, $main-color 375px, $main-color 512px);
   }
 
   &--before {

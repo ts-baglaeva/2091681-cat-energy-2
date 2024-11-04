@@ -12,4 +12,3 @@ navToggle.addEventListener('click', () => {
     navMain.classList.remove('navigation--opened');
   }
 });
-

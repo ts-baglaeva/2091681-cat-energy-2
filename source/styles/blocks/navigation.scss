@@ -98,9 +98,11 @@
   background-color: $main-color;
 
   @media screen and (min-width: $tablet-width) {
-    @include flex (row, space-between, 34px);
+    @include flex (row, flex-end, 33px);
     position: static;
     background-color: transparent;
+    align-items: start;
+    padding-top: 14px;
   }
 }
 
@@ -108,11 +110,13 @@
   display: none;
 
   @media screen and (min-width: $tablet-width) {
-    @include flex (row, space-between, 34px);
-    align-items: center;
+    @include flex (row, flex-end, 33px);
+    align-items: start;
+    padding-top: 14px;
   }
 
   @media screen and (min-width: $desktop-width) {
+    padding-top: 16px;
     padding-right: 1px;
   }
 }
@@ -175,20 +179,13 @@
     width: auto;
     font-size: 18px;
     line-height: 24px;
-    padding-bottom: 8px;
-
-    &--catalog {
-      padding-bottom: 7px;
-    }
+    padding-bottom: 6px;
   }
 
   @media screen and (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
-  }
-
-  &--catalog {
-    padding-bottom: 10px;
+    padding-bottom: 9px;
   }
 }
 
@@ -225,7 +222,7 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 1px;
+      bottom: 0;
       background-color: $corporate;
     }
   }

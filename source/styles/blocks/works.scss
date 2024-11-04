@@ -15,10 +15,6 @@
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 47px;
   }
-
-  @media screen and (min-width: $desktop-width) {
-    margin-bottom: 48px;
-  }
 }
 
 .works__title {
@@ -26,16 +22,16 @@
   font-size: 36px;
   line-height: 40px;
   background-color: transparent;
-  padding: 10px 0 40px 1px;
+  padding: 10px 0 40px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    padding: 14px 0 32px;
+    padding: 15px 0 32px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 33px 0 32px;
+    padding: 32px 0;
   }
 }
 
@@ -54,7 +50,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    @include flex (row, space-between, 20px);
+    grid-template-columns: repeat(4, 325px);
+    gap: 0;
   }
 }
 
@@ -66,48 +63,26 @@
     position: relative;
 
     &--leaf {
-      width: 227px;
+      width: 225px;
     }
 
     &--powder {
-      width: 248px;
+      width: 246px;
     }
 
     &--eat {
-      width: 250px;
-    }
-
-    &--time {
-      width: 252px;
-    }
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    &--leaf {
-      margin-right: 22px;
-      width: 229px;
-    }
-
-    &--powder {
-      margin-right: 2px;
       width: 248px;
     }
 
-    &--eat {
-      margin-right: 0;
-      width: 250px;
-    }
-
     &--time {
-      margin-right: -6px;
-      width: 252px;
+      width: 250px;
     }
   }
 }
 
 .works__item::before {
   position: absolute;
-  right: 3px;
+  right: 0;
   z-index: -1;
 
   @media screen and (min-width: $tablet-width) {
@@ -121,4 +96,3 @@
     background-color: transparent;
   }
 }
-

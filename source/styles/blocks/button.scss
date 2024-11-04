@@ -21,8 +21,6 @@
   }
 
   &--big {
-    display: none;
-
     @media screen and (min-width: $tablet-width) {
       display: block;
       font-size: 20px;
@@ -49,4 +47,3 @@
     }
   }
 }
-

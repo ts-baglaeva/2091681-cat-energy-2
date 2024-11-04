@@ -40,7 +40,7 @@
 
     @include content-width;
     grid-template-columns: 1fr 1fr;
-    gap: 58px;
+    gap: 59px;
   }
 
   @media screen and (min-width: $desktop-width) {
