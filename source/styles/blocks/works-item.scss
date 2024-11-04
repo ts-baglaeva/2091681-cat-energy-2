@@ -1,5 +1,6 @@
-.work-item__description {
-  padding: 2px 0 0 80px;
+.works-item__discription {
+  padding-top: 2px;
+  padding-left: 80px;
   position: relative;
 
   @include font;
@@ -39,53 +40,53 @@
   &--powder {
     &::after {
       content: "";
-      width: 27px;
-      height: 31px;
+      width: 30px;
+      height: 32px;
       display: block;
       background-image: url("../../icons/stack.svg#powder");
-      background-size: 27px 31px;
+      background-size: 30px 32px;
       background-repeat: no-repeat;
       position: absolute;
       top: 15px;
-      left: 17px;
+      left: 15px;
     }
   }
 
   &--eat {
     &::after {
       content: "";
-      width: 26px;
+      width: 30px;
       height: 32px;
       display: block;
       background-image: url("../../icons/stack.svg#eat");
-      background-size: 26px 32px;
+      background-size: 30px 32px;
       background-repeat: no-repeat;
       position: absolute;
       top: 15px;
-      left: 17px;
+      left: 15px;
     }
   }
 
   &--time {
     &::after {
       content: "";
-      width: 28px;
+      width: 30px;
       height: 32px;
       display: block;
       background-image: url("../../icons/stack.svg#time");
-      background-size: 27px 32px;
+      background-size: 30px 32px;
       background-repeat: no-repeat;
       position: absolute;
       top: 15px;
-      left: 17px;
+      left: 15px;
     }
   }
 }
 
 
 @media screen and (min-width: $tablet-width) {
-  .work-item__description {
-    padding: 151px 0 20px;
+  .works-item__discription {
+    padding: 150px 0 20px;
     position: relative;
     font-size: 16px;
     line-height: 24px;
@@ -97,44 +98,9 @@
       left: 0;
     }
 
-    &--leaf {
-      &::after {
-        content: "";
-        top: 64px;
-        left: 24px;
-      }
+    &::after {
+      top: 65px;
+      left: 25px;
     }
-
-    &--powder {
-      &::after {
-        content: "";
-        top: 65px;
-        left: 26px;
-      }
-    }
-
-    &--eat {
-      &::after {
-        content: "";
-        top: 63px;
-        left: 27px;
-      }
-    }
-
-    &--time {
-      &::after {
-        content: "";
-        top: 63px;
-        left: 27px;
-      }
-    }
-  }
-}
-
-.br {
-  display: none;
-
-  @media screen and (min-width: $tablet-width) {
-    display: block;
   }
 }

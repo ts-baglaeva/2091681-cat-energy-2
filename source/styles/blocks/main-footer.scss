@@ -7,7 +7,7 @@
   }
 }
 
-.main-footer-wrapper {
+.main-footer__wrapper {
   @include content-width;
   @include flex (column, space-between, 0);
   align-items: center;
@@ -16,7 +16,7 @@
 
   @media screen and (min-width: $tablet-width) {
     @include flex (row, space-between, 20px);
-    padding: 56px 0;
+    padding: 58px 2px 50px 3px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -28,8 +28,12 @@
   @include flex (row, center, 0);
   width: 280px;
   height: 24px;
-  padding: 40px 0 19px;
+  padding: 42px 0 19px;
   border-bottom: 1px solid $border-dark-line;
+
+  &:focus-visible {
+    outline: none;
+  }
 
   &::before {
     content: "";
@@ -82,6 +86,10 @@
   width: 28px;
   height: 22px;
 
+  &:focus-visible {
+    outline: none;
+  }
+
   &:hover::before,
   &:focus-visible::before {
     background-color: $corporate;
@@ -130,5 +138,8 @@
   @include flex (row, space-between, 20px);
   flex-wrap: nowrap;
   text-decoration: none;
-}
 
+  &:focus-visible {
+    outline: none;
+  }
+}

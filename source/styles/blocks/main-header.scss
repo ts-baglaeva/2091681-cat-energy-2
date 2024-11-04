@@ -1,18 +1,20 @@
 .main-header {
-  @include flex (row, space-between, 10px);
-  align-items: center;
-
-  @include content-width;
-  background-color: $main-color;
-
+  padding: 13px 0 12px;
 
   @media screen and (min-width: $tablet-width) {
+    @include flex (row, space-between, 10px);
+    align-items: start;
+
+    @include content-width;
+    background-color: $main-color;
     border: none;
-    padding: 0;
+    padding: 26px 0 7px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    &__bg {
+    padding: 1px 0;
+
+    &--bg {
       position: absolute;
       left: 0;
       right: 0;
@@ -24,7 +26,12 @@
 }
 
 .main-header__logo {
-  @include flex (row, space-between, 56px);
+  width: 280px;
+  margin: 0 auto;
+
+  @include content-width;
+  @include flex (row,  flex-start, 56px);
+  align-self: start;
   text-decoration: none;
 
   &:hover,
@@ -37,6 +44,8 @@
   }
 
   @media screen and (min-width: $tablet-width) {
+    width: auto;
+    margin: 0;
     gap: 13px;
   }
 
@@ -49,9 +58,11 @@
   width: 101px;
   height: 18px;
   padding-top: 10px;
+  padding-right: 89px;
 
   @media screen and (min-width: $tablet-width) {
     padding-top: 15px;
+    padding-right: 0;
   }
 
   @media screen and (min-width: $desktop-width) {
