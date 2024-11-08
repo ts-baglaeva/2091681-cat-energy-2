@@ -52,6 +52,8 @@
 }
 
 .hero__title {
+  margin: 0;
+
   @include font;
   font-size: 36px;
   line-height: 36px;
@@ -78,6 +80,8 @@
 }
 
 .hero__intro {
+  margin: 0;
+
   @include font;
   font-size: 14px;
   line-height: 14px;

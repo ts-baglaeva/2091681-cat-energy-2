@@ -26,6 +26,8 @@
 }
 
 .example__title {
+  margin: 0;
+
   @include font;
   font-size: 36px;
   line-height: 40px;
@@ -44,6 +46,8 @@
 }
 
 .example__discription {
+  margin: 0;
+
   @include font;
   font-family: $primary-font;
   font-size: 14px;
@@ -126,6 +130,8 @@
 }
 
 .example__item-value {
+  margin: 0;
+
   @include font;
   font-size: 24px;
   line-height: 24px;
@@ -175,6 +181,8 @@
 }
 
 .example__item-indicator {
+  margin: 0;
+
   @include font;
   font-family: $primary-font;
   font-size: 12px;
@@ -221,6 +229,8 @@
 }
 
 .example__total {
+  margin: 0;
+
   @include flex (row, center, 5px);
   padding: 9px 0 20px;
 

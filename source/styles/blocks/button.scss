@@ -46,4 +46,17 @@
       padding-right: 10px;
     }
   }
+
+  &--subscribe {
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 15px;
+    box-sizing: border-box;
+
+    @media screen and (min-width: $tablet-width) {
+      width: 256px;
+    }
+  }
 }

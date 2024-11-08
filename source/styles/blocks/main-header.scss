@@ -1,5 +1,5 @@
 .main-header {
-  padding: 13px 0 12px;
+  padding: 12px 0 0;
 
   @media screen and (min-width: $tablet-width) {
     @include flex (row, space-between, 10px);
@@ -12,14 +12,13 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 1px 0;
+    padding: 55px 0 0;
 
     &--bg {
       position: absolute;
       left: 0;
       right: 0;
       z-index: 4;
-      top: 53px;
       background-color: transparent;
     }
   }
@@ -28,6 +27,7 @@
 .main-header__logo {
   width: 280px;
   margin: 0 auto;
+  padding-bottom: 12px;
 
   @include content-width;
   @include flex (row,  flex-start, 56px);
@@ -47,6 +47,7 @@
     width: auto;
     margin: 0;
     gap: 13px;
+    padding-bottom: 0;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -69,17 +70,5 @@
     width: 118px;
     height: 21px;
     padding-top: 19px;
-  }
-
-  &--catalog {
-    padding-top: 13px;
-
-    @media screen and (min-width: $tablet-width) {
-      padding-top: 15px;
-    }
-
-    @media screen and (min-width: $desktop-width) {
-      padding-top: 19px;
-    }
   }
 }
