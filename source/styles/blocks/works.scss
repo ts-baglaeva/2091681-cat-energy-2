@@ -18,6 +18,8 @@
 }
 
 .works__title {
+  margin: 0;
+
   @include font;
   font-size: 36px;
   line-height: 40px;

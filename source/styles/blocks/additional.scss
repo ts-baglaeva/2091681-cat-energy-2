@@ -3,6 +3,8 @@
 }
 
 .additional__title {
+  margin: 0;
+
   @include font;
   font-size: 24px;
   line-height: 24px;
@@ -96,6 +98,7 @@
   @media screen and (min-width: $desktop-width) {
     @include flex (row, space-between, 0);
     column-gap: 79px;
+    padding-bottom: 25px;
   }
 }
 
@@ -142,6 +145,8 @@
 }
 
 .additional__subtitle {
+  margin: 0;
+
   @include font;
   font-size: 16px;
   line-height: 16px;
@@ -279,6 +284,8 @@
 }
 
 .additional__banner-text {
+  margin: 0;
+
   @include font;
   font-family: $primary-font;
   font-size: 16px;
